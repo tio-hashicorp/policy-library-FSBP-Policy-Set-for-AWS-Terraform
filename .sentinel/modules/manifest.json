@@ -1,0 +1,22 @@
+{
+	"records": [
+		{
+			"key": "report",
+			"source": "https://raw.githubusercontent.com/hashicorp/terraform-sentinel-policies/main/common-functions/report/report.sentinel",
+			"sourceSum": "fafbd47717e9374f28cd84234dd4d903f14dc2e564bcd253ba986aca7a0d6926",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/.sentinel/modules/report-fafbd47717e9374f28cd84234dd4d903f14dc2e564bcd253ba986aca7a0d6926.sentinel"
+		},
+		{
+			"key": "tfplan-functions",
+			"source": "./modules/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/modules/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "tfconfig-functions",
+			"source": "./modules/tfconfig-functions/tfconfig-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/modules/tfconfig-functions/tfconfig-functions.sentinel"
+		}
+	]
+}

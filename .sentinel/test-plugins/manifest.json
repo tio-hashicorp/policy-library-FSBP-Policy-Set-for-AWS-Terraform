@@ -1,0 +1,52 @@
+{
+	"records": [
+		{
+			"key": "policies/test/elasticache-redis-cluster-auto-backup-enabled/failure-success-replication-group-auto-backup-enabled/tfresources",
+			"source": "../../../plugins/darwin/arm64/sentinel-plugin-tfresources",
+			"sourceSum": "",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/plugins/darwin/arm64/sentinel-plugin-tfresources"
+		},
+		{
+			"key": "policies/test/elasticache-redis-cluster-auto-backup-enabled/failure-replication-group-auto-backup-enabled/tfresources",
+			"source": "../../../plugins/darwin/arm64/sentinel-plugin-tfresources",
+			"sourceSum": "",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/plugins/darwin/arm64/sentinel-plugin-tfresources"
+		},
+		{
+			"key": "policies/test/elasticache-redis-cluster-auto-backup-enabled/failure-cluster-auto-backup-disabled/tfresources",
+			"source": "../../../plugins/darwin/arm64/sentinel-plugin-tfresources",
+			"sourceSum": "",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/plugins/darwin/arm64/sentinel-plugin-tfresources"
+		},
+		{
+			"key": "policies/test/elasticache-redis-cluster-auto-backup-enabled/failure-replication-group-auto-backup-disabled/tfresources",
+			"source": "../../../plugins/darwin/arm64/sentinel-plugin-tfresources",
+			"sourceSum": "",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/plugins/darwin/arm64/sentinel-plugin-tfresources"
+		},
+		{
+			"key": "policies/test/elasticache-redis-cluster-auto-backup-enabled/success-replication-group-auto-backup-enabled/tfresources",
+			"source": "../../../plugins/darwin/arm64/sentinel-plugin-tfresources",
+			"sourceSum": "",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/plugins/darwin/arm64/sentinel-plugin-tfresources"
+		},
+		{
+			"key": "policies/test/elasticache-redis-cluster-auto-backup-enabled/success-custer-auto-backup-enabled/tfresources",
+			"source": "../../../plugins/darwin/arm64/sentinel-plugin-tfresources",
+			"sourceSum": "",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/plugins/darwin/arm64/sentinel-plugin-tfresources"
+		},
+		{
+			"key": "policies/test/elasticache-redis-cluster-auto-backup-enabled/success-cluster-auto-backup-enabled/tfresources",
+			"source": "../../../plugins/darwin/arm64/sentinel-plugin-tfresources",
+			"sourceSum": "",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/plugins/darwin/arm64/sentinel-plugin-tfresources"
+		},
+		{
+			"key": "policies/test/elasticache-redis-cluster-auto-backup-enabled/failure-cluster-auto-backup-enabled/tfresources",
+			"source": "../../../plugins/darwin/arm64/sentinel-plugin-tfresources",
+			"sourceSum": "",
+			"dest": "/Users/aahelguha/hashicorp/policy-library-aws-fsbp-terraform/plugins/darwin/arm64/sentinel-plugin-tfresources"
+		}
+	]
+}
