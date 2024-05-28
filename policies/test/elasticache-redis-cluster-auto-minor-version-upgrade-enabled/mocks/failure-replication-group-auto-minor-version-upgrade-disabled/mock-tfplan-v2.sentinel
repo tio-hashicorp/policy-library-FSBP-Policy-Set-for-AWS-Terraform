@@ -15,6 +15,7 @@ planned_values = {
 			"tainted":        false,
 			"type":           "aws_elasticache_replication_group",
 			"values": {
+				"auto_minor_version_upgrade": "false",
 				"auth_token":                 "REDACTED_SENSITIVE",
 				"auth_token_update_strategy": "ROTATE",
 				"automatic_failover_enabled": true,
