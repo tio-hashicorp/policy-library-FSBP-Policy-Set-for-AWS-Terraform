@@ -28,7 +28,13 @@ policy "elasticache-redis-cluster-auto-minor-version-upgrade-enabled" {
   enforcement_level = "advisory"
 }
 
-policy "elasticache-redis-cluster-auto-failover-enabled" {
-  source = "./policies/elasticache-redis-cluster-auto-failover-enabled.sentinel"
+
+policy "elasticache-redis-replication-group-auto-failover-enabled" {
+  source = "./policies/elasticache-redis-replication-group-auto-failover-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticache-redis-replication-group-encryption-at-rest-enabled" {
+  source = "./policies/elasticache-redis-replication-group-encryption-at-rest-enabled.sentinel"
   enforcement_level = "advisory"
 }

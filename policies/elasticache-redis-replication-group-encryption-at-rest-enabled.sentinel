@@ -1,4 +1,4 @@
-# This policy requires that the `automatic_failover_enabled` attribute of the `aws_elasticache_replication_group` resource is true.
+# This policy requires that the `at_rest_encryption_enabled` attribute of the `aws_elasticache_replication_group` resource is true.
 
 # Imports
 
@@ -10,14 +10,14 @@ import "collection/maps" as maps
 
 # Constants
 const = {
-	"policy_name":                                "elasticache-redis-cluster-auto-failover-enabled",
+	"policy_name":                                "elasticache-redis-replication-group-encryption-at-rest-enabled",
 	"resource_aws_elasticache_replication_group": "aws_elasticache_replication_group",
 }
 
 # Functions
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
-		key = "values.automatic_failover_enabled"
+		key = "values.at_rest_encryption_enabled"
 		return maps.has(res, key) and maps.get(res, key) is true
 	})
 }
@@ -33,7 +33,7 @@ summary = {
 		{
 			"address":        v.address,
 			"module_address": v.module_address,
-			"message":        "Attribute 'automatic_failover_enabled' must be true for 'aws_elasticache_replication_group' resources.Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/elasticache-controls.html#elasticache-3 for more details.",
+			"message":        "Attribute 'at_rest_encryption_enabled' must be true for 'aws_elasticache_replication_group' resources.Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/elasticache-controls.html#elasticache-4 for more details.",
 		}
 	},
 }
