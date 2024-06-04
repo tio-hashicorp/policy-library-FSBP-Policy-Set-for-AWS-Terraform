@@ -33,6 +33,11 @@ policy "ecs-task-definition-no-secrets-as-environment-variables" {
   enforcement_level = "advisory"
 }
 
+policy "ecs-service-no-public-ip-assignment" {
+  source = "./policies/ecs-service-no-public-ip-assignment.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ecs-non-privileged-container-definitions" {
   source = "./policies/ecs-non-privileged-container-definitions.sentinel"
   enforcement_level = "advisory"
