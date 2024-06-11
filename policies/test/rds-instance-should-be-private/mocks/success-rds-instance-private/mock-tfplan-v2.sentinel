@@ -44,7 +44,7 @@ planned_values = {
 				"parameter_group_name":                "default.mysql8.0",
 				"password":                            "REDACTED_SENSITIVE",
 				"performance_insights_enabled":        false,
-				"publicly_accessible":                 true,
+				"publicly_accessible":                 false,
 				"replicate_source_db":                 null,
 				"restore_to_point_in_time":            [],
 				"s3_import":                           [],
@@ -206,6 +206,9 @@ raw = {
 						},
 						"password": {
 							"constant_value": "foobarbaz",
+						},
+						"publicly_accessible": {
+							"constant_value": false,
 						},
 						"skip_final_snapshot": {
 							"constant_value": true,
