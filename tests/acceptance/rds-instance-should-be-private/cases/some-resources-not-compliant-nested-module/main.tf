@@ -3,12 +3,12 @@ provider "aws" {
 }
 
 module "rds-1" {
-  source = "../rds"
+  source              = "../rds"
   publicly_accessible = true
 }
 
 module "rds-2" {
-  source = "../rds"
-  publicly_accessible = false 
+  source              = "../rds"
+  publicly_accessible = false
 }
 

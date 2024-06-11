@@ -8,5 +8,5 @@ resource "aws_db_instance" "default" {
   password             = "foobarbaz"
   parameter_group_name = "default.mysql8.0"
   skip_final_snapshot  = true
-  publicly_accessible = var.publicly_accessible
+  publicly_accessible  = var.publicly_accessible
 }

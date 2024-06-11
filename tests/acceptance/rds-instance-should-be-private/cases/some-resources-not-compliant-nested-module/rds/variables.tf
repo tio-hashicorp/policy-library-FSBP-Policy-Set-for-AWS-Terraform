@@ -1,3 +1,3 @@
 variable "publicly_accessible" {
-    type = bool
+  type = bool
 }

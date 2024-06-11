@@ -24,5 +24,5 @@ resource "aws_db_instance" "default-failure" {
   password             = "foobarbaz"
   parameter_group_name = "default.mysql8.0"
   skip_final_snapshot  = true
-  publicly_accessible = true
+  publicly_accessible  = true
 }

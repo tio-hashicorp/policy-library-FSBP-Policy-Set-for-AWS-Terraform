@@ -9,8 +9,8 @@ import "json"
 
 # Constants
 const = {
-	"policy_name": "rds-instance-should-be-private",
-	"message": "Attribute 'publicly_accessible' should be false for aws_db_instance resource. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/rds-controls.html#rds-2 for more details.",
+	"policy_name":  "rds-instance-should-be-private",
+	"message":      "Attribute 'publicly_accessible' should be false for aws_db_instance resource. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/rds-controls.html#rds-2 for more details.",
 	"rds_resource": "aws_db_instance",
 }
 
@@ -49,5 +49,5 @@ print(report.generate_policy_report(summary))
 # Rules
 
 main = rule {
-	violations is empty	
+	violations is empty
 }
