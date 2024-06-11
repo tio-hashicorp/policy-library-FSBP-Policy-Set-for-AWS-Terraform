@@ -48,3 +48,8 @@ policy "elasticache-redis-replication-group-encryption-at-transit-enabled" {
   source = "./policies/elasticache-redis-replication-group-encryption-at-transit-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "rds-instance-should-be-private" {
+  source = "./policies/rds-instance-should-be-private.sentinel"
+  enforcement_level = "advisory"
+}
