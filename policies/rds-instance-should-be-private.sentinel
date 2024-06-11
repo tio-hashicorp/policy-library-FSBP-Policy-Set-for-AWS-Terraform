@@ -29,6 +29,7 @@ build_violation_object = func(res, message) {
 rds_resources = tf.plan(tfplan.planned_values.resources).type(const.rds_resource).resources
 violations = collection.reject(rds_resources, func(res) {
 	key_path = "values.publicly_accessible"
+	# default value for publicly accessible is false
 	return maps.get(res, key_path, false) is false
 })
 
