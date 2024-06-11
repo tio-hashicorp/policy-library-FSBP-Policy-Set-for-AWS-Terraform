@@ -16,7 +16,7 @@ case "RDS instance should be private all resources complaint in nested module" {
   }
 }
 
-case "RDS instance should be private some resources not compliant {
+case "RDS instance should be private some resources not compliant" {
   path = "cases/some-resources-not-complaint"
   expectation {
     result = false
