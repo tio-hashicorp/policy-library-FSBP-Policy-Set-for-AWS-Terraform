@@ -103,6 +103,11 @@ policy "rds-instance-should-be-private" {
   enforcement_level = "advisory"
 }
 
+policy "rds-encryption-at-rest-enabled" {
+  source = "./policies/rds-encryption-at-rest-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticache-redis-replication-group-redis-auth-enabled" {
   source = "./policies/elasticache-redis-replication-group-redis-auth-enabled.sentinel"
   enforcement_level = "advisory"
