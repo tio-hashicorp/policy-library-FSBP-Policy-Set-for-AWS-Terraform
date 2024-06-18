@@ -8,6 +8,16 @@ import "plugin" "tfresources" {
   source = "./plugins/linux/amd64/sentinel-plugin-tfresources"
 }
 
+policy "ecr-tag-immutability-configured" {
+  source = "./policies/ecr-tag-immutability-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ecr-image-scanning-enabled" {
+  source = "./policies/ecr-image-scanning-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "eks-cluster-supported-k8s-version-check" {
   source = "./policies/eks-cluster-supported-k8s-version-check.sentinel"
   enforcement_level = "advisory"
@@ -108,6 +118,11 @@ policy "rds-encryption-at-rest-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "rds-cluster-and-db-snapshot-encrypted" {
+  source = "./policies/rds-cluster-and-db-snapshot-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticache-redis-replication-group-redis-auth-enabled" {
   source = "./policies/elasticache-redis-replication-group-redis-auth-enabled.sentinel"
   enforcement_level = "advisory"
@@ -141,4 +156,19 @@ policy "dynamo-db-tables-delete-protection-enabled" {
 policy "elasticbeanstalk-enhanced-health-reporting-enabled" {
   source = "./policies/elasticbeanstalk-enhanced-health-reporting-enabled.sentinel"
   enforcement_level = "advisory"
+}
+
+policy "dynamo-db-tables-scales-capacity-with-demand" {
+  source = "./policies/dynamo-db-tables-scales-capacity-with-demand.sentinel"
+  enforcement_level = "advisory"
+  params = {
+      min_read_capacity = 1
+      max_read_capacity = 40000
+      min_write_capacity = 1
+      max_write_capacity = 40000
+      min_target_read_utilization = 20
+      max_target_read_utilization = 90
+      min_target_write_utilization = 20
+      max_target_write_utilization = 90
+ }
 }
