@@ -8,6 +8,11 @@ import "plugin" "tfresources" {
   source = "./plugins/linux/amd64/sentinel-plugin-tfresources"
 }
 
+policy "ecr-tag-immutability-configured" {
+  source = "./policies/ecr-tag-immutability-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ecr-image-scanning-enabled" {
   source = "./policies/ecr-image-scanning-enabled.sentinel"
   enforcement_level = "advisory"
