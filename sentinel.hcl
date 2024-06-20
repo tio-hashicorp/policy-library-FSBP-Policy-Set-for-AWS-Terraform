@@ -128,6 +128,11 @@ policy "rds-cluster-and-db-snapshot-encrypted" {
   enforcement_level = "advisory"
 }
 
+policy "rds-ensure-monitoring-configured" {
+  source = "./policies/rds-ensure-monitoring-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "rds-ensure-multi-az-configuration" {
   source = "./policies/rds-ensure-multi-az-configuration.sentinel"
   enforcement_level = "advisory"
@@ -181,4 +186,9 @@ policy "dynamo-db-tables-scales-capacity-with-demand" {
       min_target_write_utilization = 20
       max_target_write_utilization = 90
  }
+}
+
+policy "elasticbeanstalk-managed-platform-updates-enabled" {
+  source = "./policies/elasticbeanstalk-managed-platform-updates-enabled.sentinel"
+  enforcement_level = "advisory"
 }
