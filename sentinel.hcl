@@ -108,6 +108,11 @@ policy "elasticache-redis-replication-group-encryption-at-transit-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "elb-connection-draining-enabled" {
+  source = "./policies/elb-connection-draining-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elb-cross-zone-load-balancing-enabled" {
   source = "./policies/elb-cross-zone-load-balancing-enabled.sentinel"
   enforcement_level = "advisory"
