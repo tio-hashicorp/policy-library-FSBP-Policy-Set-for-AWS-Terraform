@@ -108,6 +108,11 @@ policy "elasticache-redis-replication-group-encryption-at-transit-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "elb-drop-invalid-http-headers" {
+  source = "./policies/elb-drop-invalid-http-headers.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "rds-instance-should-be-private" {
   source = "./policies/rds-instance-should-be-private.sentinel"
   enforcement_level = "advisory"
@@ -120,6 +125,11 @@ policy "rds-encryption-at-rest-enabled" {
 
 policy "rds-cluster-and-db-snapshot-encrypted" {
   source = "./policies/rds-cluster-and-db-snapshot-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-ensure-multi-az-configuration" {
+  source = "./policies/rds-ensure-multi-az-configuration.sentinel"
   enforcement_level = "advisory"
 }
 
