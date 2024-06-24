@@ -153,6 +153,22 @@ policy "rds-ensure-multi-az-configuration" {
   enforcement_level = "advisory"
 }
 
+policy "rds-ensure-cluster-deletion-protection-enabled" {
+  source = "./policies/rds-ensure-deletion-protection-enabled.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    resource_type = "aws_rds_cluster"
+  }
+}
+
+policy "rds-ensure-db-instance-deletion-protection-enabled" {
+  source = "./policies/rds-ensure-deletion-protection-enabled.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    resource_type = "aws_db_instance"
+  }
+}
+
 policy "elasticache-redis-replication-group-redis-auth-enabled" {
   source = "./policies/elasticache-redis-replication-group-redis-auth-enabled.sentinel"
   enforcement_level = "advisory"
