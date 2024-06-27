@@ -123,14 +123,30 @@ policy "elb-drop-invalid-http-headers" {
   enforcement_level = "advisory"
 }
 
+policy "elb-ensure-deletion-protection-enabled" {
+  source = "./policies/elb-ensure-deletion-protection-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elb-ensure-multi-az-configuration-classic-load-balancer" {
   source = "./policies/elb-ensure-multi-az-configuration-classic-load-balancer.sentinel"
   enforcement_level = "advisory"
 }
 
-policy "elb-ensure-valid-desync-mitigation-mode" {
+policy "elb-ensure-valid-desync-mitigation-mode-application-load-balancer" {
   source = "./policies/elb-ensure-valid-desync-mitigation-mode.sentinel"
   enforcement_level = "advisory"
+  params = {
+    lb_type = "application"
+  }
+}
+
+policy "elb-ensure-valid-desync-mitigation-mode-classic-load-balancer" {
+  source = "./policies/elb-ensure-valid-desync-mitigation-mode.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    lb_type = "classic"
+  }
 }
 
 policy "rds-instance-should-be-private" {
@@ -177,6 +193,11 @@ policy "rds-ensure-db-instance-deletion-protection-enabled" {
   params = {
     resource_type = "aws_db_instance"
   }
+}
+
+policy "rds-ensure-automatic-backups-enabled" {
+  source = "./policies/rds-ensure-automatic-backups-enabled.sentinel"
+  enforcement_level = "advisory"
 }
 
 policy "elasticache-redis-replication-group-redis-auth-enabled" {
