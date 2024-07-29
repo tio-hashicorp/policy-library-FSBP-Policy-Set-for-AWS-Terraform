@@ -12,5 +12,5 @@ provider "aws" {
 }
 
 module "sagemaker-notebook-instance" {
-  source                  = "./sagemaker-notebook-instance"
+  source = "./sagemaker-notebook-instance"
 }

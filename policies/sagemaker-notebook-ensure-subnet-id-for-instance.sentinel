@@ -15,12 +15,12 @@ const = {
 	"policy_name": "sagemaker-notebook-ensure-subnet-id-for-instance",
 	"message":     "Attribute 'subnet_id' should be launched in custom vpc for AWS Sagemaker Notebook Instance. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/sagemaker-controls.html#sagemaker-2 for more details.",
 	"resource_aws_sagemaker_notebook_instance": "aws_sagemaker_notebook_instance",
-	"resource_aws_subnet": 		"aws_subnet",
-	"resource_aws_vpc":  		"aws_vpc",
+	"resource_aws_subnet":                      "aws_subnet",
+	"resource_aws_vpc":                         "aws_vpc",
 	"default_vpc_types":                        ["aws_default_subnet", "aws_default_vpc"],
-	"address":		"address",
-	"module_prefix":            "module.",
-	"module_address":           "module_address",
+	"address":                                  "address",
+	"module_prefix":                            "module.",
+	"module_address":                           "module_address",
 }
 
 # Functions
