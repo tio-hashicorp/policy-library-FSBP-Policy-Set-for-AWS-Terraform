@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = "us-west-2"
+}
+
 resource "aws_sagemaker_notebook_instance" "simple_notebook_instance" {
   name                   = "my-notebook-instance"
   role_arn               = aws_iam_role.test_role.arn
