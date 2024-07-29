@@ -13,5 +13,4 @@ provider "aws" {
 
 module "sagemaker-notebook-instance" {
   source                  = "./sagemaker-notebook-instance"
-  sagemaker_notebook_name = "my_sagemaker_instance"
 }

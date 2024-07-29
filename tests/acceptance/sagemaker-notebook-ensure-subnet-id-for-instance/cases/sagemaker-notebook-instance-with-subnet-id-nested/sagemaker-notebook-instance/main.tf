@@ -1,5 +1,5 @@
 resource "aws_sagemaker_notebook_instance" "simple_notebook_instance" {
-  name                   = var.sagemaker_notebook_name
+  name                   = "simple"
   role_arn               = aws_iam_role.test_role.arn
   subnet_id              = aws_subnet.new_subnet.id
   direct_internet_access = "Disabled"
