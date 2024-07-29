@@ -15,7 +15,12 @@ const = {
 	"policy_name": "sagemaker-notebook-ensure-subnet-id-for-instance",
 	"message":     "Attribute 'subnet_id' should be launched in custom vpc for AWS Sagemaker Notebook Instance. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/sagemaker-controls.html#sagemaker-2 for more details.",
 	"resource_aws_sagemaker_notebook_instance": "aws_sagemaker_notebook_instance",
+	"resource_aws_subnet": 		"aws_subnet",
+	"resource_aws_vpc":  		"aws_vpc",
 	"default_vpc_types":                        ["aws_default_subnet", "aws_default_vpc"],
+	"address":		"address",
+	"module_prefix":            "module.",
+	"module_address":           "module_address",
 }
 
 # Functions
@@ -33,14 +38,36 @@ get_violations = func(resources, config_resources) {
 		if resource_aws_subnet_id in const.default_vpc_types {
 			return false
 		}
-		aws_vpc_resources = config_resources.address(resource_aws_subnet_address).resources[0].config
-		resource_aws_vpc_address = aws_vpc_resources.vpc_id.references[-1]
+		aws_subnet_resources = config_resources.type(const.resource_aws_subnet).resources
+		resource_aws_vpc_address = false
+		for aws_subnet_resources as aws_subnet_resource {
+			aws_subnet_resource_without_module = resource_address_without_module_address(aws_subnet_resource)
+			if resource_aws_subnet_address == aws_subnet_resource_without_module {
+				resource_aws_vpc_address = aws_subnet_resource.config.vpc_id.references[-1]
+			}
+		}
+		if resource_aws_vpc_address == false {
+			return false
+		}
 		resource_aws_vpc_id = strings.split(resource_aws_vpc_address, ".")[0]
 		if resource_aws_vpc_id in const.default_vpc_types {
 			return false
 		}
 		return true
 	})
+}
+
+# Removes module address prefix from a resource
+# and returns back the localized address for a module.
+resource_address_without_module_address = func(res) {
+	resource_addr = res[const.address]
+	# Check for root module
+	if not strings.has_prefix(resource_addr, const.module_prefix) {
+		return resource_addr
+	}
+
+	module_addr_prefix = res[const.module_address] + "."
+	return strings.trim_prefix(resource_addr, module_addr_prefix)
 }
 
 # Variables
