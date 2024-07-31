@@ -36,7 +36,7 @@ get_violations = func(resources, config_resources) {
 			return false
 		}
 
-		# Check is the subnet is refenced to constant value
+		# Check if the subnet is referenced to constant value
 		if maps.has(aws_sagemaker_mapped_subnet_resource, "constant_value") {
 			return false
 		}
@@ -49,14 +49,16 @@ get_violations = func(resources, config_resources) {
 
 		# Extract the vpc resources which are mapped to subnet
 		aws_subnet_resources = config_resources.type(const.resource_aws_subnet).resources
-		aws_vpc_mapped_to_subnet_address = false
+		is_aws_vpc_mapped_to_subnet_address = false
+		aws_vpc_mapped_to_subnet_address = ""
 		for aws_subnet_resources as aws_subnet_resource {
 			aws_subnet_resource_without_module = resource_address_without_module_address(aws_subnet_resource)
 			if aws_sagemaker_mapped_to_subnet_address == aws_subnet_resource_without_module {
+				is_aws_vpc_mapped_to_subnet_address = true
 				aws_vpc_mapped_to_subnet_address = aws_subnet_resource.config.vpc_id.references[-1]
 			}
 		}
-		if aws_vpc_mapped_to_subnet_address == false {
+		if is_aws_vpc_mapped_to_subnet_address is false {
 			return false
 		}
 
