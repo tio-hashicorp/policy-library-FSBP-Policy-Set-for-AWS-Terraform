@@ -13,14 +13,16 @@ import "strings"
 const = {
 	"policy_name": "sagemaker-notebook-ensure-subnet-id-for-instance",
 	"message":     "Attribute 'subnet_id' should be launched in custom vpc for AWS Sagemaker Notebook Instance. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/sagemaker-controls.html#sagemaker-2 for more details.",
-	"resource_aws_sagemaker_notebook_instance": "aws_sagemaker_notebook_instance",
-	"resource_aws_subnet":                      "aws_subnet",
-	"resource_aws_vpc":                         "aws_vpc",
-	"resource_aws_default_subnet":              "aws_default_subnet",
-	"resource_aws_default_vpc":                 "aws_default_vpc",
-	"address":                                  "address",
-	"module_prefix":                            "module.",
-	"module_address":                           "module_address",
+	"resource_aws_sagemaker_notebook_instance":           "aws_sagemaker_notebook_instance",
+	"resource_aws_subnet":                                "aws_subnet",
+	"resource_aws_vpc":                                   "aws_vpc",
+	"resource_aws_default_subnet":                        "aws_default_subnet",
+	"resource_aws_default_vpc":                           "aws_default_vpc",
+	"regex_pattern_to_match_the_default_subnet_resource": "^(aws_default_subnet)\\.[^\\.]+",
+	"regex_pattern_to_match_the_default_vpc_resource":    "^(aws_default_vpc)\\.[^\\.]+",
+	"address":        "address",
+	"module_prefix":  "module.",
+	"module_address": "module_address",
 }
 
 # Functions
@@ -41,8 +43,7 @@ get_violations = func(resources, config_resources) {
 
 		# Check if the sagemaker is mapped to default subnet
 		aws_sagemaker_mapped_to_subnet_address = aws_sagemaker_mapped_subnet_resource.references[-1]
-		regex_pattern_to_match_the_default_subnet_resource = "^(" + const.resource_aws_default_subnet + ")\\.[^\\.]+"
-		if aws_sagemaker_mapped_to_subnet_address matches regex_pattern_to_match_the_default_subnet_resource {
+		if aws_sagemaker_mapped_to_subnet_address matches const.regex_pattern_to_match_the_default_subnet_resource {
 			return false
 		}
 
@@ -60,11 +61,7 @@ get_violations = func(resources, config_resources) {
 		}
 
 		# Check if subnet is mapped to default vpc
-		regex_pattern_to_match_the_default_vpc_resource = "^(" + const.resource_aws_default_vpc + ")\\.[^\\.]+"
-		if aws_vpc_mapped_to_subnet_address matches regex_pattern_to_match_the_default_vpc_resource {
-			return false
-		}
-		return true
+		return aws_vpc_mapped_to_subnet_address not matches const.regex_pattern_to_match_the_default_vpc_resource
 	})
 }
 
