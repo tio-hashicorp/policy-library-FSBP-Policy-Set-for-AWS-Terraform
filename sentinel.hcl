@@ -397,6 +397,11 @@ policy "neptune-cluster-snapshot-encryption-at-rest-enabled" {
  enforcement_level = "advisory"
 }
 
+policy "sagemaker-notebook-no-direct-internet-access" {
+  source = "./policies/sagemaker-notebook-no-direct-internet-access.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "sagemaker-notebook-ensure-subnet-id-for-instance" {
   source = "./policies/sagemaker-notebook-ensure-subnet-id-for-instance.sentinel"
   enforcement_level = "advisory"
