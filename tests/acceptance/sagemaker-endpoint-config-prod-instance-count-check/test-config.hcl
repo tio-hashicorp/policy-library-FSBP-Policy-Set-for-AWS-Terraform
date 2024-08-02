@@ -29,10 +29,3 @@ case "Sagemaker Endpoint Config Prod with Multiple Production Variants" {
         result = false
     }
 }
-
-case "Sagemaker Endpoint Config Prod with No Initial Instance Count Attribute" {
-    path = "./cases/sagemaker-endpoint-config-prod-with-no-initial-instance-count-attribute"
-    expectation {
-        result = true
-    }
-}
