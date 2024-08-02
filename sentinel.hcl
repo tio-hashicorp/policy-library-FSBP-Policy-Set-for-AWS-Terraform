@@ -427,3 +427,8 @@ policy "sagemaker-notebook-ensure-subnet-id-for-instance" {
   source = "./policies/sagemaker-notebook-ensure-subnet-id-for-instance.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "sagemaker-notebook-instance-root-access-check" {
+  source = "./policies/sagemaker-notebook-instance-root-access-check.sentinel"
+  enforcement_level = "advisory"
+}
