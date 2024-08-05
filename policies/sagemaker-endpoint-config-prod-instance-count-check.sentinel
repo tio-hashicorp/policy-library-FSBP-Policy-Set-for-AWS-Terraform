@@ -23,9 +23,10 @@ const = {
 
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
-		initial_instance_count_values = maps.get(res, "values.production_variants", 1)
-		for initial_instance_count_values as initial_instance_count_value {
-			if initial_instance_count_value.initial_instance_count <= initial_instance_count_limit {
+		production_variants_values = maps.get(res, "values.production_variants", 1)
+		print(initial_instance_count_values)
+		for production_variants_values as production_variants_value {
+			if production_variants_value.initial_instance_count <= initial_instance_count_limit {
 				return false
 			}
 		}
