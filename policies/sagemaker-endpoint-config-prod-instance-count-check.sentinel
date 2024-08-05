@@ -17,20 +17,17 @@ const = {
 	"policy_name":                                   "sagemaker-endpoint-config-prod-instance-count-check",
 	"resource_aws_sagemaker_endpoint_configuration": "aws_sagemaker_endpoint_configuration",
 	"resource_production_variants":                  "production_variants",
+	"resource_initial_instance_count": "initial_instance_count",
 }
 
 # Functions
 
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
-		production_variants_values = maps.get(res, "values.production_variants", 1)
-		print(initial_instance_count_values)
-		for production_variants_values as production_variants_value {
-			if production_variants_value.initial_instance_count <= initial_instance_count_limit {
-				return false
-			}
-		}
-		return true
+		production_variants_values = maps.get(res, "values.production_variants", [])
+		return collection.find(production_variants_values, func(variant) {
+			return (maps.get(variant, const.resource_initial_instance_count, "") <= initial_instance_count_limit)
+		}) is not defined
 	})
 }
 
