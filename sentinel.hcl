@@ -217,6 +217,27 @@ policy "rds-ensure-cloudwatch-logs-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "rds-ensure-cluster-multi-az-configured" {
+  source = "./policies/rds-ensure-cluster-multi-az-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-cluster-copy-tags-to-snapshot-configured" {
+  source = "./policies/rds-copy-tags-to-snapshot-configured.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    resource = "aws_rds_cluster"
+  }
+}
+
+policy "rds-instance-copy-tags-to-snapshot-configured" {
+  source = "./policies/rds-copy-tags-to-snapshot-configured.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    resource = "aws_db_instance"
+  }
+}
+
 policy "rds-ensure-cluster-deletion-protection-enabled" {
   source = "./policies/rds-ensure-deletion-protection-enabled.sentinel"
   enforcement_level = "advisory"
@@ -414,5 +435,10 @@ policy "sagemaker-notebook-instance-root-access-check" {
 
 policy "sagemaker-endpoint-config-prod-instance-count-check" {
   source = "./policies/sagemaker-endpoint-config-prod-instance-count-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "network-firewall-logging-enabled" {
+  source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
