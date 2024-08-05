@@ -54,5 +54,5 @@ print(report.generate_policy_report(summary))
 # Rules
 
 main = rule {
-	violations is empty
+	initial_instance_count_limit >= 1 and violations is empty
 }

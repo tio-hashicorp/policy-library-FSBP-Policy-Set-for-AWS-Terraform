@@ -436,6 +436,9 @@ policy "sagemaker-notebook-instance-root-access-check" {
 policy "sagemaker-endpoint-config-prod-instance-count-check" {
   source = "./policies/sagemaker-endpoint-config-prod-instance-count-check.sentinel"
   enforcement_level = "advisory"
+  params = {
+    initial_instance_count_limit = 1
+  }
 }
 
 policy "network-firewall-logging-enabled" {
