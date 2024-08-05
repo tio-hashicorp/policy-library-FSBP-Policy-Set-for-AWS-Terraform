@@ -17,7 +17,7 @@ const = {
 	"policy_name":                                   "sagemaker-endpoint-config-prod-instance-count-check",
 	"resource_aws_sagemaker_endpoint_configuration": "aws_sagemaker_endpoint_configuration",
 	"resource_production_variants":                  "production_variants",
-	"resource_initial_instance_count": "initial_instance_count",
+	"resource_initial_instance_count":               "initial_instance_count",
 }
 
 # Functions
