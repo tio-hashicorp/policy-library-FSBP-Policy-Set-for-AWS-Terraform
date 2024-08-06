@@ -1,6 +1,6 @@
 mock "tfplan/v2" {
 	module {
-		source = "./mocks/policy-success-redshift-cluster-with-publicly-accessible-attribute-set-to-true/mock-tfplan-v2.sentinel"
+		source = "./mocks/policy-success-redshift-cluster-with-publicly-accessible-attribute-set-to-false/mock-tfplan-v2.sentinel"
 	}
 }
 
