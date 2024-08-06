@@ -446,6 +446,11 @@ policy "sagemaker-endpoint-config-prod-instance-count-check" {
   }
 }
 
+policy "redshift-cluster-public-access-check" {
+  source = "./policies/redshift-cluster-public-access-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
