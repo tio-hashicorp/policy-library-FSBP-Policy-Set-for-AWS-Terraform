@@ -11,7 +11,7 @@ provider "aws" {
   region = "us-west-2"
 }
 
-module "sagemaker_endpoint_instances" {
-  source                          = "./sagemaker-endpoint-instances"
-  initial_instance_count_variable = 10
+module "redshift-cluster" {
+  source                       = "./redshift-cluster"
+  publicly_accessible_variable = false
 }
