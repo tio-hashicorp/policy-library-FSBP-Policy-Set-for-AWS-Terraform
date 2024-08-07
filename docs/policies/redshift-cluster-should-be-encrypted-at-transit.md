@@ -1,4 +1,4 @@
-# AWS Redshift Cluster should have the publicly_accessable attribute set to false
+# AWS Redshift Cluster should have the require_ssl parameter in the AWS Redshift Parameter Group set to true
 
 | Provider            | Category  |
 | ------------------- | --------  |
