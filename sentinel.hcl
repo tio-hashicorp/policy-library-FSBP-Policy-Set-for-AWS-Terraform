@@ -456,6 +456,15 @@ policy "redshift-cluster-should-be-encrypted-at-transit" {
  enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-automated-snapshot-retention-enabled" {
+ source = "./policies/redshift-cluster-automated-snapshot-retention-enabled.sentinel"
+ enforcement_level = "advisory"
+ params = {
+  automated_snapshot_retention_period_lower_limit = 7
+  automated_snapshot_retention_period_upper_limit = 35
+ }
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
