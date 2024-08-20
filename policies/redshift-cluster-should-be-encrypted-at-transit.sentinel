@@ -1,4 +1,4 @@
-# This policy checks if resources of type 'aws_redshift_cluster' refernced to the
+# This policy checks if resources of type 'aws_redshift_cluster' referenced to the
 #resources of type 'aws_redshift_parameter_group' and having the 'require_ssl'
 #set to 'true'
 

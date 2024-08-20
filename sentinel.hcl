@@ -470,6 +470,11 @@ policy "redshift-cluster-automated-snapshot-retention-enabled" {
  }
 }
 
+policy "redshift-cluster-maintenance-settings-check" {
+ source = "./policies/redshift-cluster-maintenance-settings-check.sentinel"
+ enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
