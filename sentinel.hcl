@@ -475,6 +475,11 @@ policy "redshift-cluster-maintenance-settings-check" {
  enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-enhanced-vpc-routing-enabled" {
+ source = "./policies/redshift-cluster-enhanced-vpc-routing-enabled.sentinel"
+ enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
