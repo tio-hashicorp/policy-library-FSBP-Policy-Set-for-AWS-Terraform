@@ -101,70 +101,7 @@ policy "elasticache-redis-cluster-auto-backup-enabled" {
   enforcement_level = "advisory"
 }
 
-policy "elasticache-redis-cluster-auto-minor-version-upgrade-enabled" {
-  source = "./policies/elasticache-redis-cluster-auto-minor-version-upgrade-enabled.sentinel"
-  enforcement_level = "advisory"
-}
 
-policy "elasticache-redis-replication-group-auto-failover-enabled" {
-  source = "./policies/elasticache-redis-replication-group-auto-failover-enabled.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elasticache-redis-replication-group-encryption-at-rest-enabled" {
-  source = "./policies/elasticache-redis-replication-group-encryption-at-rest-enabled.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elasticache-redis-replication-group-encryption-at-transit-enabled" {
-  source = "./policies/elasticache-redis-replication-group-encryption-at-transit-enabled.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elb-configure-https-tls-termination-classic-load-balancer" {
-  source = "./policies/elb-configure-https-tls-termination-classic-load-balancer.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elb-connection-draining-enabled" {
-  source = "./policies/elb-connection-draining-enabled.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elb-cross-zone-load-balancing-enabled" {
-  source = "./policies/elb-cross-zone-load-balancing-enabled.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elb-drop-invalid-http-headers" {
-  source = "./policies/elb-drop-invalid-http-headers.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elb-ensure-access-logging-enabled" {
-  source = "./policies/elb-ensure-access-logging-enabled.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elb-ensure-deletion-protection-enabled" {
-  source = "./policies/elb-ensure-deletion-protection-enabled.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elb-ensure-http-request-redirection" {
-  source = "./policies/elb-ensure-http-request-redirection.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elb-ensure-ssl-listener-acm-cert-classic-load-balancer" {
-  source = "./policies/elb-ensure-ssl-listener-acm-cert-classic-load-balancer.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "elb-ensure-ssl-listener-predefined-security-policy" {
-  source = "./policies/elb-ensure-ssl-listener-predefined-security-policy.sentinel"
-  enforcement_level = "advisory"
-}
 
 policy "elb-ensure-multi-az-configuration-classic-load-balancer" {
   source = "./policies/elb-ensure-multi-az-configuration-classic-load-balancer.sentinel"
@@ -487,5 +424,10 @@ policy "network-firewall-logging-enabled" {
 
 policy "network-firewall-policy-rule-group-associated" {
   source = "./policies/network-firewall-policy-rule-group-associated.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "aws-activemq-cloudwatch-audit-log-enabled" {
+  source = "./policies/aws-activemq-cloudwatch-audit-log-enabled.sentinel"
   enforcement_level = "advisory"
 }
