@@ -47,6 +47,7 @@ summary = {
 # Outputs
 
 print(report.generate_policy_report(summary))
+
 # Rules
 
 main = rule {
