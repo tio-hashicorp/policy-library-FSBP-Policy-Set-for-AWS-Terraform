@@ -490,7 +490,7 @@ policy "network-firewall-policy-rule-group-associated" {
   enforcement_level = "advisory"
 }
 
-policy "aws-activemq-cloudwatch-audit-log-enabled" {
-  source = "./policies/aws-activemq-cloudwatch-audit-log-enabled.sentinel"
+policy "mq-cloudwatch-audit-log-enabled" {
+  source = "./policies/mq-cloudwatch-audit-log-enabled.sentinel"
   enforcement_level = "advisory"
 }

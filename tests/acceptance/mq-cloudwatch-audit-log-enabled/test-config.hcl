@@ -1,4 +1,4 @@
-name = "aws-activemq-cloudwatch-audit-log-enabled"
+name = "mq-cloudwatch-audit-log-enabled"
 
 disabled = false
 

@@ -13,7 +13,7 @@ By publishing ActiveMQ broker logs to CloudWatch Logs, you can create CloudWatch
 ## Policy Results (Pass)
 ```bash
 trace:
-      Pass - aws-activemq-cloudwatch-audit-log-enabled.sentinel
+      Pass - mq-cloudwatch-audit-log-enabled.sentinel
 
       Description:
         This policy checks if resources of type 'aws_mq_broker' have the attribute
@@ -28,7 +28,7 @@ trace:
 
       ✓ Found 0 resource violations
 
-      aws-activemq-cloudwatch-audit-log-enabled.sentinel:52:1 - Rule "main"
+      mq-cloudwatch-audit-log-enabled.sentinel:52:1 - Rule "main"
         Value:
           true
 ```
@@ -38,7 +38,7 @@ trace:
 ## Policy Results (Fail)
 ```bash
 trace:
-      Fail - aws-activemq-cloudwatch-audit-log-enabled.sentinel
+      Fail - mq-cloudwatch-audit-log-enabled.sentinel
 
       Description:
         This policy checks if resources of type 'aws_mq_broker' have the attribute
@@ -59,7 +59,7 @@ trace:
           | Attribute 'logs' with parameter 'audit' should be true for AWS ActiveMQ Broker. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/mq-controls.html#mq-2 for more details.
 
 
-      aws-activemq-cloudwatch-audit-log-enabled.sentinel:52:1 - Rule "main"
+      mq-cloudwatch-audit-log-enabled.sentinel:52:1 - Rule "main"
         Value:
           false
 ```

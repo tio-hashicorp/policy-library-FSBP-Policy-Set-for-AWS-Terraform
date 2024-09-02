@@ -21,10 +21,7 @@ const = {
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
 		mq_broker_logs_values = maps.get(res, "values.logs", {})
-		if mq_broker_logs_values is empty {
-			return false
-		}
-		return mq_broker_logs_values[0].audit is "true"
+		return mq_broker_logs_values is not empty and mq_broker_logs_values[0].audit is "true"
 	})
 }
 
