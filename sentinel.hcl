@@ -489,3 +489,8 @@ policy "network-firewall-policy-rule-group-associated" {
   source = "./policies/network-firewall-policy-rule-group-associated.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "kinesis-stream-encrypted" {
+  source = "./policies/kinesis-stream-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
