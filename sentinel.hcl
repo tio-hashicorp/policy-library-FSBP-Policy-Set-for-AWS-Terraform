@@ -480,6 +480,11 @@ policy "redshift-cluster-enhanced-vpc-routing-enabled" {
  enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-default-admin-check" {
+ source = "./policies/redshift-cluster-default-admin-check.sentinel"
+ enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
@@ -487,6 +492,11 @@ policy "network-firewall-logging-enabled" {
 
 policy "network-firewall-policy-rule-group-associated" {
   source = "./policies/network-firewall-policy-rule-group-associated.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "mq-cloudwatch-audit-log-enabled" {
+  source = "./policies/mq-cloudwatch-audit-log-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
