@@ -11,8 +11,8 @@ import "json"
 # Constants
 
 const = {
-	"policy_name":                "kinesis-stream-encrypted",
-	"message":                    "Attribute 'encryption_type' should be 'KMS' for AWS Kinesis Stream. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kinesis-controls.html#kinesis-1 for more details.",
+	"policy_name":                 "kinesis-stream-encrypted",
+	"message":                     "Attribute 'encryption_type' should be 'KMS' for AWS Kinesis Stream. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kinesis-controls.html#kinesis-1 for more details.",
 	"resource_aws_kinesis_stream": "aws_kinesis_stream",
 }
 
