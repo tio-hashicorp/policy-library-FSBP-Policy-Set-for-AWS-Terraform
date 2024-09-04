@@ -27,11 +27,11 @@ trace:
 
       → → Overall Result: true
 
-      This result means that all resources have passed the policy check for the policy redshift-cluster-public-access-check.
+      This result means that all resources have passed the policy check for the policy redshift-cluster-audit-logging-enabled.
 
       ✓ Found 0 resource violations
 
-      redshift-cluster-audit-logging-enabled.sentinel:128:1 - Rule "main"
+      redshift-cluster-audit-logging-enabled.sentinel:84:1 - Rule "main"
         Value:
           true
 ```
@@ -53,17 +53,17 @@ trace:
 
       → → Overall Result: false
 
-      This result means that not all resources passed the policy check and the protected behavior is not allowed for the policy redshift-cluster-public-access-check.
+      This result means that not all resources passed the policy check and the protected behavior is not allowed for the policy redshift-cluster-audit-logging-enabled.
 
       Found 1 resource violations
 
       → Module name: root
         ↳ Resource Address: aws_redshift_cluster.rscluster
           | ✗ failed
-          | Parameter 'require_ssl' should be true for AWS Redshift Parameter Group. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/redshift-controls.html#redshift-2 for more details.
+          | Parameter 'logging' should be enabled or referenced to resource AWS Redshift Logging for AWS Redshift Parameter Group. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/redshift-controls.html#redshift-4 for more details.
 
 
-      redshift-cluster-audit-logging-enabled.sentinel:128:1 - Rule "main"
+      redshift-cluster-audit-logging-enabled.sentinel:84:1 - Rule "main"
         Value:
           false
 ```

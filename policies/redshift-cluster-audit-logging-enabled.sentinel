@@ -12,8 +12,8 @@ import "strings"
 
 # Constants
 const = {
-	"policy_name":                           "redshift-cluster-public-access-check",
-	"message":                               "Parameter 'require_ssl' should be true for AWS Redshift Parameter Group. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/redshift-controls.html#redshift-2 for more details.",
+	"policy_name":                           "redshift-cluster-audit-logging-enabled",
+	"message":                               "Parameter 'logging' should be enabled or referenced to resource AWS Redshift Logging for AWS Redshift Parameter Group. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/redshift-controls.html#redshift-4 for more details.",
 	"resource_aws_redshift_cluster":         "aws_redshift_cluster",
 	"resource_aws_redshift_cluster_logging": "aws_redshift_logging",
 	"address":        "address",
