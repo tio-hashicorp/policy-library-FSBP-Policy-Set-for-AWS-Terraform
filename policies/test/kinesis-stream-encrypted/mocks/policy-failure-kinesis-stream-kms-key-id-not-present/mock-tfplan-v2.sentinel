@@ -17,9 +17,9 @@ planned_values = {
 			"values": {
 				"encryption_type":           "KMS",
 				"enforce_consumer_deletion": false,
-				"name":                      "terraform-kinesis-test",
-				"retention_period":          48,
-				"shard_count":               1,
+				"name":             "terraform-kinesis-test",
+				"retention_period": 48,
+				"shard_count":      1,
 				"shard_level_metrics": [
 					"IncomingBytes",
 					"OutgoingBytes",
