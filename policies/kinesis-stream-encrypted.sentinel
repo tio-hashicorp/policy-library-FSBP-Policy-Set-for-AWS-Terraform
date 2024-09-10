@@ -12,7 +12,7 @@ import "json"
 
 const = {
 	"policy_name":                 "kinesis-stream-encrypted",
-	"message":                     "Attribute 'encryption_type' should be 'KMS' for AWS Kinesis Stream. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kinesis-controls.html#kinesis-1 for more details.",
+	"message":                     "Attribute 'kms_key_id' attribute must be specified and not empty, and 'encryption_type' must be set to 'KMS' for the AWS Kinesis Stream. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kinesis-controls.html#kinesis-1 for more details.",
 	"resource_aws_kinesis_stream": "aws_kinesis_stream",
 }
 
@@ -20,7 +20,11 @@ const = {
 
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
-		kinesis_stream_values = maps.get(res, "values.encryption_type", {})
+		kinesis_id = maps.get(res, "values.kms_key_id", {})
+		if kinesis_id is null or kinesis_id is empty {
+			return false
+		}
+		kinesis_stream_values = maps.get(res, "values.encryption_type", "NONE")
 		return kinesis_stream_values is not empty and kinesis_stream_values is "KMS"
 	})
 }

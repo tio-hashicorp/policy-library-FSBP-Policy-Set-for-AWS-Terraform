@@ -28,7 +28,7 @@ trace:
 
       ✓ Found 0 resource violations
 
-      kinesis-stream-encrypted.sentinel:50:1 - Rule "main"
+      kinesis-stream-encrypted.sentinel:54:1 - Rule "main"
         Value:
           true
 ```
@@ -56,10 +56,10 @@ trace:
       → Module name: root
         ↳ Resource Address: aws_kinesis_stream.test_stream
           | ✗ failed
-          | Attribute 'encryption_type' should be 'KMS' for AWS Kinesis Stream. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kinesis-controls.html#kinesis-1 for more details.
+          | Attribute 'kms_key_id' attribute must be specified and not empty, and 'encryption_type' must be set to 'KMS' for the AWS Kinesis Stream. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kinesis-controls.html#kinesis-1 for more details.
 
 
-      kinesis-stream-encrypted.sentinel:50:1 - Rule "main"
+      kinesis-stream-encrypted.sentinel:54:1 - Rule "main"
         Value:
           false
 ```
