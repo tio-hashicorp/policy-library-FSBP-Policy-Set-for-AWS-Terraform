@@ -499,3 +499,8 @@ policy "mq-cloudwatch-audit-log-enabled" {
   source = "./policies/mq-cloudwatch-audit-log-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "kinesis-stream-encrypted" {
+  source = "./policies/kinesis-stream-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
