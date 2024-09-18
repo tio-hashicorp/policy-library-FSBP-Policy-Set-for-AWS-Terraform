@@ -504,3 +504,8 @@ policy "kinesis-stream-encrypted" {
   source = "./policies/kinesis-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "kms-restrict-iam-inline-policies-decrypt-all-kms-keys" {
+  source = "./policies/kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel"
+  enforcement_level = "advisory"
+}
