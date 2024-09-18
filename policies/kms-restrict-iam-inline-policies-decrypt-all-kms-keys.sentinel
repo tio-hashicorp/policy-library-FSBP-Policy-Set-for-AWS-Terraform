@@ -11,9 +11,9 @@ import "json"
 # Constants
 
 const = {
-	"policy_name":                 "kms-restrict-iam-inline-policies-decrypt-all-kms-keys",
-	"message":                     "Actions 'kms:ReEncryptFrom' and 'kms:Decrypt' must not be allowed on all 'KMS keys'. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kms-controls.html#kms-2 for more details.",
-	"resource_aws_iam_policy":     "aws_iam_policy",
+	"policy_name":             "kms-restrict-iam-inline-policies-decrypt-all-kms-keys",
+	"message":                 "Actions 'kms:ReEncryptFrom' and 'kms:Decrypt' must not be allowed on all 'KMS keys'. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kms-controls.html#kms-2 for more details.",
+	"resource_aws_iam_policy": "aws_iam_policy",
 }
 
 # Functions
@@ -21,13 +21,13 @@ const = {
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
 		policy = maps.get(res, "values.policy", "")
-        actions = json.unmarshal(policy)
-        for actions["Statement"] as action {
-            if "kms:ReEncryptFrom" in action["Action"] or "kms:Decrypt" in action["Action"] {
-                return false
-            }
-        }
-        return true
+		actions = json.unmarshal(policy)
+		for actions["Statement"] as action {
+			if "kms:ReEncryptFrom" in action["Action"] or "kms:Decrypt" in action["Action"] {
+				return false
+			}
+		}
+		return true
 	})
 }
 
