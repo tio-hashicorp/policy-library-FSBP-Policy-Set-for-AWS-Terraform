@@ -1,4 +1,4 @@
-# Kinesis streams should be encrypted at rest
+# KMS restrict IAM inline policies decrypt all KMS keys
 
 | Provider            | Category |
 |---------------------|----------|
@@ -20,9 +20,9 @@ trace:
     Pass - kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel
 
     Description:
-    This policy checks if resources of type 'kinesis-stream-encrypted' have the
-    'encryption_type'
-    set to 'KMS'
+    This policy checks if resources of type
+    'kms-restrict-iam-inline-policies-decrypt-all-kms-keys'
+    contain blocked action patterns such as 'kms:ReEncryptFrom' and 'kms:Decrypt'
 
     Print messages:
 
@@ -45,9 +45,9 @@ trace:
     Fail - kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel
 
     Description:
-    This policy checks if resources of type 'kinesis-stream-encrypted' have the
-    'encryption_type'
-    set to 'KMS'
+    This policy checks if resources of type
+    'kms-restrict-iam-inline-policies-decrypt-all-kms-keys'
+    contain blocked action patterns such as 'kms:ReEncryptFrom' and 'kms:Decrypt'
 
     Print messages:
 

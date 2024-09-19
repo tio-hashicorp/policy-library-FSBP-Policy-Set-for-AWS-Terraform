@@ -1,5 +1,5 @@
-# This policy checks if resources of type 'kinesis-stream-encrypted' have the 'encryption_type'
-# set to 'KMS'
+# This policy checks if resources of type 'kms-restrict-iam-inline-policies-decrypt-all-kms-keys'
+# contain blocked action patterns such as 'kms:ReEncryptFrom' and 'kms:Decrypt'
 
 import "tfplan/v2" as tfplan
 import "tfresources" as tf
