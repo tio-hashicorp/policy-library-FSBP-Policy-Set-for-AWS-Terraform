@@ -1,4 +1,4 @@
-# This policy checks if resources of type 'kms-restrict-iam-inline-policies-decrypt-all-kms-keys'
+# This policy checks if resources of type 'aws_iam_policy_document'
 # contain blocked action patterns such as 'kms:ReEncryptFrom' and 'kms:Decrypt'
 
 import "tfplan/v2" as tfplan
@@ -20,10 +20,11 @@ const = {
 
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
-		policy = maps.get(res, "values.policy", "")
-		actions = json.unmarshal(policy)
-		for actions["Statement"] as action {
-			if "kms:ReEncryptFrom" in action["Action"] or "kms:Decrypt" in action["Action"] {
+		policy_json = maps.get(res, "values.policy", "")
+		policies = json.unmarshal(policy_json)
+		for maps.get(policies, "Statement", []) as action {
+			actions = maps.get(action, "Action", [])
+			if "kms:ReEncryptFrom" in actions or "kms:Decrypt" in actions {
 				return false
 			}
 		}

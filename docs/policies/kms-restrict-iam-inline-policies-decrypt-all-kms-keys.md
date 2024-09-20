@@ -21,7 +21,7 @@ trace:
 
     Description:
     This policy checks if resources of type
-    'kms-restrict-iam-inline-policies-decrypt-all-kms-keys'
+    'aws_iam_policy_document'
     contain blocked action patterns such as 'kms:ReEncryptFrom' and 'kms:Decrypt'
 
     Print messages:
@@ -46,7 +46,7 @@ trace:
 
     Description:
     This policy checks if resources of type
-    'kms-restrict-iam-inline-policies-decrypt-all-kms-keys'
+    'aws_iam_policy_document'
     contain blocked action patterns such as 'kms:ReEncryptFrom' and 'kms:Decrypt'
 
     Print messages:
