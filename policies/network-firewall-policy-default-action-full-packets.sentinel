@@ -1,4 +1,4 @@
-# This policy ensures that resources of type 'aws_networkfirewall_firewall' have
+# This policy ensures that resources of type 'aws_networkfirewall_firewall_policy' have
 # default stateless action should be 'aws:drop' or 'aws:forward_to_sfe' for full packets
 
 import "tfplan/v2" as tfplan
@@ -34,8 +34,8 @@ get_violations = func(resources) {
 
 # Variables
 
-statelessDefaultActions = tf.plan(tfplan.planned_values.resources).type(const.resource_aws_networkfirewall_firewall_policy).resources
-violations = get_violations(statelessDefaultActions)
+aws_networkfirewall_firewall_policies = tf.plan(tfplan.planned_values.resources).type(const.resource_aws_networkfirewall_firewall_policy).resources
+violations = get_violations(aws_networkfirewall_firewall_policies)
 
 summary = {
 	"policy_name": const.policy_name,
