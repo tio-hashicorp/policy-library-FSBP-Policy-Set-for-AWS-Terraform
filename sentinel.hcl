@@ -509,3 +509,8 @@ policy "kms-restrict-iam-inline-policies-decrypt-all-kms-keys" {
   source = "./policies/kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "network-firewall-policy-default-action-full-packets" {
+  source = "./policies/network-firewall-policy-default-action-full-packets.sentinel"
+  enforcement_level = "advisory"
+}
