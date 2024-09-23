@@ -17,7 +17,7 @@ trace:
 
       Description:
         This policy ensures that resources of type 'aws_networkfirewall_firewall' have
-        default stateless action should be 'aws:drop' or 'aws:forward_to_sfe'
+        default stateless action should be 'aws:drop' or 'aws:forward_to_sfe' for full packets
 
       Print messages:
 
@@ -41,7 +41,7 @@ trace:
 
       Description:
         This policy ensures that resources of type 'aws_networkfirewall_firewall' have
-        default stateless action should be 'aws:drop' or 'aws:forward_to_sfe'
+        default stateless action should be 'aws:drop' or 'aws:forward_to_sfe' for full packets
 
       Print messages:
 
