@@ -10,8 +10,8 @@ import "collection/maps" as maps
 # Constants
 
 const = {
-	"policy_name":             "kms-restrict-iam-inline-policies-decrypt-all-kms-keys",
-	"message":                 "Actions 'kms:ReEncryptFrom' and 'kms:Decrypt' must not be allowed on all 'KMS keys'. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kms-controls.html#kms-2 for more details.",
+	"policy_name":                      "kms-restrict-iam-inline-policies-decrypt-all-kms-keys",
+	"message":                          "Actions 'kms:ReEncryptFrom' and 'kms:Decrypt' must not be allowed on all 'KMS keys'. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kms-controls.html#kms-2 for more details.",
 	"resource_aws_iam_policy_document": "aws_iam_policy_document",
 }
 
