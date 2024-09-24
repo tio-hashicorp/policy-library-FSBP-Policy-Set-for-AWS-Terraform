@@ -485,6 +485,11 @@ policy "redshift-cluster-default-admin-check" {
  enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-audit-logging-enabled" {
+ source = "./policies/redshift-cluster-audit-logging-enabled.sentinel"
+ enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
