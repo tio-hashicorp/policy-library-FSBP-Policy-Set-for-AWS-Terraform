@@ -480,6 +480,11 @@ policy "redshift-cluster-audit-logging-enabled" {
  enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-default-db-name-check" {
+ source = "./policies/redshift-cluster-default-db-name-check.sentinel"
+ enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
