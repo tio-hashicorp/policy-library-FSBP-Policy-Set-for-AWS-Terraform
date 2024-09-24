@@ -14,14 +14,15 @@ With AWS KMS, you control who can use your KMS keys and gain access to your encr
 
 Instead of granting permission for all keys, determine the minimum set of keys that users need to access encrypted data. Then design policies that allow the users to use only those keys. For example, do not allow kms:Decrypt permission on all KMS keys. Instead, allow the permission only on specific keys in a specific Region for your account. By adopting the principle of least privilege, you can reduce the risk of unintended disclosure of your data.
 
+This rule is covered by the [kms-restrict-iam-inline-policies-decrypt-all-kms-keys](../../policies/kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel) policy.
+
 ## Policy Results (Pass)
 ```bash
 trace:
     Pass - kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel
 
     Description:
-    This policy checks if resources of type
-    'aws_iam_policy_document'
+    This policy checks if resources of type 'aws_iam_policy_document'
     contain blocked action patterns such as 'kms:ReEncryptFrom' and 'kms:Decrypt'
 
     Print messages:
@@ -32,7 +33,7 @@ trace:
 
     ✓ Found 0 resource violations
 
-    kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel:56:1 - Rule "main"
+    kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel:55:1 - Rule "main"
     Value:
         true
 ```
@@ -45,8 +46,7 @@ trace:
     Fail - kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel
 
     Description:
-    This policy checks if resources of type
-    'aws_iam_policy_document'
+    This policy checks if resources of type 'aws_iam_policy_document'
     contain blocked action patterns such as 'kms:ReEncryptFrom' and 'kms:Decrypt'
 
     Print messages:
@@ -63,7 +63,7 @@ trace:
         | Actions 'kms:ReEncryptFrom' and 'kms:Decrypt' must not be allowed on all 'KMS keys'. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/kms-controls.html#kms-2 for more details.
 
 
-    kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel:56:1 - Rule "main"
+    kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel:55:1 - Rule "main"
     Value:
         false
 ```
