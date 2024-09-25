@@ -514,3 +514,8 @@ policy "network-firewall-policy-default-action-full-packets" {
   source = "./policies/network-firewall-policy-default-action-full-packets.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "network-firewall-policy-default-action-fragmented-packets" {
+  source = "./policies/network-firewall-policy-default-action-fragmented-packets.sentinel"
+  enforcement_level = "advisory"
+}
