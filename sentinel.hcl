@@ -519,3 +519,8 @@ policy "network-firewall-policy-default-action-fragmented-packets" {
   source = "./policies/network-firewall-policy-default-action-fragmented-packets.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "network-firewall-stateless-rule-group" {
+  source = "./policies/network-firewall-stateless-rule-group.sentinel"
+  enforcement_level = "advisory"
+}
