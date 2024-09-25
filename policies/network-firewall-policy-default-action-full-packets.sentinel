@@ -23,10 +23,7 @@ get_violations = func(resources) {
 			return false
 		}
 		default_stateless_action = maps.get(firewall_policy[0], "stateless_default_actions", [])
-		if default_stateless_action contains "aws:pass" {
-			return false
-		}
-		return true
+		return default_stateless_action not contains "aws:pass"
 	})
 }
 
