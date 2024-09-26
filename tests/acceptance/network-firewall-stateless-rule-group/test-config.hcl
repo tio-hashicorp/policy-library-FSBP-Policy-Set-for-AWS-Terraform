@@ -12,6 +12,6 @@ case "stateless-actions-are-not-present" {
 case "stateless-actions-are-present" {
     path = "./cases/stateless-actions-are-present"
     expectation {
-        result = false
+        result = true
     }
 }
