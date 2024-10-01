@@ -1,4 +1,4 @@
-# Network Firewall policy default action fragmented packets
+# The default stateless action for Network Firewall policies should be drop or forward for fragmented packets
 
 | Provider            | Category                                         |
 |---------------------|--------------------------------------------------|

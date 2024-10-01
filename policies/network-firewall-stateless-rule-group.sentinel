@@ -10,6 +10,8 @@ import "collection/maps" as maps
 const = {
 	"policy_name":                             "network-firewall-stateless-rule-group",
 	"resource_aws_networkfirewall_rule_group": "aws_networkfirewall_rule_group",
+	"rules_source":                            "rules_source",
+	"stateless_rules_and_custom_actions":      "stateless_rules_and_custom_actions",
 	"message": "stateless rule group in 'aws_networkfirewall_rule_group' contains rules. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/networkfirewall-controls.html#networkfirewall-6 for more details.",
 }
 
@@ -21,8 +23,8 @@ get_violations = func(resources) {
 		if rule_group is empty {
 			return false
 		}
-		rules_source = maps.get(rule_group[0], "rules_source", [])
-		stateless_rules = maps.get(rules_source[0], "stateless_rules_and_custom_actions", [])
+		rules_source = maps.get(rule_group[0], const.rules_source, [])
+		stateless_rules = maps.get(rules_source[0], const.stateless_rules_and_custom_actions, [])
 		return stateless_rules is not empty
 	})
 }

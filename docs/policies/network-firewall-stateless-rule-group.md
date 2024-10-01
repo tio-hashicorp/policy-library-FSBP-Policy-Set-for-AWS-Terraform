@@ -1,4 +1,4 @@
-# Stateless Network Firewall rule group should not be empty
+# Stateless Network Firewall rule group should not be empty in AWS Network Firewall
 
 | Provider            | Category                                         |
 |---------------------|--------------------------------------------------|

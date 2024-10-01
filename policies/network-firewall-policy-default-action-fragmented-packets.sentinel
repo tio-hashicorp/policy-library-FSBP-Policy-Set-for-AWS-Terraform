@@ -10,8 +10,8 @@ import "collection/maps" as maps
 # Constants
 const = {
 	"policy_name":                                  "network-firewall-policy-default-action-full-packets",
-	"resource_aws_networkfirewall_firewall":        "aws_networkfirewall_firewall",
 	"resource_aws_networkfirewall_firewall_policy": "aws_networkfirewall_firewall_policy",
+	"stateless_fragment_default_actions":           "stateless_fragment_default_actions",
 	"message": "'aws_networkfirewall_firewall' default stateless action should be 'aws:drop' or 'aws:forward_to_sfe' for fragmented packets. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/networkfirewall-controls.html#networkfirewall-4 for more details.",
 }
 
@@ -23,7 +23,7 @@ get_violations = func(resources) {
 		if firewall_policy is null or firewall_policy is empty {
 			return false
 		}
-		fragmented_default_stateless_action = maps.get(firewall_policy[0], "stateless_fragment_default_actions", [])
+		fragmented_default_stateless_action = maps.get(firewall_policy[0], const.stateless_fragment_default_actions, [])
 		return fragmented_default_stateless_action not contains "aws:pass"
 	})
 }
