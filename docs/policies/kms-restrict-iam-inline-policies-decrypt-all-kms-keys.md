@@ -8,7 +8,7 @@
 
 This control checks whether the inline policies that are embedded in your IAM identities (role, user, or group) allow the AWS KMS decryption and re-encryption actions on all KMS keys. The control fails if the policy is open enough to allow kms:Decrypt or kms:ReEncryptFrom actions on all KMS keys.
 
-The control only checks KMS keys in the Resource element and doesn't take into account any conditionals in the Condition element of a policy.
+The control only checks KMS keys in the Resource element that you create with the `aws_iam_policy_document` datasource and doesn't take into account any conditionals in the Condition element of a policy.
 
 With AWS KMS, you control who can use your KMS keys and gain access to your encrypted data. IAM policies define which actions an identity (user, group, or role) can perform on which resources. Following security best practices, AWS recommends that you allow least privilege. In other words, you should grant to identities only the permissions they need and only for keys that are required to perform a task. Otherwise, the user might use keys that are not appropriate for your data.
 
