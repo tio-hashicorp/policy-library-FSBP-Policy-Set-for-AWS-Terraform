@@ -495,6 +495,11 @@ policy "redshift-cluster-default-db-name-check" {
  enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-unrestricted-port-access-check" {
+  source = "./policies/redshift-cluster-unrestricted-port-access-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
