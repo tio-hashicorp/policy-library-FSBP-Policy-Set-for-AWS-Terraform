@@ -9,9 +9,9 @@ import "collection/maps" as maps
 
 # Constants
 const = {
-	"policy_name":                    "dms-replication-instances-should-not-be-public",
-	"message":                        "Attribute 'publicly_accessible' should be false for AWS DMS Replication Instance. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/dms-controls.html#dms-1 for more details.",
-	"resource_aws_dms_replication_instance":    "aws_dms_replication_instance",
+	"policy_name": "dms-replication-instances-should-not-be-public",
+	"message":     "Attribute 'publicly_accessible' should be false for AWS DMS Replication Instance. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/dms-controls.html#dms-1 for more details.",
+	"resource_aws_dms_replication_instance": "aws_dms_replication_instance",
 }
 
 # Functions

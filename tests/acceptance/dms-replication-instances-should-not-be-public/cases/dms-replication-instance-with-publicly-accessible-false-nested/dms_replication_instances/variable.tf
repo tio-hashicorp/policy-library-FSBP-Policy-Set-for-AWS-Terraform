@@ -1,3 +1,3 @@
-variable publicly_accessible_variable {
-    type = bool
+variable "publicly_accessible_variable" {
+  type = bool
 }
