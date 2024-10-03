@@ -524,3 +524,8 @@ policy "network-firewall-policy-default-action-full-packets" {
   source = "./policies/network-firewall-policy-default-action-full-packets.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "api-gateway-rest-and-websocket-api-logging-enabled" {
+  source = "./policies/api-gateway-rest-and-websocket-api-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
