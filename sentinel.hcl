@@ -495,6 +495,11 @@ policy "redshift-cluster-default-db-name-check" {
  enforcement_level = "advisory"
 }
 
+policy "macie-status-should-be-enabled" {
+  source = "./policies/macie-status-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
