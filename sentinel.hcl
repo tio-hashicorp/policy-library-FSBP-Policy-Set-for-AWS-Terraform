@@ -534,3 +534,8 @@ policy "network-firewall-stateless-rule-group" {
   source = "./policies/network-firewall-stateless-rule-group.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "api-gateway-rest-and-websocket-api-logging-enabled" {
+  source = "./policies/api-gateway-rest-and-websocket-api-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
