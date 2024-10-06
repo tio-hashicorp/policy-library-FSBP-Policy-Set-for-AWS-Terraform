@@ -524,3 +524,8 @@ policy "network-firewall-stateless-rule-group" {
   source = "./policies/network-firewall-stateless-rule-group.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "network-firewall-should-have-deletion-protection-enabled" {
+  source = "./policies/network-firewall-should-have-deletion-protection-enabled.sentinel"
+  enforcement_level = "advisory"
+}
