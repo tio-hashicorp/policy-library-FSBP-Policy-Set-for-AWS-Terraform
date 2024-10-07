@@ -1,8 +1,10 @@
-mock "tfstate/v2" {
+mock "tfplan/v2" {
 	module {
-		source = "./mocks/policy-failure-kms-reencryptform-is-present-and-decrypt-is-not-present-in-actions/mock-tfstate-v2.sentinel"
+		source = "./mocks/policy-success-api-gateway-logging-is-error-or-info/mock-tfplan-v2.sentinel"
 	}
 }
+
+
 
 import "plugin" "tfresources" {
 	source = "../../../plugins/darwin/arm64/sentinel-plugin-tfresources"
@@ -16,6 +18,6 @@ mock "report" {
 
 test {
 	rules = {
-		main = false
+		main = true
 	}
 }

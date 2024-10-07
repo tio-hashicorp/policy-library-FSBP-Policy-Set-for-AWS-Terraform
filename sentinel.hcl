@@ -485,6 +485,16 @@ policy "redshift-cluster-default-admin-check" {
  enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-audit-logging-enabled" {
+ source = "./policies/redshift-cluster-audit-logging-enabled.sentinel"
+ enforcement_level = "advisory"
+}
+
+policy "redshift-cluster-default-db-name-check" {
+ source = "./policies/redshift-cluster-default-db-name-check.sentinel"
+ enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
@@ -527,5 +537,10 @@ policy "network-firewall-stateless-rule-group" {
 
 policy "network-firewall-should-have-deletion-protection-enabled" {
   source = "./policies/network-firewall-should-have-deletion-protection-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-rest-and-websocket-api-logging-enabled" {
+  source = "./policies/api-gateway-rest-and-websocket-api-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
