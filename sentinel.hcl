@@ -510,6 +510,11 @@ policy "network-firewall-policy-rule-group-associated" {
   enforcement_level = "advisory"
 }
 
+policy "macie-status-should-be-enabled" {
+  source = "./policies/macie-status-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "mq-cloudwatch-audit-log-enabled" {
   source = "./policies/mq-cloudwatch-audit-log-enabled.sentinel"
   enforcement_level = "advisory"
