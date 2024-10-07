@@ -510,6 +510,11 @@ policy "mq-cloudwatch-audit-log-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "mq-auto-minor-version-upgrade-enabled" {
+  source = "./policies/mq-auto-minor-version-upgrade-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "kinesis-stream-encrypted" {
   source = "./policies/kinesis-stream-encrypted.sentinel"
   enforcement_level = "advisory"
