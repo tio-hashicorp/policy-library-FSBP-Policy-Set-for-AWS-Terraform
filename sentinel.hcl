@@ -495,6 +495,11 @@ policy "redshift-cluster-default-db-name-check" {
  enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-should-be-encrypted-at-rest" {
+  source = "./policies/redshift-cluster-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "dms-replication-instances-should-not-be-public" {
   source = "./policies/dms-replication-instances-should-not-be-public.sentinel"
   enforcement_level = "advisory"
@@ -510,8 +515,18 @@ policy "network-firewall-policy-rule-group-associated" {
   enforcement_level = "advisory"
 }
 
+policy "macie-status-should-be-enabled" {
+  source = "./policies/macie-status-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "mq-cloudwatch-audit-log-enabled" {
   source = "./policies/mq-cloudwatch-audit-log-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "mq-auto-minor-version-upgrade-enabled" {
+  source = "./policies/mq-auto-minor-version-upgrade-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -527,5 +542,20 @@ policy "kms-restrict-iam-inline-policies-decrypt-all-kms-keys" {
 
 policy "network-firewall-policy-default-action-full-packets" {
   source = "./policies/network-firewall-policy-default-action-full-packets.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "network-firewall-policy-default-action-fragmented-packets" {
+  source = "./policies/network-firewall-policy-default-action-fragmented-packets.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "network-firewall-stateless-rule-group" {
+  source = "./policies/network-firewall-stateless-rule-group.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-rest-and-websocket-api-logging-enabled" {
+  source = "./policies/api-gateway-rest-and-websocket-api-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
