@@ -1,4 +1,4 @@
-name = "aws-macie-status-should-be-enabled"
+name = "mq-auto-minor-version-upgrade-enabled"
 
 disabled = false
 
