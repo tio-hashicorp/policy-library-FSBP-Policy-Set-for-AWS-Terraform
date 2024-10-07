@@ -500,6 +500,11 @@ policy "redshift-cluster-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "dms-replication-instances-should-not-be-public" {
+  source = "./policies/dms-replication-instances-should-not-be-public.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
