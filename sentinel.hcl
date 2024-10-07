@@ -495,6 +495,11 @@ policy "redshift-cluster-default-db-name-check" {
  enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-should-be-encrypted-at-rest" {
+  source = "./policies/redshift-cluster-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
