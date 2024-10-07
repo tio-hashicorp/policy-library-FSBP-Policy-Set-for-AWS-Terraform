@@ -10,7 +10,7 @@ case "x-ray-tracing-is-enabled" {
 }
 
 case "x-ray-tracing-is-disabled" {
-    path = "./cases/x-ray-tracing-is-not-disabled"
+    path = "./cases/x-ray-tracing-is-disabled"
     expectation {
         result = false
     }
