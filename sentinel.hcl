@@ -544,3 +544,8 @@ policy "api-gateway-rest-have-x-ray-tracing-enabled" {
   source = "./policies/api-gateway-rest-have-x-ray-tracing-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "api-gateway-rest-configure-ssl-certificates" {
+  source = "./policies/api-gateway-rest-configure-ssl-certificates.sentinel"
+  enforcement_level = "advisory"
+}
