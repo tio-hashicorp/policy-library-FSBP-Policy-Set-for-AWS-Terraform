@@ -569,3 +569,8 @@ policy "api-gateway-rest-and-websocket-api-logging-enabled" {
   source = "./policies/api-gateway-rest-and-websocket-api-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "api-gateway-rest-have-x-ray-tracing-enabled" {
+  source = "./policies/api-gateway-rest-have-x-ray-tracing-enabled.sentinel"
+  enforcement_level = "advisory"
+}
