@@ -530,6 +530,11 @@ policy "mq-auto-minor-version-upgrade-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "msk-in-cluster-node-require-encrypted-in-transit" {
+  source = "./policies/msk-in-cluster-node-require-encrypted-in-transit.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "kinesis-stream-encrypted" {
   source = "./policies/kinesis-stream-encrypted.sentinel"
   enforcement_level = "advisory"
