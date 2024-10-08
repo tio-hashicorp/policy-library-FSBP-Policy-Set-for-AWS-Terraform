@@ -91,6 +91,7 @@ planned_values = {
 				"stage_name":            "example",
 				"tags":                  null,
 				"variables":             null,
+				"xray_tracing_enabled":  null,
 			},
 		},
 	},
@@ -232,7 +233,7 @@ resource_changes = {
 				"stage_name":            "example",
 				"tags":                  null,
 				"variables":             null,
-				"xray_tracing_enabled":  false,
+				"xray_tracing_enabled":  null,
 			},
 			"after_unknown": {
 				"access_log_settings": [],
@@ -367,9 +368,6 @@ raw = {
 						"stage_name": {
 							"constant_value": "example",
 						},
-						"xray_tracing_enabled": {
-							"constant_value": false,
-						},
 					},
 					"mode":                "managed",
 					"name":                "example",
@@ -475,7 +473,7 @@ raw = {
 						"stage_name":            "example",
 						"tags":                  null,
 						"variables":             null,
-						"xray_tracing_enabled":  false,
+						"xray_tracing_enabled":  null,
 					},
 				},
 			],
@@ -484,13 +482,13 @@ raw = {
 	"relevant_attributes": [
 		{
 			"attribute": [
-				"id",
+				"body",
 			],
 			"resource": "aws_api_gateway_rest_api.example",
 		},
 		{
 			"attribute": [
-				"body",
+				"id",
 			],
 			"resource": "aws_api_gateway_rest_api.example",
 		},
@@ -649,7 +647,7 @@ raw = {
 					"stage_name":            "example",
 					"tags":                  null,
 					"variables":             null,
-					"xray_tracing_enabled":  false,
+					"xray_tracing_enabled":  null,
 				},
 				"after_sensitive": {
 					"access_log_settings": [],
@@ -678,5 +676,5 @@ raw = {
 		},
 	],
 	"terraform_version": "1.9.5",
-	"timestamp":         "2024-10-06T21:49:28Z",
+	"timestamp":         "2024-10-08T05:17:49Z",
 }

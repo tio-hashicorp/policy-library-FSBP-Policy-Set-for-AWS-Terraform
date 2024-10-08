@@ -18,7 +18,11 @@ const = {
 
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
-		return maps.get(res, "values.xray_tracing_enabled", false)
+		xray_tracing = maps.get(res, "values.xray_tracing_enabled", false)
+		if xray_tracing == null {
+			return false
+		}
+		return xray_tracing
 	})
 }
 
