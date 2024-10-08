@@ -295,6 +295,11 @@ policy "rds-ensure-no-default-port" {
   enforcement_level = "advisory"
 }
 
+policy "rds-cluster-default-admin-check" {
+  source = "./policies/rds-cluster-default-admin-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
