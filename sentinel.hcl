@@ -510,6 +510,11 @@ policy "redshift-cluster-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-unrestricted-port-access-check" {
+  source = "./policies/redshift-cluster-unrestricted-port-access-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "dms-replication-instances-should-not-be-public" {
   source = "./policies/dms-replication-instances-should-not-be-public.sentinel"
   enforcement_level = "advisory"
