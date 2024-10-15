@@ -310,6 +310,11 @@ policy "rds-cluster-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "rds-aurora-mysql-audit-logging-enabled" {
+  source = "./policies/rds-aurora-mysql-audit-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
