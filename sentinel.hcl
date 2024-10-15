@@ -505,6 +505,11 @@ policy "dms-replication-instances-should-not-be-public" {
   enforcement_level = "advisory"
 }
 
+policy "dms-auto-minor-version-upgrade-check" {
+  source = "./policies/dms-auto-minor-version-upgrade-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
