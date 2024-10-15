@@ -305,6 +305,11 @@ policy "rds-instance-default-admin-check" {
   enforcement_level = "advisory"
 }
 
+policy "rds-cluster-encrypted-at-rest" {
+  source = "./policies/rds-cluster-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
