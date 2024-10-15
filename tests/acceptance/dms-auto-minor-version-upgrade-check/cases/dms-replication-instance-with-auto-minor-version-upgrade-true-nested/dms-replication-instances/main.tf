@@ -43,7 +43,7 @@ resource "aws_iam_role_policy_attachment" "dms-vpc-role-AmazonDMSVPCManagementRo
 resource "aws_dms_replication_instance" "this" {
   allocated_storage            = 20
   apply_immediately            = true
-  auto_minor_version_upgrade = var.auto-minor-version-upgrade-variable
+  auto_minor_version_upgrade   = var.auto-minor-version-upgrade-variable
   availability_zone            = "us-west-2c"
   engine_version               = "3.1.4"
   kms_key_arn                  = "arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012"
