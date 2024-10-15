@@ -510,6 +510,11 @@ policy "dms-auto-minor-version-upgrade-check" {
   enforcement_level = "advisory"
 }
 
+policy "dms-endpoint-should-be-ssl-configured" {
+  source = "./policies/dms-endpoint-should-be-ssl-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
