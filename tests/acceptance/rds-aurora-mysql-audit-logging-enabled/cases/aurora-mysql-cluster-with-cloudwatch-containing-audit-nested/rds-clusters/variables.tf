@@ -1,5 +1,5 @@
 variable "cloudwatch_logs" {
-  type = [string]
+  type = list(string)
 }
 
 variable "engine_type" {
