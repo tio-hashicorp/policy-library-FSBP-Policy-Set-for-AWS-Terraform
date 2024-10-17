@@ -530,6 +530,11 @@ policy "dms-auto-minor-version-upgrade-check" {
   enforcement_level = "advisory"
 }
 
+policy "dms-redis-tls-enabled" {
+  source = "./policies/dms-redis-tls-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
