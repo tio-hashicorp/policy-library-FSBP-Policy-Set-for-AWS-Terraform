@@ -599,3 +599,8 @@ policy "api-gateway-rest-have-x-ray-tracing-enabled" {
   source = "./policies/api-gateway-rest-have-x-ray-tracing-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "api-gateway-should-be-associated-with-a-waf-web-acl" {
+  source = "./policies/api-gateway-should-be-associated-with-a-waf-web-acl.sentinel"
+  enforcement_level = "advisory"
+}
