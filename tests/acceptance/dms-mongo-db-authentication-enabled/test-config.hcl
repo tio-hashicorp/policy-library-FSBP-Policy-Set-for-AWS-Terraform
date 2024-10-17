@@ -31,7 +31,7 @@ case "DMS Mongo DB with Auth Mechanism Set to Default" {
 }
 
 case "DMS Mongo DB with No Auth Mechanism Attribute" {
-    path = "./cases/dms-mongo-db-with-no-auth-mechanism-atttribute"
+    path = "./cases/dms-mongo-db-with-no-auth-mechanism-attribute"
     expectation {
         result = false
     }
