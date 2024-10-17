@@ -21,10 +21,7 @@ get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
 		settings = maps.get(res, "values.settings", [])
 		cache_settings = maps.get(settings[0], const.caching_enabled, false)
-		if cache_settings and maps.get(settings[0], const.cache_data_encrypted, false) is false {
-			return false
-		}
-		return true
+		return cache_settings and maps.get(settings[0], const.cache_data_encrypted, false) is true
 	})
 }
 
