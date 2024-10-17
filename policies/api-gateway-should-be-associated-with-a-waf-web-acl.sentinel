@@ -19,8 +19,12 @@ const = {
 
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
-		resource_arn = maps.get(res, "config.resource_arn.references", [])
-		for resource_arn as _, val {
+		resource_arn = maps.get(res, "config.resource_arn", {})
+		if resource_arn is not defined {
+			return false
+		}
+		references = maps.get(resource_arn, "references", [])
+		for references as _, val {
 			if strings.has_prefix(val, "aws_api_gateway_stage") {
 				return true
 			}
