@@ -33,6 +33,6 @@ case "DMS Redis with SSL Protocol Set Nested" {
 case "DMS Redis with SSL Protocol Set to Plaintext" {
     path = "./cases/dms-redis-with-ssl-protocol-set-to-plaintext"
     expectation {
-        result = true
+        result = false
     }
 }
