@@ -3,6 +3,6 @@ provider "aws" {
 }
 
 module "dms-resource" {
-  source = "./dms-resources"
+  source                = "./dms-resources"
   ssl_security_protocol = "ssl-encryption"
 }

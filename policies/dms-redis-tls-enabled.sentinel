@@ -12,9 +12,9 @@ const = {
 	"policy_name":               "dms-redis-tls-enabled",
 	"message":                   "Attribute 'ssl_security_protocol' should be 'ssl-encrypted' in 'redis_settings' for engine of type 'redis' in AWS DMS Endpoint. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/dms-controls.html#dms-12 for more details.",
 	"resource_aws_dms_endpoint": "aws_dms_endpoint",
-	"redis_engine":            "redis",
-	"ssl_encryption":    "ssl-encryption",
-	"ssl_security_protocol":            "ssl_security_protocol",
+	"redis_engine":              "redis",
+	"ssl_encryption":            "ssl-encryption",
+	"ssl_security_protocol":     "ssl_security_protocol",
 }
 
 # Functions

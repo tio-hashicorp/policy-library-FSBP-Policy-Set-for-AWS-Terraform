@@ -19,9 +19,9 @@ resource "aws_dms_endpoint" "test" {
     Name = "test"
   }
   redis_settings {
-    auth_type = "none"
-    port = 20
-    server_name = "NEW_SERVER"
+    auth_type             = "none"
+    port                  = 20
+    server_name           = "NEW_SERVER"
     ssl_security_protocol = "ssl-encryption"
   }
   username = "test"

@@ -1,7 +1,7 @@
 terraform {
-	cloud {
-		workspaces {
- 		name = "dms-redis-tls-enabled"
-		}
-	}
+  cloud {
+    workspaces {
+      name = "dms-redis-tls-enabled"
+    }
+  }
 }
