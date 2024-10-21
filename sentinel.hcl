@@ -610,6 +610,11 @@ policy "api-gateway-rest-have-x-ray-tracing-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "api-gateway-access-logging-should-be-configured" {
+  source = "./policies/api-gateway-access-logging-should-be-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "api-gateway-routes-should-specify-an-authorization-type" {
   source = "./policies/api-gateway-routes-should-specify-an-authorization-type.sentinel"
   enforcement_level = "advisory"
