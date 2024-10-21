@@ -530,6 +530,11 @@ policy "dms-auto-minor-version-upgrade-check" {
   enforcement_level = "advisory"
 }
 
+policy "dms-mongo-db-authentication-enabled" {
+  source = "./policies/dms-mongo-db-authentication-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "dms-redis-tls-enabled" {
   source = "./policies/dms-redis-tls-enabled.sentinel"
   enforcement_level = "advisory"
@@ -602,5 +607,10 @@ policy "api-gateway-rest-and-websocket-api-logging-enabled" {
 
 policy "api-gateway-rest-have-x-ray-tracing-enabled" {
   source = "./policies/api-gateway-rest-have-x-ray-tracing-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-rest-configure-ssl-certificates" {
+  source = "./policies/api-gateway-rest-configure-ssl-certificates.sentinel"
   enforcement_level = "advisory"
 }
