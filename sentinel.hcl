@@ -530,6 +530,16 @@ policy "dms-auto-minor-version-upgrade-check" {
   enforcement_level = "advisory"
 }
 
+policy "dms-mongo-db-authentication-enabled" {
+  source = "./policies/dms-mongo-db-authentication-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "dms-redis-tls-enabled" {
+  source = "./policies/dms-redis-tls-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
@@ -602,5 +612,20 @@ policy "api-gateway-rest-have-x-ray-tracing-enabled" {
 
 policy "api-gateway-access-logging-should-be-configured" {
   source = "./policies/api-gateway-access-logging-should-be-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-routes-should-specify-an-authorization-type" {
+  source = "./policies/api-gateway-routes-should-specify-an-authorization-type.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-rest-configure-ssl-certificates" {
+  source = "./policies/api-gateway-rest-configure-ssl-certificates.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-rest-cache-have-encryption-enabled" {
+  source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }

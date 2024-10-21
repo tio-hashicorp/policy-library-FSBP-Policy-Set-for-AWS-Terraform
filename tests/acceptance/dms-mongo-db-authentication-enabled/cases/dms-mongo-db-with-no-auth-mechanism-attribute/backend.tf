@@ -1,7 +1,7 @@
 terraform {
   cloud {
     workspaces {
-      name = "macie-status-should-be-enabled"
+      name = "dms-mongo-db-authentication-enabled"
     }
   }
 }
