@@ -300,6 +300,16 @@ policy "rds-cluster-default-admin-check" {
   enforcement_level = "advisory"
 }
 
+policy "rds-instance-default-admin-check" {
+  source = "./policies/rds-instance-default-admin-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-cluster-encrypted-at-rest" {
+  source = "./policies/rds-cluster-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
@@ -505,8 +515,28 @@ policy "redshift-cluster-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-unrestricted-port-access-check" {
+  source = "./policies/redshift-cluster-unrestricted-port-access-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "dms-replication-instances-should-not-be-public" {
   source = "./policies/dms-replication-instances-should-not-be-public.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "dms-auto-minor-version-upgrade-check" {
+  source = "./policies/dms-auto-minor-version-upgrade-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "dms-mongo-db-authentication-enabled" {
+  source = "./policies/dms-mongo-db-authentication-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "dms-redis-tls-enabled" {
+  source = "./policies/dms-redis-tls-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -582,5 +612,15 @@ policy "api-gateway-rest-have-x-ray-tracing-enabled" {
 
 policy "api-gateway-routes-should-specify-an-authorization-type" {
   source = "./policies/api-gateway-routes-should-specify-an-authorization-type.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-rest-configure-ssl-certificates" {
+  source = "./policies/api-gateway-rest-configure-ssl-certificates.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-rest-cache-have-encryption-enabled" {
+  source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
