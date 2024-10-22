@@ -540,6 +540,22 @@ policy "dms-redis-tls-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "dms-repliction-task-targetdb-logging-enabled" {
+  source = "./policies/dms-repliction-task-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "db_type" = "target"
+  }
+}
+
+policy "dms-repliction-task-sourcedb-logging-enabled" {
+  source = "./policies/dms-repliction-task-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "db_type" = "source"
+  }
+}
+
 policy "network-firewall-logging-enabled" {
   source = "./policies/network-firewall-logging-enabled.sentinel"
   enforcement_level = "advisory"
