@@ -310,6 +310,42 @@ policy "rds-cluster-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "rds-cluster-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "resource_type" = "aws_rds_cluster"
+    "source_type" = "db-cluster"
+  }
+}
+
+policy "rds-instance-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    resource_type = "aws_rds_cluster_instance"
+    source_type = "db-instance"
+  }
+}
+
+policy "rds-parameter-group-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "resource_type" = "aws_rds_cluster_parameter_group"
+    "source_type" = "db-parameter-group"
+  }
+}
+
+policy "rds-security-group-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "resource_type" = "aws_security_group",
+    "source_type" = "db-security-group",
+  }
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
