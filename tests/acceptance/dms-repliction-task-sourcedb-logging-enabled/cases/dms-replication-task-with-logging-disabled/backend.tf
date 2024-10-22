@@ -1,7 +1,7 @@
 terraform {
-	cloud {
-		workspaces {
- 		name = "dms-repliction-task-sourcedb-logging-enabled"
-		}
-	}
+  cloud {
+    workspaces {
+      name = "dms-repliction-task-sourcedb-logging-enabled"
+    }
+  }
 }

@@ -90,8 +90,8 @@ resource "aws_dms_replication_task" "test" {
 EOF
 
 
-  source_endpoint_arn       = aws_dms_endpoint.test-dms-source-endpoint-tf.endpoint_arn
-  table_mappings            = "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"%\",\"table-name\":\"%\"},\"rule-action\":\"include\"}]}"
+  source_endpoint_arn = aws_dms_endpoint.test-dms-source-endpoint-tf.endpoint_arn
+  table_mappings      = "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"%\",\"table-name\":\"%\"},\"rule-action\":\"include\"}]}"
 
   tags = {
     Name = "test"
@@ -101,16 +101,16 @@ EOF
 }
 
 resource "aws_dms_endpoint" "test-dms-target-endpoint-tf" {
-  certificate_arn             = "arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"
-  database_name               = "test"
-  endpoint_id                 = "test-dms-endpoint-tf"
-  endpoint_type               = "target"
-  engine_name                 = "aurora"
-  kms_key_arn                 = "arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012"
-  password                    = "test"
-  port                        = 3306
-  server_name                 = "test"
-  ssl_mode                    = "none"
+  certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"
+  database_name   = "test"
+  endpoint_id     = "test-dms-endpoint-tf"
+  endpoint_type   = "target"
+  engine_name     = "aurora"
+  kms_key_arn     = "arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012"
+  password        = "test"
+  port            = 3306
+  server_name     = "test"
+  ssl_mode        = "none"
 
   tags = {
     Name = "test"
@@ -120,16 +120,16 @@ resource "aws_dms_endpoint" "test-dms-target-endpoint-tf" {
 }
 
 resource "aws_dms_endpoint" "test-dms-source-endpoint-tf" {
-  certificate_arn             = "arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"
-  database_name               = "test"
-  endpoint_id                 = "test-dms-endpoint-tf"
-  endpoint_type               = "source"
-  engine_name                 = "aurora"
-  kms_key_arn                 = "arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012"
-  password                    = "test"
-  port                        = 3306
-  server_name                 = "test"
-  ssl_mode                    = "none"
+  certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"
+  database_name   = "test"
+  endpoint_id     = "test-dms-endpoint-tf"
+  endpoint_type   = "source"
+  engine_name     = "aurora"
+  kms_key_arn     = "arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012"
+  password        = "test"
+  port            = 3306
+  server_name     = "test"
+  ssl_mode        = "none"
 
   tags = {
     Name = "test"
