@@ -295,6 +295,21 @@ policy "rds-ensure-no-default-port" {
   enforcement_level = "advisory"
 }
 
+policy "rds-cluster-default-admin-check" {
+  source = "./policies/rds-cluster-default-admin-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-instance-default-admin-check" {
+  source = "./policies/rds-instance-default-admin-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-cluster-encrypted-at-rest" {
+  source = "./policies/rds-cluster-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
@@ -500,6 +515,11 @@ policy "redshift-cluster-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "redshift-cluster-unrestricted-port-access-check" {
+  source = "./policies/redshift-cluster-unrestricted-port-access-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "dms-replication-instances-should-not-be-public" {
   source = "./policies/dms-replication-instances-should-not-be-public.sentinel"
   enforcement_level = "advisory"
@@ -512,6 +532,16 @@ policy "dms-auto-minor-version-upgrade-check" {
 
 policy "dms-endpoint-should-be-ssl-configured" {
   source = "./policies/dms-endpoint-should-be-ssl-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "dms-mongo-db-authentication-enabled" {
+  source = "./policies/dms-mongo-db-authentication-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "dms-redis-tls-enabled" {
+  source = "./policies/dms-redis-tls-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -540,6 +570,11 @@ policy "mq-auto-minor-version-upgrade-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "msk-in-cluster-node-require-encrypted-in-transit" {
+  source = "./policies/msk-in-cluster-node-require-encrypted-in-transit.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "kinesis-stream-encrypted" {
   source = "./policies/kinesis-stream-encrypted.sentinel"
   enforcement_level = "advisory"
@@ -565,7 +600,42 @@ policy "network-firewall-stateless-rule-group" {
   enforcement_level = "advisory"
 }
 
+policy "network-firewall-should-have-deletion-protection-enabled" {
+  source = "./policies/network-firewall-should-have-deletion-protection-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "api-gateway-rest-and-websocket-api-logging-enabled" {
   source = "./policies/api-gateway-rest-and-websocket-api-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-rest-have-x-ray-tracing-enabled" {
+  source = "./policies/api-gateway-rest-have-x-ray-tracing-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-should-be-associated-with-a-waf-web-acl" {
+  source = "./policies/api-gateway-should-be-associated-with-a-waf-web-acl.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-access-logging-should-be-configured" {
+  source = "./policies/api-gateway-access-logging-should-be-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-routes-should-specify-an-authorization-type" {
+  source = "./policies/api-gateway-routes-should-specify-an-authorization-type.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-rest-configure-ssl-certificates" {
+  source = "./policies/api-gateway-rest-configure-ssl-certificates.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "api-gateway-rest-cache-have-encryption-enabled" {
+  source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }

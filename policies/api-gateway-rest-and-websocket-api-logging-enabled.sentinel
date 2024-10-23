@@ -31,8 +31,8 @@ get_violations = func(resources) {
 
 # Variables
 
-aws_networkfirewall_firewall_policies = tf.plan(tfplan.planned_values.resources).type(const.resource_aws_api_gateway_method_settings).resources
-violations = get_violations(aws_networkfirewall_firewall_policies)
+aws_api_gateway_method_settings = tf.plan(tfplan.planned_values.resources).type(const.resource_aws_api_gateway_method_settings).resources
+violations = get_violations(aws_api_gateway_method_settings)
 
 summary = {
 	"policy_name": const.policy_name,
