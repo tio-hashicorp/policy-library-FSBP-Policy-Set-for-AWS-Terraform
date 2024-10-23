@@ -310,6 +310,11 @@ policy "rds-cluster-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "rds-aurora-mysql-audit-logging-enabled" {
+  source = "./policies/rds-aurora-mysql-audit-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "rds-cluster-event-notifications-configured-for-critical-events" {
   source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
   enforcement_level = "advisory"
@@ -563,6 +568,11 @@ policy "dms-replication-instances-should-not-be-public" {
 
 policy "dms-auto-minor-version-upgrade-check" {
   source = "./policies/dms-auto-minor-version-upgrade-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "dms-endpoint-should-be-ssl-configured" {
+  source = "./policies/dms-endpoint-should-be-ssl-configured.sentinel"
   enforcement_level = "advisory"
 }
 
