@@ -696,3 +696,8 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "cloudfront-should-require-encryption-in-transit" {
+  source = "./policies/cloudfront-should-require-encryption-in-transit.sentinel"
+  enforcement_level = "advisory"
+}
