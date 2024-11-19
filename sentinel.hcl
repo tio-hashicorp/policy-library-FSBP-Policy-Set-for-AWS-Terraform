@@ -696,3 +696,8 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "cloudfront-should-have-default-root-object-configured" {
+  source = "./policies/cloudfront-should-have-default-root-object-configured.sentinel"
+  enforcement_level = "advisory"
+}
