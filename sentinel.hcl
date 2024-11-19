@@ -634,3 +634,8 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "autoscaling-group-should-cover-multiple-azs" {
+  source = "./policies/autoscaling-group-should-cover-multiple-azs.sentinel"
+  enforcement_level = "advisory"
+}
