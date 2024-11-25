@@ -28,7 +28,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
       origin_access_identity = "origin-access-identity/cloudfront/EXAMPLE"
     }
   }
-  
+
   enabled             = true
   is_ipv6_enabled     = true
   comment             = "Some comment"

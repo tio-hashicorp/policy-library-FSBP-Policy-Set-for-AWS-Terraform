@@ -192,7 +192,7 @@ planned_values = {
 					},
 				],
 				"origin_group": [],
-				"price_class": "PriceClass_200",
+				"price_class":  "PriceClass_200",
 				"restrictions": [
 					{
 						"geo_restriction": [
