@@ -19,7 +19,6 @@ const = {
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
 		origin = maps.get(res.values, "origin", [])
-		print("dwawd ->> ", origin)
 		if length(origin) < 2 {
 			return true
 		}

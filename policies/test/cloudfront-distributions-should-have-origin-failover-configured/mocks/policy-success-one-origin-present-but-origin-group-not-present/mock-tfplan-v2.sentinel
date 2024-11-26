@@ -163,16 +163,11 @@ planned_values = {
 						"connection_timeout":       10,
 						"custom_header":            [],
 						"custom_origin_config":     [],
-						"domain_name":              "primary-bucket.s3.amazonaws.com",
 						"origin_access_control_id": "",
-						"origin_id":                "primaryS3",
+						"origin_id":                "myS3Origin",
 						"origin_path":              "",
 						"origin_shield":            [],
-						"s3_origin_config": [
-							{
-								"origin_access_identity": "origin-access-identity/cloudfront/EXAMPLE",
-							},
-						],
+						"s3_origin_config":         [],
 					},
 				],
 				"origin_group": [],
