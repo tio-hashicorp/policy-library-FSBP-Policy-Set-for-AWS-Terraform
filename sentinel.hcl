@@ -696,3 +696,8 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "cloudfront-distributions-should-use-custom-ssl-tsl-certificates" {
+  source = "./policies/cloudfront-distributions-should-use-custom-ssl-tsl-certificates.sentinel"
+  enforcement_level = "advisory"
+}
