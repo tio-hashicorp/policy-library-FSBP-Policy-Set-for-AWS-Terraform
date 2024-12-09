@@ -23,7 +23,7 @@ case "elasticsearch-domain-with-vpc-options-attribute-not-present" {
 	}
 }
 
-case "elasticsearch-domain-are-indide-vpc" {
+case "elasticsearch-domain-are-inside-vpc" {
 	path = "./cases/elasticsearch-domain-are-indide-vpc"
 	expectation {
 		result = true

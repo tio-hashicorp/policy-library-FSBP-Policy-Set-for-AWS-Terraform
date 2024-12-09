@@ -11,6 +11,9 @@ resource "aws_elasticsearch_domain" "example" {
   cluster_config {
     instance_type = "r4.large.elasticsearch"
   }
+  vpc_options {
+    security_group_ids = [ aws_subnet.main.id ]
+  }
 
   tags = {
     Domain = "TestDomain"
