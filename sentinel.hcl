@@ -696,3 +696,8 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "cloudfront-distributions-should-not-use-deprecated-ssl-protocols" {
+  source = "./policies/cloudfront-distributions-should-not-use-deprecated-ssl-protocols.sentinel"
+  enforcement_level = "advisory"
+}
