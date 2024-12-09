@@ -634,3 +634,8 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "elasticsearch-encrypted-at-rest" {
+  source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
