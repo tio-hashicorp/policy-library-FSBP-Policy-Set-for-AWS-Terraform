@@ -12,7 +12,7 @@ resource "aws_elasticsearch_domain" "example" {
     instance_type = "r4.large.elasticsearch"
   }
   vpc_options {
-    security_group_ids = [ aws_subnet.main.id ]
+    security_group_ids = [aws_subnet.main.id]
   }
 
   tags = {
