@@ -13,9 +13,9 @@ resource "aws_cloudfront_distribution" "example" {
   }
 
   enabled             = true
-  is_ipv6_enabled      = true
-  default_root_object  = "index.html"
-  
+  is_ipv6_enabled     = true
+  default_root_object = "index.html"
+
   # Default cache behavior
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
@@ -59,6 +59,6 @@ resource "aws_cloudfront_origin_access_identity" "example" {
 }
 
 resource "aws_acm_certificate" "example" {
-  domain_name = "example.com"
+  domain_name       = "example.com"
   validation_method = "DNS"
 }
