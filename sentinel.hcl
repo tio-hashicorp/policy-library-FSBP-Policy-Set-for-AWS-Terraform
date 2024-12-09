@@ -634,3 +634,8 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "autoscaling-group-should-use-launch-templates" {
+  source = "./policies/autoscaling-group-should-use-launch-templates.sentinel"
+  enforcement_level = "advisory"
+}
