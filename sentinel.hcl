@@ -634,3 +634,8 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-launch-template-imdsv2-check" {
+  source = "./policies/ec2-launch-template-imdsv2-check.sentinel"
+  enforcement_level = "advisory"
+}
