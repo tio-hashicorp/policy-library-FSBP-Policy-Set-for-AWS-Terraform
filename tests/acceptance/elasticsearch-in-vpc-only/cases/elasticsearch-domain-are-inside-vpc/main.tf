@@ -12,7 +12,7 @@ resource "aws_elasticsearch_domain" "example" {
     instance_type = "r4.large.elasticsearch"
   }
   vpc_options {
-    subnet_ids  = [aws_subnet.main.id]
+    subnet_ids = [aws_subnet.main.id]
   }
 
   tags = {
