@@ -634,3 +634,8 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-client-vpn-connection-log-enabled" {
+  source = "./policies/ec2-client-vpn-connection-log-enabled.sentinel"
+  enforcement_level = "advisory"
+}
