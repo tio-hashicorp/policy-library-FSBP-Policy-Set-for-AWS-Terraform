@@ -1,4 +1,4 @@
-# AWS Launch Template should have the 'http_tokens' attribute set to 'required' in 'metadata_options'
+# EC2 launch templates should use Instance Metadata Service Version 2 (IMDSv2)
 
 | Provider            | Category  |
 | ------------------- | --------  |
