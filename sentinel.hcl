@@ -634,3 +634,11 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "elasticsearch-primary-node-fault-tolerance" {
+  source = "./policies/elasticsearch-primary-node-fault-tolerance.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    master_count_value = 3
+  }
+}
