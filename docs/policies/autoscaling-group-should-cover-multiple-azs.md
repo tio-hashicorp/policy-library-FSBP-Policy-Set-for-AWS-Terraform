@@ -1,4 +1,4 @@
-# AWS Autoscaling Group should have the atleast one value aither in 'availability_zones' or 'vpc_zone_identifier' attribute
+# Amazon EC2 Auto Scaling group should cover multiple Availability Zones
 
 | Provider            | Category  |
 | ------------------- | --------  |
