@@ -1,4 +1,4 @@
-# AWS Autoscaling Group should have the 'launch_template' attribute or the attribute must be present in 'mixed_instances_policy'
+# Amazon EC2 Auto Scaling groups should use Amazon EC2 launch templates
 
 | Provider            | Category  |
 | ------------------- | --------  |
