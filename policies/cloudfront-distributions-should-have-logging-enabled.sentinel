@@ -5,21 +5,21 @@ import "tfresources" as tf
 import "report" as report
 import "collection" as collection
 import "collection/maps" as maps
-import "strings"
 
 # Constants
 const = {
 	"policy_name":                          "cloudfront-distributions-should-have-origin-failover-configured",
 	"resource_aws_cloudfront_distribution": "aws_cloudfront_distribution",
-	"message": "server access logging is enabled on 'aws_cloudfront_distribution'. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/cloudfront-controls.html#cloudfront-5 for more details.",
+	"message":        "server access logging is enabled on 'aws_cloudfront_distribution'. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/cloudfront-controls.html#cloudfront-5 for more details.",
+	"logging_config": "logging_config",
 }
 
 # Functions
 
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
-		logging_config = maps.get(res.values, "logging_config", [])
-		return logging_config is not empty
+		logging_config_values = maps.get(res.values, const.logging_config, [])
+		return logging_config_values is not empty
 	})
 }
 
