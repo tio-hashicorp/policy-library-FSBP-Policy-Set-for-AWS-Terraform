@@ -5,7 +5,6 @@ import "tfresources" as tf
 import "report" as report
 import "collection" as collection
 import "collection/maps" as maps
-import "strings"
 
 # Constants
 const = {
@@ -20,7 +19,7 @@ get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
 		viewer_certificate = maps.get(res.values, "viewer_certificate", [])
 		ssl_support_method = maps.get(viewer_certificate[0], "ssl_support_method", "")
-		return ssl_support_method is not null and ssl_support_method == "sni-only"
+		return ssl_support_method is not null and ssl_support_method is "sni-only"
 	})
 }
 
