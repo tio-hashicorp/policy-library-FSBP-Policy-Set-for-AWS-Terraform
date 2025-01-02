@@ -1,6 +1,6 @@
 mock "tfplan/v2" {
 	module {
-		source = "./mocks/policy-success-viewer-protocol-policy-set-to-allow-all/mock-tfplan-v2.sentinel"
+		source = "./mocks/policy-success-viewer-protocol-policy-set-to-https-only/mock-tfplan-v2.sentinel"
 	}
 }
 
