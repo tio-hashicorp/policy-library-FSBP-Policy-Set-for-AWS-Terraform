@@ -5,7 +5,6 @@ import "tfresources" as tf
 import "report" as report
 import "collection" as collection
 import "collection/maps" as maps
-import "strings"
 
 # Constants
 const = {
@@ -20,7 +19,7 @@ get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
 		viewer_certificate = maps.get(res.values, "viewer_certificate", [])
 		default_certificate = maps.get(viewer_certificate[0], "cloudfront_default_certificate", false)
-		return default_certificate == null or default_certificate == false
+		return default_certificate is null or default_certificate is false
 	})
 }
 
