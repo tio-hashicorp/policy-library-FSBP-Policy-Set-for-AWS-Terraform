@@ -5,7 +5,6 @@ import "tfresources" as tf
 import "report" as report
 import "collection" as collection
 import "collection/maps" as maps
-import "strings"
 
 # Constants
 const = {
@@ -24,7 +23,7 @@ get_violations = func(resources) {
 		custom_origin_config = maps.get(origin[0], "custom_origin_config", [])
 		origin_protocol_policy = maps.get(custom_origin_config[0], "origin_protocol_policy", "")
 
-		if viewer_protocol_policy == "allow-all" and origin_protocol_policy == "match-viewer" {
+		if viewer_protocol_policy is "allow-all" and origin_protocol_policy is "match-viewer" {
 			return false
 		}
 
