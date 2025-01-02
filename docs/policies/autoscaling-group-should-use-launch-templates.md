@@ -1,8 +1,8 @@
 # Amazon EC2 Auto Scaling groups should use Amazon EC2 launch templates
 
-| Provider            | Category  |
-| ------------------- | --------  |
-| Amazon Web Services |  Security |
+| Provider            |        Category        |
+| ------------------- | ---------------------- |
+| Amazon Web Services | Resource Configuration |
 
 ## Description
 
