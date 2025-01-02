@@ -61,10 +61,6 @@ resource "aws_launch_template" "foo" {
     license_configuration_arn = "arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef"
   }
 
-  network_interfaces {
-
-  }
-
   metadata_options {
     http_endpoint               = "enabled"
     http_tokens                 = "required"
@@ -72,12 +68,16 @@ resource "aws_launch_template" "foo" {
     instance_metadata_tags      = "enabled"
   }
 
-  monitoring {
-    enabled = true
+  network_interfaces {
+    associate_public_ip_address = false
   }
 
   network_interfaces {
     associate_public_ip_address = true
+  }
+
+  monitoring {
+    enabled = true
   }
 
   placement {
