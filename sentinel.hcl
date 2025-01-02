@@ -634,3 +634,8 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "fsx-openzfs-copy-tags-to-backups-and-volumes-enabled" {
+  source = "./policies/fsx-openzfs-copy-tags-to-backups-and-volumes-enabled.sentinel"
+  enforcement_level = "advisory"
+}
