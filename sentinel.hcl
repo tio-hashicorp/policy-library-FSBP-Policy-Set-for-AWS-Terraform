@@ -706,3 +706,8 @@ policy "backup-recovery-point-encrypted" {
   source = "./policies/backup-recovery-point-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "elasticsearch-encrypted-at-rest" {
+  source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
