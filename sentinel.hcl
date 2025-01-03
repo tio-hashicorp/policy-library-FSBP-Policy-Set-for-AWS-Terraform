@@ -310,6 +310,47 @@ policy "rds-cluster-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "rds-aurora-mysql-audit-logging-enabled" {
+  source = "./policies/rds-aurora-mysql-audit-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-cluster-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "resource_type" = "aws_rds_cluster"
+    "source_type" = "db-cluster"
+  }
+}
+
+policy "rds-instance-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    resource_type = "aws_rds_cluster_instance"
+    source_type = "db-instance"
+  }
+}
+
+policy "rds-parameter-group-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "resource_type" = "aws_rds_cluster_parameter_group"
+    "source_type" = "db-parameter-group"
+  }
+}
+
+policy "rds-security-group-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "resource_type" = "aws_security_group",
+    "source_type" = "db-security-group",
+  }
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
@@ -530,6 +571,11 @@ policy "dms-auto-minor-version-upgrade-check" {
   enforcement_level = "advisory"
 }
 
+policy "dms-endpoint-should-be-ssl-configured" {
+  source = "./policies/dms-endpoint-should-be-ssl-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "dms-mongo-db-authentication-enabled" {
   source = "./policies/dms-mongo-db-authentication-enabled.sentinel"
   enforcement_level = "advisory"
@@ -538,6 +584,22 @@ policy "dms-mongo-db-authentication-enabled" {
 policy "dms-redis-tls-enabled" {
   source = "./policies/dms-redis-tls-enabled.sentinel"
   enforcement_level = "advisory"
+}
+
+policy "dms-repliction-task-targetdb-logging-enabled" {
+  source = "./policies/dms-repliction-task-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "db_type" = "target"
+  }
+}
+
+policy "dms-repliction-task-sourcedb-logging-enabled" {
+  source = "./policies/dms-repliction-task-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "db_type" = "source"
+  }
 }
 
 policy "network-firewall-logging-enabled" {
@@ -632,6 +694,16 @@ policy "api-gateway-rest-configure-ssl-certificates" {
 
 policy "api-gateway-rest-cache-have-encryption-enabled" {
   source = "./policies/api-gateway-rest-cache-have-encryption-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "autoscaling-group-should-cover-multiple-azs" {
+  source = "./policies/autoscaling-group-should-cover-multiple-azs.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "backup-recovery-point-encrypted" {
+  source = "./policies/backup-recovery-point-encrypted.sentinel"
   enforcement_level = "advisory"
 }
 
