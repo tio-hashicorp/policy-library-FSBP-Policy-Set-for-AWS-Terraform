@@ -701,3 +701,8 @@ policy "autoscaling-group-should-cover-multiple-azs" {
   source = "./policies/autoscaling-group-should-cover-multiple-azs.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "backup-recovery-point-encrypted" {
+  source = "./policies/backup-recovery-point-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
