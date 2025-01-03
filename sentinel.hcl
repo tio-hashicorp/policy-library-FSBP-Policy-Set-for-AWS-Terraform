@@ -716,3 +716,8 @@ policy "elasticsearch-in-vpc-only" {
   source = "./policies/elasticsearch-in-vpc-only.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "fsx-lustre-copy-tags-to-backups" {
+  source = "./policies/fsx-lustre-copy-tags-to-backups.sentinel"
+  enforcement_level = "advisory"
+}
