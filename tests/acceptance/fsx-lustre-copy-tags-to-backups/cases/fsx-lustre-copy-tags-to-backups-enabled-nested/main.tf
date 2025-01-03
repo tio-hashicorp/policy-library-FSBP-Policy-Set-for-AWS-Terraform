@@ -3,6 +3,6 @@ provider "aws" {
 }
 
 module "fsx-lustre-resources" {
-  source = "./fsx-lustre-resources"
+  source                        = "./fsx-lustre-resources"
   copy_tags_to_backups_variable = true
 }
