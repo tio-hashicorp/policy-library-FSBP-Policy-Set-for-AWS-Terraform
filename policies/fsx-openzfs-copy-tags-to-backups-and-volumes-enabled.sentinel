@@ -8,9 +8,6 @@ import "report" as report
 import "collection" as collection
 import "collection/maps" as maps
 
-# Params
-param master_count_value default 3
-
 # Constants
 const = {
 	"policy_name": "fsx-openzfs-copy-tags-to-backups-and-volumes-enabled",
