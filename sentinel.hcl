@@ -737,6 +737,11 @@ policy "autoscaling-group-should-cover-multiple-azs" {
   enforcement_level = "advisory"
 }
 
+policy "autoscaling-group-should-use-launch-templates" {
+  source = "./policies/autoscaling-group-should-use-launch-templates.sentinel"
+   enforcement_level = "advisory"
+}
+
 policy "backup-recovery-point-encrypted" {
   source = "./policies/backup-recovery-point-encrypted.sentinel"
   enforcement_level = "advisory"
@@ -756,3 +761,4 @@ policy "cloudfront-should-require-encryption-in-transit" {
   source = "./policies/cloudfront-should-require-encryption-in-transit.sentinel"
   enforcement_level = "advisory"
 }
+ 
