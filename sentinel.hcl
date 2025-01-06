@@ -786,3 +786,8 @@ policy "elasticsearch-in-vpc-only" {
   source = "./policies/elasticsearch-in-vpc-only.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "elasticsearch-node-to-node-encryption-check" {
+  source = "./policies/elasticsearch-node-to-node-encryption-check.sentinel"
+  enforcement_level = "advisory"
+}
