@@ -697,6 +697,11 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "cloudfront-should-have-default-root-object-configured" {
+  source = "./policies/cloudfront-should-have-default-root-object-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "autoscaling-group-should-cover-multiple-azs" {
   source = "./policies/autoscaling-group-should-cover-multiple-azs.sentinel"
   enforcement_level = "advisory"
