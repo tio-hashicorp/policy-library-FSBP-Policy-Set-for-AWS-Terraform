@@ -824,3 +824,8 @@ policy "elasticsearch-primary-node-fault-tolerance" {
     master_count_value = 3
   }
 }
+
+policy "fsx-openzfs-copy-tags-to-backups-and-volumes-enabled" {
+  source = "./policies/fsx-openzfs-copy-tags-to-backups-and-volumes-enabled.sentinel"
+  enforcement_level = "advisory"
+}
