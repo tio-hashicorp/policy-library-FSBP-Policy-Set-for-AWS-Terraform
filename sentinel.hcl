@@ -697,6 +697,11 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "cloudfront-distributions-should-have-origin-failover-configured" {
+  source = "./policies/cloudfront-distributions-should-have-origin-failover-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "cloudfront-should-have-default-root-object-configured" {
   source = "./policies/cloudfront-should-have-default-root-object-configured.sentinel"
   enforcement_level = "advisory"
