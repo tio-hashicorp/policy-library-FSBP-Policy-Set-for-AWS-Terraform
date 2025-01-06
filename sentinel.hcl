@@ -697,6 +697,11 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "cloudfront-distributions-should-encrypt-traffic-to-custom-origins" {
+  source = "./policies/cloudfront-distributions-should-encrypt-traffic-to-custom-origins.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "cloudfront-distributions-should-use-sni-to-serve-https-requests" {
   source = "./policies/cloudfront-distributions-should-use-sni-to-serve-https-requests.sentinel"
   enforcement_level = "advisory"
