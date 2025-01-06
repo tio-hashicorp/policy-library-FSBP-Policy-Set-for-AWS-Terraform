@@ -791,3 +791,8 @@ policy "elasticsearch-node-to-node-encryption-check" {
   source = "./policies/elasticsearch-node-to-node-encryption-check.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "elasticsearch-logs-to-cloudwatch" {
+  source = "./policies/elasticsearch-logs-to-cloudwatch.sentinel"
+  enforcement_level = "advisory"
+}
