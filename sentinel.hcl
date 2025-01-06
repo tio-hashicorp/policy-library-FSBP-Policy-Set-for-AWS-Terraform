@@ -757,6 +757,11 @@ policy "ec2-metadata-imdsv2-required" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-network-acl" {
+  source = "./policies/ec2-network-acl.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticsearch-encrypted-at-rest" {
   source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
