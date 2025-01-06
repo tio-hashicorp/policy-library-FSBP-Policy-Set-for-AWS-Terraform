@@ -806,3 +806,8 @@ policy "elasticsearch-logs-to-cloudwatch" {
   source = "./policies/elasticsearch-logs-to-cloudwatch.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "elasticsearch-audit-logging-enabled" {
+  source = "./policies/elasticsearch-audit-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
