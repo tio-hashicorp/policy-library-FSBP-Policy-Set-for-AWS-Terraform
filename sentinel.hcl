@@ -697,6 +697,11 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "cloudfront-distributions-should-have-logging-enabled" {
+  source = "./policies/cloudfront-distributions-should-have-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "cloudfront-distributions-should-have-origin-failover-configured" {
   source = "./policies/cloudfront-distributions-should-have-origin-failover-configured.sentinel"
   enforcement_level = "advisory"
@@ -726,7 +731,6 @@ policy "elasticsearch-in-vpc-only" {
   source = "./policies/elasticsearch-in-vpc-only.sentinel"
   enforcement_level = "advisory"
 }
-
 
 policy "cloudfront-should-require-encryption-in-transit" {
   source = "./policies/cloudfront-should-require-encryption-in-transit.sentinel"
