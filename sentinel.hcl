@@ -310,6 +310,47 @@ policy "rds-cluster-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "rds-aurora-mysql-audit-logging-enabled" {
+  source = "./policies/rds-aurora-mysql-audit-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-cluster-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "resource_type" = "aws_rds_cluster"
+    "source_type" = "db-cluster"
+  }
+}
+
+policy "rds-instance-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    resource_type = "aws_rds_cluster_instance"
+    source_type = "db-instance"
+  }
+}
+
+policy "rds-parameter-group-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "resource_type" = "aws_rds_cluster_parameter_group"
+    "source_type" = "db-parameter-group"
+  }
+}
+
+policy "rds-security-group-event-notifications-configured-for-critical-events" {
+  source = "./policies/rds-event-notifications-configured-for-critical-events.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "resource_type" = "aws_security_group",
+    "source_type" = "db-security-group",
+  }
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
@@ -530,6 +571,11 @@ policy "dms-auto-minor-version-upgrade-check" {
   enforcement_level = "advisory"
 }
 
+policy "dms-endpoint-should-be-ssl-configured" {
+  source = "./policies/dms-endpoint-should-be-ssl-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "dms-mongo-db-authentication-enabled" {
   source = "./policies/dms-mongo-db-authentication-enabled.sentinel"
   enforcement_level = "advisory"
@@ -538,6 +584,22 @@ policy "dms-mongo-db-authentication-enabled" {
 policy "dms-redis-tls-enabled" {
   source = "./policies/dms-redis-tls-enabled.sentinel"
   enforcement_level = "advisory"
+}
+
+policy "dms-repliction-task-targetdb-logging-enabled" {
+  source = "./policies/dms-repliction-task-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "db_type" = "target"
+  }
+}
+
+policy "dms-repliction-task-sourcedb-logging-enabled" {
+  source = "./policies/dms-repliction-task-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    "db_type" = "source"
+  }
 }
 
 policy "network-firewall-logging-enabled" {
@@ -635,7 +697,112 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "cloudfront-distributions-should-not-use-deprecated-ssl-protocols" {
+  source = "./policies/cloudfront-distributions-should-not-use-deprecated-ssl-protocols.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-encrypt-traffic-to-custom-origins" {
+  source = "./policies/cloudfront-distributions-should-encrypt-traffic-to-custom-origins.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-use-sni-to-serve-https-requests" {
+  source = "./policies/cloudfront-distributions-should-use-sni-to-serve-https-requests.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-use-custom-ssl-tsl-certificates" {
+  source = "./policies/cloudfront-distributions-should-use-custom-ssl-tsl-certificates.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-have-logging-enabled" {
+  source = "./policies/cloudfront-distributions-should-have-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-have-origin-failover-configured" {
+  source = "./policies/cloudfront-distributions-should-have-origin-failover-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-should-have-default-root-object-configured" {
+  source = "./policies/cloudfront-should-have-default-root-object-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-should-require-encryption-in-transit" {
+  source = "./policies/cloudfront-should-require-encryption-in-transit.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "autoscaling-group-should-cover-multiple-azs" {
+  source = "./policies/autoscaling-group-should-cover-multiple-azs.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "autoscaling-group-should-use-launch-templates" {
+  source = "./policies/autoscaling-group-should-use-launch-templates.sentinel"
+   enforcement_level = "advisory"
+}
+
+policy "backup-recovery-point-encrypted" {
+  source = "./policies/backup-recovery-point-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-metadata-imdsv2-required" {
+  source = "./policies/ec2-metadata-imdsv2-required.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-network-acl" {
+  source = "./policies/ec2-network-acl.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-client-vpn-connection-log-enabled" {
+  source = "./policies/ec2-client-vpn-connection-log-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-launch-template-imdsv2-check" {
+  source = "./policies/ec2-launch-template-imdsv2-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-vpn-connection-logging-enabled" {
+  source = "./policies/ec2-vpn-connection-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-ebs-encryption-enabled" {
+  source = "./policies/ec2-ebs-encryption-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ec2-launch-template-public-ip-disabled" {
   source = "./policies/ec2-launch-template-public-ip-disabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-encrypted-at-rest" {
+  source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-in-vpc-only" {
+  source = "./policies/elasticsearch-in-vpc-only.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-node-to-node-encryption-check" {
+  source = "./policies/elasticsearch-node-to-node-encryption-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-logs-to-cloudwatch" {
+  source = "./policies/elasticsearch-logs-to-cloudwatch.sentinel"
   enforcement_level = "advisory"
 }
