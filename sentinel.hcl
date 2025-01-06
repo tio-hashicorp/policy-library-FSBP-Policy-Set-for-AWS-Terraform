@@ -829,3 +829,8 @@ policy "fsx-openzfs-copy-tags-to-backups-and-volumes-enabled" {
   source = "./policies/fsx-openzfs-copy-tags-to-backups-and-volumes-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "fsx-lustre-copy-tags-to-backups" {
+  source = "./policies/fsx-lustre-copy-tags-to-backups.sentinel"
+  enforcement_level = "advisory"
+}
