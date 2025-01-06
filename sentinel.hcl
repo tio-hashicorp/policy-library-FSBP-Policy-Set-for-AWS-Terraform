@@ -762,6 +762,11 @@ policy "ec2-network-acl" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-client-vpn-connection-log-enabled" {
+  source = "./policies/ec2-client-vpn-connection-log-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticsearch-encrypted-at-rest" {
   source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
