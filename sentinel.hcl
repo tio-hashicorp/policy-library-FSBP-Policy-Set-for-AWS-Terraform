@@ -772,6 +772,11 @@ policy "ec2-launch-template-imdsv2-check" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-vpn-connection-logging-enabled" {
+  source = "./policies/ec2-vpn-connection-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticsearch-encrypted-at-rest" {
   source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
