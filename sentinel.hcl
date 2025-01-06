@@ -777,6 +777,11 @@ policy "ec2-vpn-connection-logging-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-ebs-encryption-enabled" {
+  source = "./policies/ec2-ebs-encryption-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticsearch-encrypted-at-rest" {
   source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
