@@ -1,4 +1,4 @@
-# FSx for OpenZFS file systems should be configured to copy tags to backups
+# FSx for Lustre file systems should be configured to copy tags to backups
 
 | Provider            | -Category |
 | ------------------- | --------- |
