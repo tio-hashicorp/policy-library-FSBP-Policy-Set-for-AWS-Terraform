@@ -697,13 +697,93 @@ policy "api-gateway-rest-cache-have-encryption-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "cloudfront-distributions-should-not-use-deprecated-ssl-protocols" {
+  source = "./policies/cloudfront-distributions-should-not-use-deprecated-ssl-protocols.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-encrypt-traffic-to-custom-origins" {
+  source = "./policies/cloudfront-distributions-should-encrypt-traffic-to-custom-origins.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-use-sni-to-serve-https-requests" {
+  source = "./policies/cloudfront-distributions-should-use-sni-to-serve-https-requests.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-use-custom-ssl-tsl-certificates" {
+  source = "./policies/cloudfront-distributions-should-use-custom-ssl-tsl-certificates.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-have-logging-enabled" {
+  source = "./policies/cloudfront-distributions-should-have-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-have-origin-failover-configured" {
+  source = "./policies/cloudfront-distributions-should-have-origin-failover-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-should-have-default-root-object-configured" {
+  source = "./policies/cloudfront-should-have-default-root-object-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-should-require-encryption-in-transit" {
+  source = "./policies/cloudfront-should-require-encryption-in-transit.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "autoscaling-group-should-cover-multiple-azs" {
   source = "./policies/autoscaling-group-should-cover-multiple-azs.sentinel"
   enforcement_level = "advisory"
 }
 
+policy "autoscaling-group-should-use-launch-templates" {
+  source = "./policies/autoscaling-group-should-use-launch-templates.sentinel"
+   enforcement_level = "advisory"
+}
+
 policy "backup-recovery-point-encrypted" {
   source = "./policies/backup-recovery-point-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-metadata-imdsv2-required" {
+  source = "./policies/ec2-metadata-imdsv2-required.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-network-acl" {
+  source = "./policies/ec2-network-acl.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-client-vpn-connection-log-enabled" {
+  source = "./policies/ec2-client-vpn-connection-log-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-launch-template-imdsv2-check" {
+  source = "./policies/ec2-launch-template-imdsv2-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-vpn-connection-logging-enabled" {
+  source = "./policies/ec2-vpn-connection-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-ebs-encryption-enabled" {
+  source = "./policies/ec2-ebs-encryption-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-launch-template-public-ip-disabled" {
+  source = "./policies/ec2-launch-template-public-ip-disabled.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -714,6 +794,39 @@ policy "elasticsearch-encrypted-at-rest" {
 
 policy "elasticsearch-in-vpc-only" {
   source = "./policies/elasticsearch-in-vpc-only.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-node-to-node-encryption-check" {
+  source = "./policies/elasticsearch-node-to-node-encryption-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-logs-to-cloudwatch" {
+  source = "./policies/elasticsearch-logs-to-cloudwatch.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-audit-logging-enabled" {
+  source = "./policies/elasticsearch-audit-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-https-required" {
+  source = "./policies/elasticsearch-https-required.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-primary-node-fault-tolerance" {
+  source = "./policies/elasticsearch-primary-node-fault-tolerance.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    master_count_value = 3
+  }
+}
+
+policy "fsx-openzfs-copy-tags-to-backups-and-volumes-enabled" {
+  source = "./policies/fsx-openzfs-copy-tags-to-backups-and-volumes-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
