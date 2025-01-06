@@ -811,3 +811,8 @@ policy "elasticsearch-audit-logging-enabled" {
   source = "./policies/elasticsearch-audit-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "elasticsearch-https-required" {
+  source = "./policies/elasticsearch-https-required.sentinel"
+  enforcement_level = "advisory"
+}
