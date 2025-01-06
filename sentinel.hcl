@@ -701,3 +701,48 @@ policy "cloudfront-distributions-should-not-use-deprecated-ssl-protocols" {
   source = "./policies/cloudfront-distributions-should-not-use-deprecated-ssl-protocols.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "cloudfront-distributions-should-use-custom-ssl-tsl-certificates" {
+  source = "./policies/cloudfront-distributions-should-use-custom-ssl-tsl-certificates.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-have-logging-enabled" {
+  source = "./policies/cloudfront-distributions-should-have-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-distributions-should-have-origin-failover-configured" {
+  source = "./policies/cloudfront-distributions-should-have-origin-failover-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-should-have-default-root-object-configured" {
+  source = "./policies/cloudfront-should-have-default-root-object-configured.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "autoscaling-group-should-cover-multiple-azs" {
+  source = "./policies/autoscaling-group-should-cover-multiple-azs.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "backup-recovery-point-encrypted" {
+  source = "./policies/backup-recovery-point-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-encrypted-at-rest" {
+  source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-in-vpc-only" {
+  source = "./policies/elasticsearch-in-vpc-only.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-should-require-encryption-in-transit" {
+  source = "./policies/cloudfront-should-require-encryption-in-transit.sentinel"
+  enforcement_level = "advisory"
+}
