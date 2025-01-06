@@ -732,6 +732,11 @@ policy "cloudfront-should-have-default-root-object-configured" {
   enforcement_level = "advisory"
 }
 
+policy "cloudfront-should-require-encryption-in-transit" {
+  source = "./policies/cloudfront-should-require-encryption-in-transit.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "autoscaling-group-should-cover-multiple-azs" {
   source = "./policies/autoscaling-group-should-cover-multiple-azs.sentinel"
   enforcement_level = "advisory"
@@ -747,6 +752,11 @@ policy "backup-recovery-point-encrypted" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-metadata-imdsv2-required" {
+  source = "./policies/ec2-metadata-imdsv2-required.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticsearch-encrypted-at-rest" {
   source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
@@ -756,9 +766,3 @@ policy "elasticsearch-in-vpc-only" {
   source = "./policies/elasticsearch-in-vpc-only.sentinel"
   enforcement_level = "advisory"
 }
-
-policy "cloudfront-should-require-encryption-in-transit" {
-  source = "./policies/cloudfront-should-require-encryption-in-transit.sentinel"
-  enforcement_level = "advisory"
-}
- 
