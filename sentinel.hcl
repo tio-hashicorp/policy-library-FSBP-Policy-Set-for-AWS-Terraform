@@ -701,3 +701,23 @@ policy "cloudfront-should-have-default-root-object-configured" {
   source = "./policies/cloudfront-should-have-default-root-object-configured.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "autoscaling-group-should-cover-multiple-azs" {
+  source = "./policies/autoscaling-group-should-cover-multiple-azs.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "backup-recovery-point-encrypted" {
+  source = "./policies/backup-recovery-point-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-encrypted-at-rest" {
+  source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-in-vpc-only" {
+  source = "./policies/elasticsearch-in-vpc-only.sentinel"
+  enforcement_level = "advisory"
+}
