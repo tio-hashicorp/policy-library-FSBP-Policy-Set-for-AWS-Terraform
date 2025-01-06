@@ -782,6 +782,11 @@ policy "ec2-ebs-encryption-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-launch-template-public-ip-disabled" {
+  source = "./policies/ec2-launch-template-public-ip-disabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticsearch-encrypted-at-rest" {
   source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
