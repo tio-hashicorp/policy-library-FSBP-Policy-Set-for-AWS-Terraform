@@ -52,7 +52,7 @@ is_catch_all_protocol = func(protocol) {
 }
 
 does_rule_reference_ports = func(from_port, to_port) {
-	return from_port is defined and from_port is not null and to_port is defined and to_port is not null and 
+	return from_port is defined and from_port is not null and to_port is defined and to_port is not null and
 		collection.find(ports, func(port) {
 			return from_port <= port and to_port >= port
 		}) is defined
