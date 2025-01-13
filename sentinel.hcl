@@ -716,3 +716,8 @@ policy "elasticsearch-in-vpc-only" {
   source = "./policies/elasticsearch-in-vpc-only.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-security-group-ingress-traffic-restriction-to-common-ports" {
+  source = "./policies/ec2-security-group-ingress-traffic-restriction-to-common-ports.sentinel"
+  enforcement_level = "advisory"
+}
