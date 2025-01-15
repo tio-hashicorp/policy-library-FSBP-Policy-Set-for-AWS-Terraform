@@ -835,6 +835,11 @@ policy "fsx-lustre-copy-tags-to-backups" {
   enforcement_level = "advisory"
 }
 
+policy "guardduty-s3-protection-should-be-enabled" {
+  source = "./policies/guardduty-s3-protection-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "guardduty-eks-protection-runtime-should-be-enabled" {
   source = "./policies/guardduty-eks-protection-runtime-should-be-enabled.sentinel"
   enforcement_level = "advisory"
