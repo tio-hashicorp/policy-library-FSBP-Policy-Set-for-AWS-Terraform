@@ -17,7 +17,9 @@ const = {
 
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
-		return res.values.name is "EKS_RUNTIME_MONITORING" and res.values.status is "ENABLED"
+		name = maps.get(res.values, "name", "")
+		status = maps.get(res.values, "status", "")
+		return name is "EKS_RUNTIME_MONITORING" and status is "ENABLED"
 	})
 }
 
