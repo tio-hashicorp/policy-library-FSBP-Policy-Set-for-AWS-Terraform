@@ -839,3 +839,18 @@ policy "guardduty-s3-protection-should-be-enabled" {
   source = "./policies/guardduty-s3-protection-should-be-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "guardduty-eks-protection-runtime-should-be-enabled" {
+  source = "./policies/guardduty-eks-protection-runtime-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "guardduty-eks-audit-log-monitoring-should-be-enabled" {
+  source = "./policies/guardduty-eks-audit-log-monitoring-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "guardduty-should-be-enabled" {
+  source = "./policies/guardduty-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
