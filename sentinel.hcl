@@ -835,6 +835,11 @@ policy "fsx-lustre-copy-tags-to-backups" {
   enforcement_level = "advisory"
 }
 
+policy "guardduty-eks-audit-log-monitoring-should-be-enabled" {
+  source = "./policies/guardduty-eks-audit-log-monitoring-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "guardduty-should-be-enabled" {
   source = "./policies/guardduty-should-be-enabled.sentinel"
   enforcement_level = "advisory"
