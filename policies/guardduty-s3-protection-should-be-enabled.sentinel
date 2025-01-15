@@ -27,7 +27,7 @@ get_violations = func(resources) {
 		if s3_logs_values is null or s3_logs_values is empty {
 			return false
 		}
-		return s3_logs_values[0].enable
+		return maps.get(s3_logs_values[0], "enable", false)
 	})
 }
 
