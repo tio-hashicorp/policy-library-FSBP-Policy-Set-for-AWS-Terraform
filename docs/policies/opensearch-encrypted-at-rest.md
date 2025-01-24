@@ -1,4 +1,4 @@
-# AWS RDS Cluster should have the enabled in storage_encrypted attribute set to true
+# AWS OpenSearch Domain should have the enabled in encrypt_at_rest attribute set to true
 
 | Provider            | Category  |
 | ------------------- | --------  |
