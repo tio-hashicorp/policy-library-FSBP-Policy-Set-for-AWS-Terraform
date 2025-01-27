@@ -854,3 +854,8 @@ policy "guardduty-should-be-enabled" {
   source = "./policies/guardduty-should-be-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "codebuild-bitbucket-url-should-not-contain-sensitive-credentials" {
+  source = "./policies/codebuild-bitbucket-url-should-not-contain-sensitive-credentials.sentinel"
+  enforcement_level = "advisory"
+}
