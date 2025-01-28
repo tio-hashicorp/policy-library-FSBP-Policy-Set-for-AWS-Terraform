@@ -133,8 +133,8 @@ resource "aws_codebuild_project" "example" {
     }
 
     s3_logs {
-      status              = "ENABLED"
-      location            = "${aws_s3_bucket.example.id}/build-log"
+      status   = "ENABLED"
+      location = "${aws_s3_bucket.example.id}/build-log"
     }
   }
 
