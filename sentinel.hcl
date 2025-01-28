@@ -854,3 +854,8 @@ policy "guardduty-should-be-enabled" {
   source = "./policies/guardduty-should-be-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "codebuild-s3-logs-should-be-encrypted" {
+  source = "./policies/codebuild-s3-logs-should-be-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
