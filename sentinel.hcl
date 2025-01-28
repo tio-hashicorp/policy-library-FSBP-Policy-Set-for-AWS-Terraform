@@ -854,3 +854,8 @@ policy "guardduty-should-be-enabled" {
   source = "./policies/guardduty-should-be-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "codebuild-project-environments-should-have-a-logging-aws-configuration" {
+  source = "./policies/codebuild-project-environments-should-have-a-logging-aws-configuration.sentinel"
+  enforcement_level = "advisory"
+}
