@@ -854,3 +854,8 @@ policy "guardduty-should-be-enabled" {
   source = "./policies/guardduty-should-be-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "opensearch-node-to-node-encryption-check" {
+  source = "./policies/opensearch-node-to-node-encryption-check.sentinel"
+  enforcement_level = "advisory"
+}
