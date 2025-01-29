@@ -18,25 +18,23 @@ const = {
 get_violations = func(resources) {
 	return collection.reject(resources, func(res) {
 		logs_config = maps.get(res.values, "logs_config", [])
-		if logs_config is not empty {
-			s3_logs = maps.get(logs_config[0], "s3_logs", [])
-			cloudwatch_logs = maps.get(logs_config[0], "cloudwatch_logs", [])
-			if s3_logs is empty and cloudwatch_logs is empty {
-				return false
-			} else if s3_logs is empty {
-				cloudwatch_status = maps.get(cloudwatch_logs[0], "status", "ENABLED")
-				return cloudwatch_status is "ENABLED"
-			} else if cloudwatch_logs is empty {
-				s3_status = maps.get(s3_logs[0], "status", "DISABLED")
-				return s3_status is "ENABLED"
-			}
-			s3_status = maps.get(s3_logs[0], "status", "DISABLED")
+		if logs_config is empty {
+			return false
+		}
+		s3_logs = maps.get(logs_config[0], "s3_logs", [])
+		cloudwatch_logs = maps.get(logs_config[0], "cloudwatch_logs", [])
+		if s3_logs is empty and cloudwatch_logs is empty {
+			return false
+		} else if s3_logs is empty {
 			cloudwatch_status = maps.get(cloudwatch_logs[0], "status", "ENABLED")
-			print("YAHA")
-			return s3_status is "ENABLED" or cloudwatch_status is "ENABLED"
-		} 
-		print("NOPE")
-		return false
+			return cloudwatch_status is "ENABLED"
+		} else if cloudwatch_logs is empty {
+			s3_status = maps.get(s3_logs[0], "status", "DISABLED")
+			return s3_status is "ENABLED"
+		}
+		s3_status = maps.get(s3_logs[0], "status", "DISABLED")
+		cloudwatch_status = maps.get(cloudwatch_logs[0], "status", "ENABLED")
+		return s3_status is "ENABLED" or cloudwatch_status is "ENABLED"
 	})
 }
 
