@@ -19,13 +19,13 @@ case "opensearch-logs-to-cloudwatch-enabled-set-to-false" {
 case "opensearch-logs-to-cloudwatch-enabled-set-to-true" {
 	path = "./cases/opensearch-logs-to-cloudwatch-enabled-set-to-true"
 	expectation {
-		result = false
+		result = true
 	}
 }
 
 case "opensearch-logs-to-cloudwatch-enabled-set-to-true-nested" {
 	path = "./cases/opensearch-logs-to-cloudwatch-enabled-set-to-true-nested"
 	expectation {
-		result = false
+		result = true
 	}
 }
