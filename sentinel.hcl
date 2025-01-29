@@ -854,3 +854,8 @@ policy "guardduty-should-be-enabled" {
   source = "./policies/guardduty-should-be-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "opensearch-logs-to-cloudwatch" {
+  source = "./policies/opensearch-logs-to-cloudwatch.sentinel"
+  enforcement_level = "advisory"
+}
