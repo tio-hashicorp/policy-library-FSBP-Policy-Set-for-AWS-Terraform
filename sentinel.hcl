@@ -902,3 +902,8 @@ policy "opensearch-data-node-fault-tolerance" {
     instance_count = 3
   }
 }
+
+policy "opensearch-access-control-enabled" {
+  source = "./policies/opensearch-access-control-enabled.sentinel"
+  enforcement_level = "advisory"
+}
