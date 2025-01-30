@@ -879,3 +879,8 @@ policy "opensearch-node-to-node-encryption-check" {
   source = "./policies/opensearch-node-to-node-encryption-check.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "opensearch-logs-to-cloudwatch" {
+  source = "./policies/opensearch-logs-to-cloudwatch.sentinel"
+  enforcement_level = "advisory"
+}
