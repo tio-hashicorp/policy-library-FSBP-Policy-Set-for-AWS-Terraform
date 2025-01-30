@@ -859,3 +859,8 @@ policy "guardduty-should-be-enabled" {
   source = "./policies/guardduty-should-be-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "opensearch-encrypted-at-rest" {
+  source = "./policies/opensearch-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
