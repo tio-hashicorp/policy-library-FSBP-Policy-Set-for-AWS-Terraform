@@ -860,6 +860,11 @@ policy "guardduty-should-be-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "codebuild-project-environments-should-have-a-logging-aws-configuration" {
+  source = "./policies/codebuild-project-environments-should-have-a-logging-aws-configuration.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "codebuild-s3-logs-should-be-encrypted" {
   source = "./policies/codebuild-s3-logs-should-be-encrypted.sentinel"
   enforcement_level = "advisory"
