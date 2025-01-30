@@ -894,3 +894,11 @@ policy "opensearch-audit-logging-enabled" {
   source = "./policies/opensearch-audit-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "opensearch-data-node-fault-tolerance" {
+  source = "./policies/opensearch-data-node-fault-tolerance.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    instance_count = 3
+  }
+}
