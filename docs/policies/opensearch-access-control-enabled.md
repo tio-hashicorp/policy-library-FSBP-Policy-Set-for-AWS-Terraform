@@ -20,7 +20,7 @@ trace:
 
         Description:
         This policy checks if resources of type 'aws_opensearch_domain' have the
-        'anonymous_auth_anonymous_auth_enabledd' attribute set to true
+        'anonymous_auth_enabled' attribute set to true
         in the 'advanced_security_options' block
 
         Print messages:
@@ -46,7 +46,7 @@ trace:
 
         Description:
         This policy checks if resources of type 'aws_opensearch_domain' have the
-        'anonymous_auth_anonymous_auth_enabledd' attribute set to true
+        'anonymous_auth_enabled' attribute set to true
         in the 'advanced_security_options' block
 
         Print messages:
