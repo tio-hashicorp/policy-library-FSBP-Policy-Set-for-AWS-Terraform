@@ -864,3 +864,8 @@ policy "opensearch-encrypted-at-rest" {
   source = "./policies/opensearch-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "opensearch-node-to-node-encryption-check" {
+  source = "./policies/opensearch-node-to-node-encryption-check.sentinel"
+  enforcement_level = "advisory"
+}
