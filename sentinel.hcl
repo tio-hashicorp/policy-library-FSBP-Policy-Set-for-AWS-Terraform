@@ -787,6 +787,11 @@ policy "ec2-launch-template-public-ip-disabled" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-security-group-ingress-traffic-restriction-to-common-ports" {
+  source = "./policies/ec2-security-group-ingress-traffic-restriction-to-common-ports.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticsearch-encrypted-at-rest" {
   source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
