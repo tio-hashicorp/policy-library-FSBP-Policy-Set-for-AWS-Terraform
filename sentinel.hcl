@@ -884,3 +884,8 @@ policy "opensearch-logs-to-cloudwatch" {
   source = "./policies/opensearch-logs-to-cloudwatch.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "opensearch-audit-logging-enabled" {
+  source = "./policies/opensearch-audit-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
