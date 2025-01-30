@@ -787,6 +787,11 @@ policy "ec2-launch-template-public-ip-disabled" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-security-group-ingress-traffic-restriction-to-common-ports" {
+  source = "./policies/ec2-security-group-ingress-traffic-restriction-to-common-ports.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticsearch-encrypted-at-rest" {
   source = "./policies/elasticsearch-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
@@ -852,6 +857,31 @@ policy "guardduty-eks-audit-log-monitoring-should-be-enabled" {
 
 policy "guardduty-should-be-enabled" {
   source = "./policies/guardduty-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "codebuild-project-environments-should-have-a-logging-aws-configuration" {
+  source = "./policies/codebuild-project-environments-should-have-a-logging-aws-configuration.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "codebuild-s3-logs-should-be-encrypted" {
+  source = "./policies/codebuild-s3-logs-should-be-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "opensearch-encrypted-at-rest" {
+  source = "./policies/opensearch-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "opensearch-node-to-node-encryption-check" {
+  source = "./policies/opensearch-node-to-node-encryption-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "opensearch-logs-to-cloudwatch" {
+  source = "./policies/opensearch-logs-to-cloudwatch.sentinel"
   enforcement_level = "advisory"
 }
 
