@@ -907,3 +907,8 @@ policy "opensearch-access-control-enabled" {
   source = "./policies/opensearch-access-control-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "opensearch-https-required" {
+  source = "./policies/opensearch-https-required.sentinel"
+  enforcement_level = "advisory"
+}
