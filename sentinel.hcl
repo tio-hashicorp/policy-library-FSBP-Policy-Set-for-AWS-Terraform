@@ -907,3 +907,8 @@ policy "opensearch-access-control-enabled" {
   source = "./policies/opensearch-access-control-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "iam-policy-no-statements-with-full-access" {
+  source = "./policies/iam-policy-no-statements-with-full-access.sentinel"
+  enforcement_level = "advisory"
+}
