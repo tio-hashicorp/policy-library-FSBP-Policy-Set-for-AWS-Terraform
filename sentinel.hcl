@@ -907,3 +907,19 @@ policy "opensearch-access-control-enabled" {
   source = "./policies/opensearch-access-control-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "iam-password-policy-strong-configuration" {
+  source = "./policies/iam-password-policy-strong-configuration.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    minimum_password_length_param = 14
+    require_lowercase_characters_param = true
+    require_uppercase_characters_param = true
+    require_numbers_param = true
+    require_symbols_param = true
+    allow_users_to_change_password_param = true
+    max_password_age_param = 90
+    min_password_reuse_prevention_param = 12
+    min_password_reuse_prevention_param = 24
+  }
+}
