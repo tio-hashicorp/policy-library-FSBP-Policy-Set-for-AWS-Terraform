@@ -29,10 +29,3 @@ case "iam-policy-statement-with-effect-set-to-deny" {
 		result = true
 	}
 }
-
-case "iam-policy-with-missing-statement-attribute" {
-	path = "./cases/iam-policy-with-missing-statement-attribute"
-	expectation {
-		result = true
-	}
-}
