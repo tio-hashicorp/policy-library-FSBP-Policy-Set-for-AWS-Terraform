@@ -908,6 +908,11 @@ policy "opensearch-access-control-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "opensearch-https-required" {
+  source = "./policies/opensearch-https-required.sentinel"
+   enforcement_level = "advisory"
+}
+
 policy "iam-policy-no-statements-with-full-access" {
   source = "./policies/iam-policy-no-statements-with-full-access.sentinel"
   enforcement_level = "advisory"
