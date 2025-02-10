@@ -918,6 +918,11 @@ policy "opensearch-update-check" {
   enforcement_level = "advisory"
 }
 
+policy "acm-pca-root-ca-disabled" {
+  source = "./policies/acm-pca-root-ca-disabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "iam-policy-no-statements-with-full-access" {
   source = "./policies/iam-policy-no-statements-with-full-access.sentinel"
   enforcement_level = "advisory"
