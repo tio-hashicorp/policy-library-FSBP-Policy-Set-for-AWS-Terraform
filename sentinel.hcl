@@ -908,6 +908,31 @@ policy "opensearch-access-control-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "opensearch-https-required" {
+  source = "./policies/opensearch-https-required.sentinel"
+   enforcement_level = "advisory"
+}
+
+policy "opensearch-update-check" {
+  source = "./policies/opensearch-update-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "acm-pca-root-ca-disabled" {
+  source = "./policies/acm-pca-root-ca-disabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "iam-policy-no-statements-with-full-access" {
+  source = "./policies/iam-policy-no-statements-with-full-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "iam-no-policies-attached-to-users" {
+  source = "./policies/iam-no-policies-attached-to-users.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "iam-password-policy-strong-configuration" {
   source = "./policies/iam-password-policy-strong-configuration.sentinel"
   enforcement_level = "advisory"
