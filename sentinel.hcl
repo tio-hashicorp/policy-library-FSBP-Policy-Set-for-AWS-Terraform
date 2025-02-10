@@ -913,6 +913,11 @@ policy "opensearch-https-required" {
    enforcement_level = "advisory"
 }
 
+policy "opensearch-update-check" {
+  source = "./policies/opensearch-update-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "iam-policy-no-statements-with-full-access" {
   source = "./policies/iam-policy-no-statements-with-full-access.sentinel"
   enforcement_level = "advisory"
