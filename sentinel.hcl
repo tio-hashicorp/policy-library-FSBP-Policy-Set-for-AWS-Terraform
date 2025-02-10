@@ -927,3 +927,8 @@ policy "iam-policy-no-statements-with-full-access" {
   source = "./policies/iam-policy-no-statements-with-full-access.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "iam-no-policies-attached-to-users" {
+  source = "./policies/iam-no-policies-attached-to-users.sentinel"
+  enforcement_level = "advisory"
+}
