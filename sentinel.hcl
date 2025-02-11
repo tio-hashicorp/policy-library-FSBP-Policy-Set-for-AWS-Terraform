@@ -908,6 +908,47 @@ policy "opensearch-access-control-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "opensearch-https-required" {
+  source = "./policies/opensearch-https-required.sentinel"
+   enforcement_level = "advisory"
+}
+
+policy "opensearch-update-check" {
+  source = "./policies/opensearch-update-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "acm-pca-root-ca-disabled" {
+  source = "./policies/acm-pca-root-ca-disabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "iam-policy-no-statements-with-full-access" {
+  source = "./policies/iam-policy-no-statements-with-full-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "iam-no-policies-attached-to-users" {
+  source = "./policies/iam-no-policies-attached-to-users.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "iam-password-policy-strong-configuration" {
+  source = "./policies/iam-password-policy-strong-configuration.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    minimum_password_length_param = 14
+    require_lowercase_characters_param = true
+    require_uppercase_characters_param = true
+    require_numbers_param = true
+    require_symbols_param = true
+    allow_users_to_change_password_param = true
+    max_password_age_param = 90
+    min_password_reuse_prevention_param = 12
+    min_password_reuse_prevention_param = 24
+  }
+}
+
 policy "s3-bucket-block-public-read-access" {
   source = "./policies/s3-bucket-block-public-read-access.sentinel"
   enforcement_level = "advisory"
