@@ -1,4 +1,4 @@
-# This policy requires resources of type `aws_s3_access_point` to have all attributes 
+# This policy requires resources of type `aws_s3_access_point` to have all attributes
 # in the `public_access_block_configuration` set to true.
 
 # Imports
@@ -12,13 +12,13 @@ import "report" as report
 # Constants
 
 const = {
-	"policy_name":         "s3-access-point-block-public-access-enabled",
-	"message":             "All attributes in 'public_access_block_configuration' must be set to true for 'aws_s3_access_point' resources. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/s3-controls.html#s3-19 for more details.",
-	"resource_aws_s3_access_point":       "aws_s3_access_point",
-	"block_public_acls": "block_public_acls",
-	"ignore_public_acls":	"ignore_public_acls",
-	"block_public_policy":	"block_public_policy",
-	"restrict_public_buckets":	"restrict_public_buckets",
+	"policy_name":                  "s3-access-point-block-public-access-enabled",
+	"message":                      "All attributes in 'public_access_block_configuration' must be set to true for 'aws_s3_access_point' resources. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/s3-controls.html#s3-19 for more details.",
+	"resource_aws_s3_access_point": "aws_s3_access_point",
+	"block_public_acls":            "block_public_acls",
+	"ignore_public_acls":           "ignore_public_acls",
+	"block_public_policy":          "block_public_policy",
+	"restrict_public_buckets":      "restrict_public_buckets",
 }
 
 # Functions
