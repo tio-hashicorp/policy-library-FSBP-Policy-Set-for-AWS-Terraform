@@ -32,8 +32,6 @@ get_violations = func(resources) {
 			}) is defined and
 				maps.get(statement, "effect", "") == const.Allow
 		})
-		print("csadnjs")
-		print(full_access)
 		return full_access is not defined or full_access is empty
 	})
 }
