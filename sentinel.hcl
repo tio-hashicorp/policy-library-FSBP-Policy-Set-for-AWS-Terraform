@@ -907,3 +907,8 @@ policy "opensearch-access-control-enabled" {
   source = "./policies/opensearch-access-control-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "s3-access-point-block-public-access-enabled" {
+  source = "./policies/s3-access-point-block-public-access-enabled.sentinel"
+  enforcement_level = "advisory"
+}
