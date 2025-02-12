@@ -11,5 +11,5 @@ resource "aws_s3_bucket_acl" "example" {
 
 
   bucket = aws_s3_bucket.secure_bucket.id
-  acl    = "public-write"
+  acl    = "log-delivery-write"
 }
