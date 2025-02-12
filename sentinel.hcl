@@ -948,3 +948,8 @@ policy "iam-password-policy-strong-configuration" {
     min_password_reuse_prevention_param = 24
   }
 }
+
+policy "s3-bucket-policy-restrict-access-to-other-accounts" {
+  source = "./policies/s3-bucket-policy-restrict-access-to-other-accounts.sentinel"
+  enforcement_level = "advisory"
+}
