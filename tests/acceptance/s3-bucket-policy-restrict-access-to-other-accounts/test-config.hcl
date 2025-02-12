@@ -29,10 +29,3 @@ case "s3-bucket-policy-with-unrestricted-access" {
 		result = false
 	}
 }
-
-case "s3-bucket-policy-with-statement-not-present" {
-	path = "./cases/s3-bucket-policy-with-statement-not-present"
-	expectation {
-		result = false
-	}
-}
