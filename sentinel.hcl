@@ -948,3 +948,8 @@ policy "iam-password-policy-strong-configuration" {
     min_password_reuse_prevention_param = 24
   }
 }
+
+policy "s3-bucket-block-public-write-access" {
+  source = "./policies/s3-bucket-block-public-write-access.sentinel"
+  enforcement_level = "advisory"
+}
