@@ -968,3 +968,8 @@ policy "s3-bucket-policy-restrict-access-to-other-accounts" {
   source = "./policies/s3-bucket-policy-restrict-access-to-other-accounts.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "kinesis-firehose-delivery-stream-encrypted" {
+  source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
