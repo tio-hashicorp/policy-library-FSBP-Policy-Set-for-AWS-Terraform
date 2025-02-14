@@ -963,3 +963,8 @@ policy "s3-bucket-block-public-write-access" {
   source = "./policies/s3-bucket-block-public-write-access.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "s3-bucket-policy-restrict-access-to-other-accounts" {
+  source = "./policies/s3-bucket-policy-restrict-access-to-other-accounts.sentinel"
+  enforcement_level = "advisory"
+}
