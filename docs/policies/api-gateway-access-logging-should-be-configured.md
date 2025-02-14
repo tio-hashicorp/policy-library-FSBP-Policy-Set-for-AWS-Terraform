@@ -1,4 +1,4 @@
-# Policy heading goes here
+# Access logging should be configured for API Gateway V2 Stages
 
 | Provider            | Category     |
 |---------------------|--------------|
