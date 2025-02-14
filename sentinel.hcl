@@ -948,3 +948,8 @@ policy "iam-password-policy-strong-configuration" {
     min_password_reuse_prevention_param = 24
   }
 }
+
+policy "kinesis-firehose-delivery-stream-encrypted" {
+  source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
