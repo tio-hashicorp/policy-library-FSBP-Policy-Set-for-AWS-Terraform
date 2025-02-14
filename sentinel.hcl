@@ -949,7 +949,12 @@ policy "iam-password-policy-strong-configuration" {
   }
 }
 
+policy "s3-access-point-block-public-access-enabled" {
+  source = "./policies/s3-access-point-block-public-access-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "s3-bucket-block-public-read-access" {
   source = "./policies/s3-bucket-block-public-read-access.sentinel"
-  enforcement_level = "advisory"
+   enforcement_level = "advisory"
 }
