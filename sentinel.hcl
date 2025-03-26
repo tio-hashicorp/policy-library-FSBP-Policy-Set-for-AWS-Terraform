@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "transfer-family-server-should-not-use-ftp" {
+  source = "./policies/transfer-family-server-should-not-use-ftp.sentinel"
+  enforcement_level = "advisory"
+}
