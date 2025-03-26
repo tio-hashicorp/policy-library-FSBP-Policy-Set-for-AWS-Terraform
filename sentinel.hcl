@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "step-functions-state-machine-logging-enabled" {
+  source = "./policies/step-functions-state-machine-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
