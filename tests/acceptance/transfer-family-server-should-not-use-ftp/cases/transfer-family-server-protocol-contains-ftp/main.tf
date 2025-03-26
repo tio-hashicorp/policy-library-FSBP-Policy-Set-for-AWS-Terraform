@@ -1,5 +1,5 @@
 provider "aws" {
-  region  = "us-east-2"
+  region = "us-east-2"
 }
 
 resource "aws_transfer_server" "example" {
@@ -10,7 +10,7 @@ resource "aws_transfer_server" "example" {
     vpc_id     = aws_vpc.example.id
   }
 
-  protocols   = ["FTP", "FTPS"]
+  protocols = ["FTP", "FTPS"]
 
 }
 
@@ -19,6 +19,6 @@ resource "aws_vpc" "example" {
 }
 
 resource "aws_subnet" "example" {
-  vpc_id            = aws_vpc.example.id
-  cidr_block        = "16.0.5.0/24"
+  vpc_id     = aws_vpc.example.id
+  cidr_block = "16.0.5.0/24"
 }
