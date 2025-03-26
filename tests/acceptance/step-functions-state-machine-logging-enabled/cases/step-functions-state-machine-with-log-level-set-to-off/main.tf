@@ -7,20 +7,20 @@ terraform {
   }
 }
 provider "aws" {
-  region  = "us-east-1"
+  region = "us-east-1"
 }
-	
+
 resource "aws_iam_role" "iam_for_sfn" {
   name = "iam_for_sfn"
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
     Statement = [
       {
-        Effect    = "Allow",
+        Effect = "Allow",
         Principal = {
           Service = "states.amazonaws.com"
         },
-        Action    = "sts:AssumeRole"
+        Action = "sts:AssumeRole"
       }
     ]
   })
@@ -47,7 +47,7 @@ EOF
   logging_configuration {
     log_destination        = "${aws_cloudwatch_log_group.log_group_for_sfn.arn}:*"
     include_execution_data = true
-    level = "OFF"
+    level                  = "OFF"
   }
 }
 
@@ -56,14 +56,14 @@ resource "aws_cloudwatch_log_group" "log_group_for_sfn" {
   tags = {
     Name = "my-state-machine"
   }
-  
+
 }
 
 resource "aws_lambda_function" "lambda" {
-  function_name = "my_lambda"
-  handler = "exports.handler"
-  runtime = "nodejs14.x"
-  role = aws_iam_role.iam_for_sfn.arn
-  filename = "lambda.zip"
+  function_name    = "my_lambda"
+  handler          = "exports.handler"
+  runtime          = "nodejs14.x"
+  role             = aws_iam_role.iam_for_sfn.arn
+  filename         = "lambda.zip"
   source_code_hash = filebase64sha256("lambda.zip")
 }
