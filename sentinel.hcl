@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "lambda-functions-should-use-supported-runtimes" {
+  source = "./policies/lambda-functions-should-use-supported-runtimes.sentinel"
+  enforcement_level = "advisory"
+}
