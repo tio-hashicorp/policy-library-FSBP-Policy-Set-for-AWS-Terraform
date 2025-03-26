@@ -8,8 +8,8 @@ resource "aws_iam_role" "lambda_role" {
     Version = "2012-10-17"
     Statement = [
       {
-        Action    = "sts:AssumeRole"
-        Effect    = "Allow"
+        Action = "sts:AssumeRole"
+        Effect = "Allow"
         Principal = {
           Service = "lambda.amazonaws.com"
         }
@@ -25,8 +25,8 @@ resource "aws_iam_role_policy_attachment" "lambda_policy" {
 
 resource "aws_lambda_function" "my_lambda" {
   function_name = "my_lambda_function"
-  package_type  = "Image"           
-  image_uri     = "123456789012.dkr.ecr.us-east-1.amazonaws.com/my-lambda-image:latest" 
+  package_type  = "Image"
+  image_uri     = "123456789012.dkr.ecr.us-east-1.amazonaws.com/my-lambda-image:latest"
   role          = aws_iam_role.lambda_role.arn
 }
 
