@@ -1,11 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.84.0"
-    }
-  }
-}
 provider "aws" {
   region = "us-east-1"
 }
@@ -59,5 +51,4 @@ resource "aws_lambda_function" "lambda" {
   runtime          = "nodejs14.x"
   role             = aws_iam_role.iam_for_sfn.arn
   filename         = "lambda.zip"
-  source_code_hash = filebase64sha256("lambda.zip")
 }
