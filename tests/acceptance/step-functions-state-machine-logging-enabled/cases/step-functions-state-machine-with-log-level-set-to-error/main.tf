@@ -39,7 +39,7 @@ EOF
   logging_configuration {
     log_destination        = "${aws_cloudwatch_log_group.log_group_for_sfn.arn}:*"
     include_execution_data = true
-    level                  = "OFF"
+    level                  = "ERROR"
   }
 }
 
