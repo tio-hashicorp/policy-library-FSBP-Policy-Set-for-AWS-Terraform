@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "waf-classic-logging-enabled" {
+  source = "./policies/waf-classic-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
