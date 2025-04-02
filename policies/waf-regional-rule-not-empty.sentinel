@@ -9,10 +9,10 @@ import "collection/maps" as maps
 # Constants
 
 const = {
-	"policy_name":                      "waf-regional-rule-not-empty",
-	"message":                          "AWS WAF Regional rule should have at least one condition. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/waf-controls.html#waf-2 for more details.",
+	"policy_name":                   "waf-regional-rule-not-empty",
+	"message":                       "AWS WAF Regional rule should have at least one condition. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/waf-controls.html#waf-2 for more details.",
 	"resource_aws_wafregional_rule": "aws_wafregional_rule",
-	"predicate":                        "predicate",
+	"predicate":                     "predicate",
 }
 
 # Functions
