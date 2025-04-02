@@ -20,4 +20,5 @@ case "transfer-family-server-protocol-not-contains-ftp" {
 	path = "./cases/transfer-family-server-protocol-not-contains-ftp"
 	expectation {
 		result = true	
+	}
 }
