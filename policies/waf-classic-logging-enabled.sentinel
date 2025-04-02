@@ -9,10 +9,10 @@ import "collection/maps" as maps
 # Constants
 
 const = {
-	"policy_name":                 "waf-classic-logging-enabled",
-	"message":                     "Logging should be enabled for an AWS WAF global web ACL. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/waf-controls.html#waf-1 for more details.",
+	"policy_name":              "waf-classic-logging-enabled",
+	"message":                  "Logging should be enabled for an AWS WAF global web ACL. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/waf-controls.html#waf-1 for more details.",
 	"resource_aws_waf_web_acl": "aws_waf_web_acl",
-	"logging_configuration":       "logging_configuration",
+	"logging_configuration":    "logging_configuration",
 }
 
 # Functions
