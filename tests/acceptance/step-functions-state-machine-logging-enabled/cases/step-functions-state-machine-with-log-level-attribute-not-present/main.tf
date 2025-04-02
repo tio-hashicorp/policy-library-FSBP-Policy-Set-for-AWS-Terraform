@@ -51,9 +51,9 @@ resource "aws_cloudwatch_log_group" "log_group_for_sfn" {
 }
 
 resource "aws_lambda_function" "lambda" {
-  function_name    = "my_lambda"
-  handler          = "exports.handler"
-  runtime          = "nodejs14.x"
-  role             = aws_iam_role.iam_for_sfn.arn
-  filename         = "lambda.zip"
+  function_name = "my_lambda"
+  handler       = "exports.handler"
+  runtime       = "nodejs14.x"
+  role          = aws_iam_role.iam_for_sfn.arn
+  filename      = "lambda.zip"
 }
