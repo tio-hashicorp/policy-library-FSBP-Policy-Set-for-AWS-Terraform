@@ -3,5 +3,5 @@ provider "aws" {
 }
 
 resource "aws_ebs_snapshot_block_public_access" "example" {
-  state = "unblocked"
+  state = "block-new-sharing"
 }
