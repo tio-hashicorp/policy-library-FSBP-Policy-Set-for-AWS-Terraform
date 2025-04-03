@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
+  source = "./policies/ec2-ebs-snapshot-public-restorable-check-account-level.sentinel"
+  enforcement_level = "advisory"
+}
