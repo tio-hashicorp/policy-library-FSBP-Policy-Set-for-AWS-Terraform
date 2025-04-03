@@ -766,3 +766,8 @@ policy "elasticsearch-in-vpc-only" {
   source = "./policies/elasticsearch-in-vpc-only.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-attached-ebs-volumes-encrypted-at-rest" {
+  source = "./policies/ec2-attached-ebs-volumes-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
