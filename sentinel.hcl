@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-vpc-default-security-group-no-traffic" {
+  source = "./policies/ec2-vpc-default-security-group-no-traffic.sentinel"
+  enforcement_level = "advisory"
+}
