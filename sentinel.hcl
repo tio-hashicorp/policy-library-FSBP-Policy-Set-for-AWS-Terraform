@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-subnet-with-auto-assign-public-ip-disabled" {
+  source = "./policies/ec2-subnet-with-auto-assign-public-ip-disabled.sentinel"
+  enforcement_level = "advisory"
+}
