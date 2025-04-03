@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-vpc-flow-logging-enabled" {
+  source = "./policies/ec2/ec2-vpc-flow-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
