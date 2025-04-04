@@ -24,7 +24,7 @@ const = {
 // Functions
 
 get_encrypted_violations = func(resources) {
-	return collection.reject(ebs_volume_resources, func(res) {
+	return collection.reject(resources, func(res) {
 		volume_encrypted_values = maps.get(res, "config." + const.encrypted, {})
 		if volume_encrypted_values is empty {
 			return false
