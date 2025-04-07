@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-instance-virtualization-should-not-be-paravirtual" {
+  source = "./policies/ec2-instance-virtualization-should-not-be-paravirtual.sentinel"
+  enforcement_level = "advisory"
+}
