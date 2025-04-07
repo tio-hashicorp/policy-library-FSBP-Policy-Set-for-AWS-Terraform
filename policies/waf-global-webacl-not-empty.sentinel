@@ -14,7 +14,7 @@ const = {
 	"policy_name":              "waf-global-webacl-not-empty",
 	"message":                  "AWS WAF Classic global web ACLs should have at least one rule or rule group. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/waf-controls.html#waf-8 for more details.",
 	"resource_aws_waf_web_acl": "aws_waf_web_acl",
-	"rules":                     "rules",
+	"rules":                    "rules",
 }
 
 # Variables
