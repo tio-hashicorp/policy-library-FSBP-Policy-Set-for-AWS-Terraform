@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-transit-gateway-auto-vpc-attach-disabled" {
+  source = "./policies/ec2-transit-gateway-auto-vpc-attach-disabled.sentinel"
+  enforcement_level = "advisory"
+}
