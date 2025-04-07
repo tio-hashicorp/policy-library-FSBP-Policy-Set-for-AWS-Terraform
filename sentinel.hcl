@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "waf-global-rule-not-empty" {
+  source = "./policies/waf-global-rule-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
