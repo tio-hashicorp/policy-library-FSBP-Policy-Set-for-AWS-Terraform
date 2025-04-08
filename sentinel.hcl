@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "wafv2-rulegroup-logging-enabled" {
+  source = "./policies/wafv2-rulegroup-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
