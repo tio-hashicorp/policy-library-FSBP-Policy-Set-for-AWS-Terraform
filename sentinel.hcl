@@ -974,6 +974,11 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
+  source = "./policies/ec2-ebs-snapshot-public-restorable-check-account-level.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ec2-subnet-with-auto-assign-public-ip-disabled" {
   source = "./policies/ec2-subnet-with-auto-assign-public-ip-disabled.sentinel"
   enforcement_level = "advisory"
