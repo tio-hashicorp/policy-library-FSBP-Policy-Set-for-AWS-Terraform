@@ -18,6 +18,7 @@ const = {
 	"resource_aws_instance": "aws_instance",
 	"virtualization_type":   "virtualization_type",
 	"ami":            "ami",
+	"paravirtual":    "paravirtual",
 	"constant_value": "constant_value",
 	"module_prefix":  "module.",
 }
@@ -30,7 +31,7 @@ get_virtualization_complaint = func(resources) {
 		if virtualization_values is empty {
 			return true
 		}
-		return maps.get(virtualization_values, const.constant_value, "paravirtual") is "paravirtual"
+		return maps.get(virtualization_values, const.constant_value, const.paravirtual) is const.paravirtual
 	})
 }
 
