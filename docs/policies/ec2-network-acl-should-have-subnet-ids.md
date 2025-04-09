@@ -6,6 +6,8 @@
 
 ## Description
 
+DISCLAIMER - This policy works when all resources of type aws_network_acl, aws_network_acl_association and aws_subnet are present in the root module.
+
 This control checks whether there are any unused network access control lists (network ACLs) in your virtual private cloud (VPC). The control fails if the network ACL isn't associated with a subnet. The control doesn't generate findings for an unused default network ACL.
 
 The control checks the item configuration of the resource AWS::EC2::NetworkAcl and determines the relationships of the network ACL.
