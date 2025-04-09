@@ -974,6 +974,11 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
+  source = "./policies/ec2-ebs-snapshot-public-restorable-check-account-level.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ec2-network-acl-should-have-subnet-ids" {
   source = "./policies/ec2-network-acl-should-have-subnet-ids.sentinel"
   enforcement_level = "advisory"
