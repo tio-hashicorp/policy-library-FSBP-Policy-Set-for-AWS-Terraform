@@ -973,3 +973,8 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   source = "./policies/kinesis-firehose-delivery-stream-encrypted.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "lambda-vpc-multi-az-check" {
+  source = "./policies/lambda-vpc-multi-az-check.sentinel"
+  enforcement_level = "advisory"
+}
