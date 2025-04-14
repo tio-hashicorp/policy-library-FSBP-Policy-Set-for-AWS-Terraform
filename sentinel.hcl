@@ -978,3 +978,12 @@ policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
   source = "./policies/ec2-ebs-snapshot-public-restorable-check-account-level.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports" {
+  source = "./policies/ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    authorized_tcp_ports = [80, 443]
+    authorized_udp_ports = []
+  }
+}
