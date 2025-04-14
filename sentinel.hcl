@@ -978,3 +978,8 @@ policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
   source = "./policies/ec2-ebs-snapshot-public-restorable-check-account-level.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-instance-should-not-have-public-ip" {
+  source = "./policies/ec2-instance-should-not-have-public-ip.sentinel"
+  enforcement_level = "advisory"
+}
