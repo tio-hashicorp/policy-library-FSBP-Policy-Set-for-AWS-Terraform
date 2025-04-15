@@ -978,3 +978,8 @@ policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
   source = "./policies/ec2/ec2--ebs-snapshot-public-restorable-check-account-level.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "lambda-function-public-access-prohibited" {
+  source = "./policies/lambda/lambda-function-public-access-prohibited.sentinel"
+  enforcement_level = "advisory"
+}
