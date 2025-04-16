@@ -1013,3 +1013,8 @@ policy "ec2-attached-ebs-volumes-encrypted-at-rest" {
   source = "./policies/ec2-attached-ebs-volumes-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-network-acl-should-have-subnet-ids" {
+  source = "./policies/ec2-network-acl-should-have-subnet-ids.sentinel"
+  enforcement_level = "advisory"
+}
