@@ -978,3 +978,8 @@ policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
   source = "./policies/ec2/ec2--ebs-snapshot-public-restorable-check-account-level.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "step-functions-state-machine-logging-enabled" {
+  source = "./policies/step-functions-state-machine-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
