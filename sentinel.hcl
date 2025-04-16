@@ -988,3 +988,8 @@ policy "transfer-family-server-should-not-use-ftp" {
   source = "./policies/transfer-family-server-should-not-use-ftp.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "lambda-functions-should-use-supported-runtimes" {
+  source = "./policies/lambda-functions-should-use-supported-runtimes.sentinel"
+  enforcement_level = "advisory"
+}
