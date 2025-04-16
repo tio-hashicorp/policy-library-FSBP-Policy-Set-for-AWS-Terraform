@@ -4,15 +4,6 @@
 |---------------------|------------|
 | Amazon Web Services | Networking |
 
-
-## CIS versions that include this policy
-
-| Version | Included |
-|---------|----------|
-| 1.2.0   | &check;  |
-| 1.4.0   | &check;  |
-| 3.0.0   | &cross;  |
-
 ## Description
 
 DISCLAIMER - This policy will work well if `aws_flow_log` resource attribute `vpc_id` 
@@ -20,7 +11,7 @@ refers to the `aws_vpc` resource attribute `id` or `aws_default_vpc` resource at
 
 This policy checks whether Amazon VPC Flow Logs are found and enabled for VPCs. The traffic type is set to Reject or All.
 
-This rule is covered by the [ec2-vpc-flow-logging-enabled](https://github.com/hashicorp/policy-library-CIS-Policy-Set-for-AWS-Terraform/blob/main/policies/ec2/ec2-vpc-flow-logging-enabled.sentinel) policy.
+This rule is covered by the [ec2-vpc-flow-logging-enabled](../../policies/ec2/ec2-vpc-flow-logging-enabled.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash

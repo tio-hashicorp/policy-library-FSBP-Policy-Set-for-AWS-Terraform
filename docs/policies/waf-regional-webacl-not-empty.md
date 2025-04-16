@@ -10,7 +10,7 @@ This control checks whether an AWS WAF Classic Regional web ACL contains any WAF
 
 A WAF Regional web ACL can contain a collection of rules and rule groups that inspect and control web requests. If a web ACL is empty, the web traffic can pass without being detected or acted upon by WAF depending on the default action.
 
-This rule is covered by the [waf-regional-webacl-not-empty](../../policies/waf-regional-webacl-not-empty.sentinel) policy.
+This rule is covered by the [waf-regional-webacl-not-empty](../../policies/waf/waf-regional-webacl-not-empty.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash

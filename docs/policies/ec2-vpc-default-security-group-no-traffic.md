@@ -4,14 +4,6 @@
 |---------------------|------------|
 | Amazon Web Services | Networking |
 
-## CIS versions that include this policy
-
-| Version | Included |
-|---------|----------|
-| 1.2.0   | &check;  |
-| 1.4.0   | &check;  |
-| 3.0.0   | &check;  |
-
 ## Description
 
 DISCLAIMER - This policy will work well if resources of type `aws_vpc`, `aws_default_vpc`, `aws_default_security_group`,
@@ -21,7 +13,7 @@ are present in root module.
 This policy checks whether the default security group of a VPC allows inbound or outbound traffic. 
 The policy fails if the security group allows inbound or outbound traffic.
 
-This rule is covered by the [ec2-vpc-default-security-group-no-traffic](https://github.com/hashicorp/policy-library-CIS-Policy-Set-for-AWS-Terraform/blob/main/policies/ec2/ec2-vpc-default-security-group-no-traffic.sentinel) policy.
+This rule is covered by the [ec2-vpc-default-security-group-no-traffic](../../policies/ec2/ec2-vpc-default-security-group-no-traffic.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash

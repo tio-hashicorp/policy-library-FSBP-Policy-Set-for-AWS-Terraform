@@ -12,7 +12,7 @@ This control checks whether the EBS volumes that are in an attached state are en
 
 For an added layer of security of your sensitive data in EBS volumes, you should enable EBS encryption at rest. Amazon EBS encryption offers a straightforward encryption solution for your EBS resources that doesn't require you to build, maintain, and secure your own key management infrastructure. It uses KMS keys when creating encrypted volumes and snapshots.
 
-This rule is covered by the [ec2-attached-ebs-volumes-encrypted-at-rest](../../policies/ec2-attached-ebs-volumes-encrypted-at-rest.sentinel) policy.
+This rule is covered by the [ec2-attached-ebs-volumes-encrypted-at-rest](../../policies/ec2/ec2-attached-ebs-volumes-encrypted-at-rest.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash
