@@ -1048,3 +1048,8 @@ policy "ec2-transit-gateway-auto-vpc-attach-disabled" {
   source = "./policies/ec2-transit-gateway-auto-vpc-attach-disabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "waf-global-rulegroup-not-empty" {
+  source = "./policies/waf-global-rulegroup-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
