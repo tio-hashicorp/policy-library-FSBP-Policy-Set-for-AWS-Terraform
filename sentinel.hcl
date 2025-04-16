@@ -978,3 +978,8 @@ policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
   source = "./policies/ec2/ec2--ebs-snapshot-public-restorable-check-account-level.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "opensearch-in-vpc-only" {
+  source = "./policies/opensearch/opensearch-in-vpc-only.sentinel"
+  enforcement_level = "advisory"
+}
