@@ -1064,6 +1064,11 @@ policy "wafv2-rulegroup-logging-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-service-vpc-endpoint-enabled" {
+  source = "./policies/ec2-service-vpc-endpoint-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "waf-global-rule-not-empty" {
   source = "./policies/waf-global-rule-not-empty.sentinel"
   enforcement_level = "advisory"
