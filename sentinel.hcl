@@ -1043,3 +1043,8 @@ policy "ec2-instance-virtualization-should-not-be-paravirtual" {
   source = "./policies/ec2-instance-virtualization-should-not-be-paravirtual.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-transit-gateway-auto-vpc-attach-disabled" {
+  source = "./policies/ec2-transit-gateway-auto-vpc-attach-disabled.sentinel"
+  enforcement_level = "advisory"
+}
