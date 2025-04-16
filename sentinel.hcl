@@ -974,6 +974,11 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   enforcement_level = "advisory"
 }
 
+policy "waf-classic-logging-enabled" {
+  source = "./policies/waf-classic-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
   source = "./policies/ec2/ec2--ebs-snapshot-public-restorable-check-account-level.sentinel"
   enforcement_level = "advisory"
