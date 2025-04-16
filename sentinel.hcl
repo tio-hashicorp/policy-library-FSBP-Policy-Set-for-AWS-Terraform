@@ -1053,3 +1053,8 @@ policy "waf-global-rulegroup-not-empty" {
   source = "./policies/waf-global-rulegroup-not-empty.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "wafv2-webacl-not-empty" {
+  source = "./policies/wafv2-webacl-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
