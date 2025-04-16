@@ -974,6 +974,11 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   enforcement_level = "advisory"
 }
 
+policy "lambda-vpc-multi-az-check" {
+  source = "./policies/lambda-vpc-multi-az-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "waf-classic-logging-enabled" {
   source = "./policies/waf-classic-logging-enabled.sentinel"
   enforcement_level = "advisory"
