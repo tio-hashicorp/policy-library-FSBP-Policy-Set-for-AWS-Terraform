@@ -1028,3 +1028,8 @@ policy "ec2-vpc-default-security-group-no-traffic" {
   source = "./policies/ec2-vpc-default-security-group-no-traffic.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-vpc-flow-logging-enabled" {
+  source = "./policies/ec2/ec2-vpc-flow-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
