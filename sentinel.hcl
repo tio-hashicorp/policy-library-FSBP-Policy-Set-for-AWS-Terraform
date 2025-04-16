@@ -989,6 +989,11 @@ policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
   enforcement_level = "advisory"
 }
 
+policy "lambda-function-public-access-prohibited" {
+  source = "./policies/lambda/lambda-function-public-access-prohibited.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "step-functions-state-machine-logging-enabled" {
   source = "./policies/step-functions-state-machine-logging-enabled.sentinel"
   enforcement_level = "advisory"
