@@ -998,3 +998,8 @@ policy "lambda-functions-should-use-supported-runtimes" {
   source = "./policies/lambda-functions-should-use-supported-runtimes.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "waf-regional-rule-not-empty" {
+  source = "./policies/waf-regional-rule-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
