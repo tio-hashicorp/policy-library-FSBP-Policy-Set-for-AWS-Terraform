@@ -1018,3 +1018,8 @@ policy "ec2-network-acl-should-have-subnet-ids" {
   source = "./policies/ec2-network-acl-should-have-subnet-ids.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-subnet-with-auto-assign-public-ip-disabled" {
+  source = "./policies/ec2-subnet-with-auto-assign-public-ip-disabled.sentinel"
+  enforcement_level = "advisory"
+}
