@@ -1033,3 +1033,8 @@ policy "ec2-vpc-flow-logging-enabled" {
   source = "./policies/ec2/ec2-vpc-flow-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-instance-should-not-use-multiple-enis" {
+  source = "./policies/ec2-instance-should-not-use-multiple-enis.sentinel"
+  enforcement_level = "advisory"
+}
