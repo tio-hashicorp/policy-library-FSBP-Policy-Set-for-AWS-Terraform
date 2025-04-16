@@ -1083,3 +1083,12 @@ policy "ec2-instance-should-not-have-public-ip" {
   source = "./policies/ec2-instance-should-not-have-public-ip.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports" {
+  source = "./policies/ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    authorized_tcp_ports = [80, 443]
+    authorized_udp_ports = []
+  }
+}
