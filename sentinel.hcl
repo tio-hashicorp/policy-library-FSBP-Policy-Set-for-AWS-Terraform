@@ -1023,3 +1023,8 @@ policy "ec2-subnet-with-auto-assign-public-ip-disabled" {
   source = "./policies/ec2-subnet-with-auto-assign-public-ip-disabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ec2-vpc-default-security-group-no-traffic" {
+  source = "./policies/ec2-vpc-default-security-group-no-traffic.sentinel"
+  enforcement_level = "advisory"
+}
