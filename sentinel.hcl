@@ -974,6 +974,16 @@ policy "kinesis-firehose-delivery-stream-encrypted" {
   enforcement_level = "advisory"
 }
 
+policy "lambda-vpc-multi-az-check" {
+  source = "./policies/lambda-vpc-multi-az-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "waf-classic-logging-enabled" {
+  source = "./policies/waf-classic-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
   source = "./policies/ec2/ec2--ebs-snapshot-public-restorable-check-account-level.sentinel"
   enforcement_level = "advisory"
@@ -982,4 +992,118 @@ policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
 policy "lambda-function-public-access-prohibited" {
   source = "./policies/lambda/lambda-function-public-access-prohibited.sentinel"
   enforcement_level = "advisory"
+}
+
+policy "step-functions-state-machine-logging-enabled" {
+  source = "./policies/step-functions-state-machine-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "transfer-family-server-should-not-use-ftp" {
+  source = "./policies/transfer-family-server-should-not-use-ftp.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "lambda-functions-should-use-supported-runtimes" {
+  source = "./policies/lambda-functions-should-use-supported-runtimes.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "waf-regional-rule-not-empty" {
+  source = "./policies/waf-regional-rule-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "waf-regional-rulegroup-not-empty" {
+  source = "./policies/waf-regional-rulegroup-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-attached-ebs-volumes-encrypted-at-rest" {
+  source = "./policies/ec2-attached-ebs-volumes-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-network-acl-should-have-subnet-ids" {
+  source = "./policies/ec2-network-acl-should-have-subnet-ids.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-subnet-with-auto-assign-public-ip-disabled" {
+  source = "./policies/ec2-subnet-with-auto-assign-public-ip-disabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-vpc-default-security-group-no-traffic" {
+  source = "./policies/ec2-vpc-default-security-group-no-traffic.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-vpc-flow-logging-enabled" {
+  source = "./policies/ec2/ec2-vpc-flow-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-instance-should-not-use-multiple-enis" {
+  source = "./policies/ec2-instance-should-not-use-multiple-enis.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-instance-virtualization-should-not-be-paravirtual" {
+  source = "./policies/ec2-instance-virtualization-should-not-be-paravirtual.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-transit-gateway-auto-vpc-attach-disabled" {
+  source = "./policies/ec2-transit-gateway-auto-vpc-attach-disabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "waf-global-rulegroup-not-empty" {
+  source = "./policies/waf-global-rulegroup-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "wafv2-webacl-not-empty" {
+  source = "./policies/wafv2-webacl-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "wafv2-rulegroup-logging-enabled" {
+  source = "./policies/wafv2-rulegroup-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-service-vpc-endpoint-enabled" {
+  source = "./policies/ec2-service-vpc-endpoint-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "waf-global-rule-not-empty" {
+  source = "./policies/waf-global-rule-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "waf-global-webacl-not-empty" {
+  source = "./policies/waf-global-webacl-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "waf-regional-webacl-not-empty" {
+  source = "./policies/waf-regional-webacl-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-instance-should-not-have-public-ip" {
+  source = "./policies/ec2-instance-should-not-have-public-ip.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports" {
+  source = "./policies/ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    authorized_tcp_ports = [80, 443]
+    authorized_udp_ports = []
+  }
 }
