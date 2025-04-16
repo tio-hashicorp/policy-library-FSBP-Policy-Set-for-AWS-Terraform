@@ -1058,3 +1058,8 @@ policy "wafv2-webacl-not-empty" {
   source = "./policies/wafv2-webacl-not-empty.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "wafv2-rulegroup-logging-enabled" {
+  source = "./policies/wafv2-rulegroup-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
