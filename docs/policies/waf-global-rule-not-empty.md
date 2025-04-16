@@ -10,7 +10,7 @@ This control checks whether an AWS WAF global rule contains any conditions. The 
 
 A WAF global rule can contain multiple conditions. A rule's conditions allow for traffic inspection and take a defined action (allow, block, or count). Without any conditions, the traffic passes without inspection. A WAF global rule with no conditions, but with a name or tag suggesting allow, block, or count, could lead to the wrong assumption that one of those actions is occurring.
 
-This rule is covered by the [waf-global-rule-not-empty](../../policies/waf-global-rule-not-empty.sentinel) policy.
+This rule is covered by the [waf-global-rule-not-empty](../../policies/waf/waf-global-rule-not-empty.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash

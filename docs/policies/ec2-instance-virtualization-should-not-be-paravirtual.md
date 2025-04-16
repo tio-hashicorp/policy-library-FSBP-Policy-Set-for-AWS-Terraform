@@ -12,7 +12,7 @@ This control checks whether the virtualization type of an EC2 instance is paravi
 
 Linux Amazon Machine Images (AMIs) use one of two types of virtualization: paravirtual (PV) or hardware virtual machine (HVM). The main differences between PV and HVM AMIs are the way in which they boot and whether they can take advantage of special hardware extensions (CPU, network, and storage) for better performance.
 
-This rule is covered by the [ec2-instance-virtualization-should-not-be-paravirtual](../../policies/ec2-instance-virtualization-should-not-be-paravirtual.sentinel) policy.
+This rule is covered by the [ec2-instance-virtualization-should-not-be-paravirtual](../../policies/ec2/ec2-instance-virtualization-should-not-be-paravirtual.sentinel) policy.
 
 ## Policy Results (Pass)
 

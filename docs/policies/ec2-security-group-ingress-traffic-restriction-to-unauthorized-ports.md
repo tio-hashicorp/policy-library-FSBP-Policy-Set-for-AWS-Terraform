@@ -14,7 +14,7 @@ This control checks whether an Amazon EC2 security group permits unrestricted in
 
 - If you provide custom parameter values for authorized_tcp_ports or authorized_udp_ports in the [sentinel.hcl](../../sentinel.hcl) file for the policy, the control fails if the security group permits unrestricted incoming traffic from any unlisted port.
 
-This rule is covered by the [ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports](../../policies/ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports.sentinel) policy.
+This rule is covered by the [ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports](../../policies/ec2/ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash
