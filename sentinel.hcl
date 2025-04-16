@@ -983,3 +983,8 @@ policy "step-functions-state-machine-logging-enabled" {
   source = "./policies/step-functions-state-machine-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "transfer-family-server-should-not-use-ftp" {
+  source = "./policies/transfer-family-server-should-not-use-ftp.sentinel"
+  enforcement_level = "advisory"
+}
