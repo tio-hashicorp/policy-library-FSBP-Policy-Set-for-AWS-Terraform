@@ -1063,3 +1063,8 @@ policy "wafv2-rulegroup-logging-enabled" {
   source = "./policies/wafv2-rulegroup-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "waf-global-rule-not-empty" {
+  source = "./policies/waf-global-rule-not-empty.sentinel"
+  enforcement_level = "advisory"
+}
