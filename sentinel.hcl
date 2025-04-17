@@ -1044,6 +1044,11 @@ policy "ec2-vpc-flow-logging-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "opensearch-in-vpc-only" {
+  source = "./policies/opensearch/opensearch-in-vpc-only.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ec2-instance-should-not-use-multiple-enis" {
   source = "./policies/ec2/ec2-instance-should-not-use-multiple-enis.sentinel"
   enforcement_level = "advisory"
