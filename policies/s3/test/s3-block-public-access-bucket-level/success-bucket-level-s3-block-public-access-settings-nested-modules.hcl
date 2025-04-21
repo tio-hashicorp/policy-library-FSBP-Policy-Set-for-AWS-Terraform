@@ -22,8 +22,10 @@ mock "tfplan-functions" {
   }
 }
 
-import "plugin" "tfresources" {
-  source = "../../../../plugins/darwin/arm64/sentinel-plugin-tfresources"
+mock "tfresources" {
+  module {
+    source = "../../../../modules/tfresources/tfresources.sentinel"
+  }
 }
 
 mock "report" {
