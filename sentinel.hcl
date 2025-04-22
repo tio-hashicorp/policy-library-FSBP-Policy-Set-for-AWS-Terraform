@@ -1110,3 +1110,8 @@ policy "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports" {
     authorized_udp_ports = []
   }
 }
+
+policy "iam-no-admin-privileges-allowed-by-policies" {
+  source = "./policies/iam/iam-no-admin-privileges-allowed-by-policies.sentinel"
+  enforcement_level = "advisory"
+}
