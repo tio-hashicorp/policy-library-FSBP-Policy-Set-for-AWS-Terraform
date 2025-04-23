@@ -982,6 +982,10 @@ policy "waf-classic-logging-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
+  source = "./policies/ec2/ec2-ebs-snapshot-public-restorable-check-account-level.sentinel"
+  enforcement_level = "advisory"
+}
 
 policy "lambda-function-public-access-prohibited" {
   source = "./policies/lambda/lambda-function-public-access-prohibited.sentinel"
@@ -1105,9 +1109,4 @@ policy "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports" {
     authorized_tcp_ports = [80, 443]
     authorized_udp_ports = []
   }
-}
-
-policy "ec2-ebs-snapshot-public-restorable-check-account-level" {
-  source = "./policies/ec2/ec2-ebs-snapshot-public-restorable-check-account-level.sentinel"
-  enforcement_level = "advisory"
 }
