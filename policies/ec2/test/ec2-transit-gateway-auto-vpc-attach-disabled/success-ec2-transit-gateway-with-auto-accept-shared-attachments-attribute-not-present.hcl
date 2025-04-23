@@ -1,0 +1,25 @@
+mock "tfplan/v2" {
+	module {
+		source = "./mocks/policy-success-ec2-transit-gateway-with-auto-accept-shared-attachments-attribute-not-present/mock-tfplan-v2.sentinel"
+	}
+}
+
+
+
+mock "tfresources" {
+  module {
+    source = "../../../../modules/tfresources/tfresources.sentinel"
+  }
+}
+
+mock "report" {
+	module {
+		source = "../../../../modules/mocks/report/report.sentinel"
+	}
+}
+
+test {
+	rules = {
+		main = true
+	}
+}
