@@ -1115,3 +1115,8 @@ policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
   source = "./policies/elasticsearch/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "eventbridge-custom-event-bus-should-have-attached-policy" {
+  source = "./policies/eventbridge/eventbridge-custom-event-bus-should-have-attached-policy.sentinel"
+  enforcement_level = "advisory"
+}
