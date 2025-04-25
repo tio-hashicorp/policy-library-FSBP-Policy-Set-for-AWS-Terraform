@@ -1115,3 +1115,8 @@ policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
   source = "./policies/elasticsearch/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "sqs-queue-should-be-encrypted-at-rest" {
+  source = "./policies/sqs/sqs-queue-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
