@@ -1,4 +1,4 @@
-name = "ec2-security-group-ingress-traffic-restriction-to-common-ports"
+name = "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports"
 
 disabled = false
 
