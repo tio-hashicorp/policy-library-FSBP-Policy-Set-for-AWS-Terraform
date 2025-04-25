@@ -1115,3 +1115,8 @@ policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
   source = "./policies/elasticsearch/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "service-catalog-shared-within-organization" {
+  source = "./policies/servicecatalog/service-catalog-shared-within-organization.sentinel"
+  enforcement_level = "advisory"
+}
