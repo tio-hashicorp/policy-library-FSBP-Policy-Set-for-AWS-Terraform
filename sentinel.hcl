@@ -1110,3 +1110,8 @@ policy "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports" {
     authorized_udp_ports = []
   }
 }
+
+policy "dms-endpoints-should-use-ssl" {
+  source = "./policies/dms/dms-endpoints-should-use-ssl.sentinel"
+  enforcement_level = "advisory"
+}
