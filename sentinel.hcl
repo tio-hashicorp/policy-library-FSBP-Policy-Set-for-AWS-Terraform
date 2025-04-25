@@ -1111,6 +1111,11 @@ policy "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports" {
   }
 }
 
+policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
+  source = "./policies/elasticsearch/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "dms-endpoints-should-use-ssl" {
   source = "./policies/dms/dms-endpoints-should-use-ssl.sentinel"
   enforcement_level = "advisory"
