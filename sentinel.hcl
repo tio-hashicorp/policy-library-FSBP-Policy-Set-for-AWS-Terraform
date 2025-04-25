@@ -1115,3 +1115,8 @@ policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
   source = "./policies/elasticsearch/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ssm-documents-should-not-be-public" {
+  source = "./policies/ssm/ssm-documents-should-not-be-public.sentinel"
+  enforcement_level = "advisory"
+}
