@@ -1110,3 +1110,8 @@ policy "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports" {
     authorized_udp_ports = []
   }
 }
+
+policy "guardduty-malware-protection-enabled" {
+  source = "./policies/guardduty/guardduty-malware-protection-enabled.sentinel"
+  enforcement_level = "advisory"
+}
