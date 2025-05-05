@@ -1115,3 +1115,8 @@ policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
   source = "./policies/elasticsearch/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "autoscaling-launch-config-public-ip-disabled" {
+  source = "./policies/autoscaling-group/autoscaling-launch-config-public-ip-disabled.sentinel"
+  enforcement_level = "advisory"
+}
