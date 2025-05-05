@@ -6,6 +6,8 @@
 
 ## Description
 
+DISCLAIMER - This policy works when all resources of type aws_secretsmanager_secret and aws_secretsmanager_secret_rotation are present in the root module.
+
 This control checks whether a secret stored in AWS Secrets Manager is configured with automatic rotation. The control fails if the secret isn't configured with automatic rotation. If you provide a custom value for the maximumAllowedRotationFrequency parameter, the control passes only if the secret is automatically rotated within the specified window of time.
 
 Secrets Manager helps you improve the security posture of your organization. Secrets include database credentials, passwords, and third-party API keys. You can use Secrets Manager to store secrets centrally, encrypt secrets automatically, control access to secrets, and rotate secrets safely and automatically.
