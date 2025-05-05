@@ -6,6 +6,8 @@
 
 ## Description
 
+DISCLAIMER - This policy works when all resources of type aws_servicecatalog_portfolio and aws_servicecatalog_portfolio_share are present in the root module.
+
 This control checks whether AWS Service Catalog shares portfolios within an organization when the integration with AWS Organizations is enabled. The control fails if portfolios aren't shared within an organization.
 
 Portfolio sharing only within Organizations helps ensure that a portfolio isn't shared with incorrect AWS accounts. To share a Service Catalog portfolio with an account in an organization, Security Hub recommends using ORGANIZATION_MEMBER_ACCOUNT instead of ACCOUNT. 
