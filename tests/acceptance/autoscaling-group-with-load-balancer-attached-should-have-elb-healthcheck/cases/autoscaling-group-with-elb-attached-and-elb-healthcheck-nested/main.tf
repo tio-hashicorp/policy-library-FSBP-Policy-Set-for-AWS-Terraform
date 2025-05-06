@@ -3,7 +3,6 @@ provider "aws" {
 }
 
 module "autoscaling_groups" {
-  source      = "./autoscaling-groups"
-  healthcheck = "ELB"
+  source = "./autoscaling-groups"
 }
 
