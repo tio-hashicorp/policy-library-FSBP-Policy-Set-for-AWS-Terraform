@@ -1185,3 +1185,8 @@ policy "autoscaling-launch-config-public-ip-disabled" {
   source = "./policies/autoscaling-group/autoscaling-launch-config-public-ip-disabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "autoscaling-group-should-use-multiple-instance-types" {
+  source = "./policies/autoscaling-group/autoscaling-group-should-use-multiple-instance-types.sentinel"
+  enforcement_level = "advisory"
+}
