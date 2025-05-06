@@ -5,7 +5,7 @@ disabled = false
 case "autoscaling-group-with-elb-not-attached-and-healthcheck-attribute-not-present" {
 	path = "./cases/autoscaling-group-with-elb-not-attached-and-healthcheck-attribute-not-present"
 	expectation {
-		result = false
+		result = true
 	}
 }
 
@@ -26,7 +26,7 @@ case "autoscaling-group-with-elb-attached-and-healthcheck-attribute-set-to-ec2" 
 case "autoscaling-group-with-elb-not-attached-and-elb-healthcheck" {
 	path = "./cases/autoscaling-group-with-elb-not-attached-and-elb-healthcheck"
 	expectation {
-		result = false
+		result = true
 	}
 }
 
