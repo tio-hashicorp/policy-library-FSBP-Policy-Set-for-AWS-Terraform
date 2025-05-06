@@ -1170,3 +1170,8 @@ policy "service-catalog-shared-within-organization" {
   source = "./policies/servicecatalog/service-catalog-shared-within-organization.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "acm-rsa-certificate-key-length-atleast-2048" {
+  source = "./policies/acm/acm-rsa-certificate-key-length-atleast-2048.sentinel"
+  enforcement_level = "advisory"
+}
