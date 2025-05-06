@@ -1117,6 +1117,6 @@ policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
 }
 
 policy "secretsmanager-auto-rotation-enabled-check" {
-  source = "./policies/secretsmanager/secretsmanager/secretsmanager-auto-rotation-enabled-check.sentinel"
+  source = "./policies/secretsmanager/secretsmanager-auto-rotation-enabled-check.sentinel"
   enforcement_level = "advisory"
 }
