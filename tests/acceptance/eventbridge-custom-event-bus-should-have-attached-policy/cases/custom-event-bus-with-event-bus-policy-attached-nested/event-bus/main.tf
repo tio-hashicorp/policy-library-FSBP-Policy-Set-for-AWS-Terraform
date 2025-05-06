@@ -1,0 +1,26 @@
+resource "aws_cloudwatch_event_bus" "example" {
+  name = "example-event-bus"
+}
+
+resource "aws_cloudwatch_event_bus_policy" "example" {
+  event_bus_name = aws_cloudwatch_event_bus.example.name
+  policy         = data.aws_iam_policy_document.test.json
+}
+
+data "aws_iam_policy_document" "test" {
+  statement {
+    sid    = "DevAccountAccess"
+    effect = "Allow"
+    actions = [
+      "events:PutEvents",
+    ]
+    resources = [
+      "arn:aws:events:eu-west-1:123456789012:event-bus/default"
+    ]
+
+    principals {
+      type        = "AWS"
+      identifiers = ["123456789012"]
+    }
+  }
+}
