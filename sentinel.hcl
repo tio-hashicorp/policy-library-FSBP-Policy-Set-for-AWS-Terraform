@@ -1111,6 +1111,16 @@ policy "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports" {
   }
 }
 
+policy "guardduty-malware-protection-enabled" {
+  source = "./policies/guardduty/guardduty-malware-protection-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "iam-no-admin-privileges-allowed-by-policies" {
+  source = "./policies/iam/iam-no-admin-privileges-allowed-by-policies.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
   source = "./policies/elasticsearch/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel"
   enforcement_level = "advisory"
@@ -1118,5 +1128,15 @@ policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
 
 policy "cloudfront-s3-origin-non-existent-bucket" {
   source = "./policies/cloudfront/cloudfront-s3-origin-non-existent-bucket.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-associated-with-waf" {
+  source = "./policies/cloudfront/cloudfront-associated-with-waf.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudfront-s3-origin-access-control-enabled" {
+  source = "./policies/cloudfront/cloudfront-s3-origin-access-control-enabled.sentinel"
   enforcement_level = "advisory"
 }
