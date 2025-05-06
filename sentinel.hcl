@@ -30,22 +30,22 @@ policy "ecr-lifecycle-policy-configured" {
 }
 
 policy "eks-cluster-supported-k8s-version-check" {
-  source = "./policies/ecr/eks-cluster-supported-k8s-version-check.sentinel"
+  source = "./policies/eks/eks-cluster-supported-k8s-version-check.sentinel"
   enforcement_level = "advisory"
 }
 
 policy "eks-cluster-encrypted-kubernetes-secrets" {
-  source = "./policies/ecr/eks-cluster-encrypted-kubernetes-secrets.sentinel"
+  source = "./policies/eks/eks-cluster-encrypted-kubernetes-secrets.sentinel"
   enforcement_level = "advisory"
 }
 
 policy "eks-cluster-audit-logging-enabled" {
-  source = "./policies/ecr/eks-cluster-audit-logging-enabled.sentinel"
+  source = "./policies/eks/eks-cluster-audit-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
 policy "eks-cluster-endpoints-restrict-public-access" {
-  source = "./policies/ecr/eks-cluster-endpoints-restrict-public-access.sentinel"
+  source = "./policies/eks/eks-cluster-endpoints-restrict-public-access.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -380,22 +380,22 @@ policy "dynamo-db-tables-point-in-time-recovery-enabled" {
 }
 
 policy "docdb-cluster-backup-retention-check" {
-  source = "./policies/docdb-cluster-backup-retention-check.sentinel"
+  source = "./policies/docdb/docdb-cluster-backup-retention-check.sentinel"
   enforcement_level = "advisory"
 }
 
 policy "docdb-cluster-deletion-protection-enabled" {
-  source = "./policies/docdb-cluster-deletion-protection-enabled.sentinel"
+  source = "./policies/docdb/docdb-cluster-deletion-protection-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
 policy "docdb-cluster-storage-encrypted" {
-  source = "./policies/docdb-cluster-storage-encrypted.sentinel"
+  source = "./policies/docdb/docdb-cluster-storage-encrypted.sentinel"
   enforcement_level = "advisory"
 }
 
 policy "docdb-cluster-audit-logging-enabled" {
-  source = "./policies/docdb-cluster-audit-logging-enabled.sentinel"
+  source = "./policies/docdb/docdb-cluster-audit-logging-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -1113,5 +1113,10 @@ policy "ec2-security-group-ingress-traffic-restriction-to-unauthorized-ports" {
 
 policy "iam-no-admin-privileges-allowed-by-policies" {
   source = "./policies/iam/iam-no-admin-privileges-allowed-by-policies.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
+  source = "./policies/elasticsearch/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel"
   enforcement_level = "advisory"
 }
