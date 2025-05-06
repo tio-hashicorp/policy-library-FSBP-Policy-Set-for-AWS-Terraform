@@ -1155,3 +1155,8 @@ policy "sqs-queue-should-be-encrypted-at-rest" {
   source = "./policies/sqs/sqs-queue-should-be-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "ssm-documents-should-not-be-public" {
+  source = "./policies/ssm/ssm-documents-should-not-be-public.sentinel"
+  enforcement_level = "advisory"
+}
