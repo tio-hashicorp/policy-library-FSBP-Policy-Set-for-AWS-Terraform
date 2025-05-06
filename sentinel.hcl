@@ -1117,6 +1117,6 @@ policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
 }
 
 policy "acm-rsa-certificate-key-length-atleast-2048" {
-  source = "./policies/acm-rsa-certificate-key-length-atleast-2048.sentinel"
+  source = "./policies/acm/acm-rsa-certificate-key-length-atleast-2048.sentinel"
   enforcement_level = "advisory"
 }
