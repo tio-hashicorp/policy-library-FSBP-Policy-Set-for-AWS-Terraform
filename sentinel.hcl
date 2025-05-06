@@ -1180,3 +1180,8 @@ policy "autoscaling-group-with-load-balancer-attached-should-have-elb-healthchec
   source = "./policies/autoscaling-group/autoscaling-group-with-load-balancer-attached-should-have-elb-healthcheck.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "autoscaling-launch-config-public-ip-disabled" {
+  source = "./policies/autoscaling-group/autoscaling-launch-config-public-ip-disabled.sentinel"
+  enforcement_level = "advisory"
+}
