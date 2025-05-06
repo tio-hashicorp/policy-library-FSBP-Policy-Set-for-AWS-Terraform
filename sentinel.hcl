@@ -1145,3 +1145,8 @@ policy "dms-endpoints-should-use-ssl" {
   source = "./policies/dms/dms-endpoints-should-use-ssl.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "eventbridge-custom-event-bus-should-have-attached-policy" {
+  source = "./policies/eventbridge/eventbridge-custom-event-bus-should-have-attached-policy.sentinel"
+  enforcement_level = "advisory"
+}
