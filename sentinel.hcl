@@ -1175,3 +1175,8 @@ policy "acm-rsa-certificate-key-length-atleast-2048" {
   source = "./policies/acm/acm-rsa-certificate-key-length-atleast-2048.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "autoscaling-group-with-load-balancer-attached-should-have-elb-healthcheck" {
+  source = "./policies/autoscaling-group/autoscaling-group-with-load-balancer-attached-should-have-elb-healthcheck.sentinel"
+  enforcement_level = "advisory"
+}
