@@ -6,6 +6,8 @@
 
 ## Description
 
+DISCLAIMER - This policy works when all resources of type aws_iam_policy and aws_iam_policy_document are present in the root module.
+
 This policy checks whether the default version of IAM policies (also known as customer managed policies) has administrator access by including a statement with "Effect": "Allow" with "Action": "*" over "Resource": "*". The policy fails if you have IAM policy documents with such a statement.
 
 The control only checks the customer managed policies that you create with the `aws_iam_policy_document` datasource. It does not verify the AWS managed/inline policy blocks.
