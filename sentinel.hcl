@@ -1140,3 +1140,8 @@ policy "cloudfront-s3-origin-access-control-enabled" {
   source = "./policies/cloudfront/cloudfront-s3-origin-access-control-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "dms-endpoints-should-use-ssl" {
+  source = "./policies/dms/dms-endpoints-should-use-ssl.sentinel"
+  enforcement_level = "advisory"
+}
