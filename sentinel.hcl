@@ -1116,6 +1116,11 @@ policy "guardduty-malware-protection-enabled" {
   enforcement_level = "advisory"
 }
 
+policy "iam-no-admin-privileges-allowed-by-policies" {
+  source = "./policies/iam/iam-no-admin-privileges-allowed-by-policies.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
   source = "./policies/elasticsearch/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel"
   enforcement_level = "advisory"
