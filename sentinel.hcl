@@ -1165,3 +1165,8 @@ policy "secretsmanager-auto-rotation-enabled-check" {
   source = "./policies/secretsmanager/secretsmanager-auto-rotation-enabled-check.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "service-catalog-shared-within-organization" {
+  source = "./policies/servicecatalog/service-catalog-shared-within-organization.sentinel"
+  enforcement_level = "advisory"
+}
