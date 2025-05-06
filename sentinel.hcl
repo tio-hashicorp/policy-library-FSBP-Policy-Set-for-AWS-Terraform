@@ -1150,3 +1150,8 @@ policy "eventbridge-custom-event-bus-should-have-attached-policy" {
   source = "./policies/eventbridge/eventbridge-custom-event-bus-should-have-attached-policy.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "sqs-queue-should-be-encrypted-at-rest" {
+  source = "./policies/sqs/sqs-queue-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
