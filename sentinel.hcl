@@ -1117,6 +1117,6 @@ policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
 }
 
 policy "autoscaling-group-should-use-multiple-instance-types" {
-  source = "./policies/autoscaling-group-should-use-multiple-instance-types.sentinel"
+  source = "./policies/autoscaling-group/autoscaling-group-should-use-multiple-instance-types.sentinel"
   enforcement_level = "advisory"
 }
