@@ -1126,6 +1126,11 @@ policy "elasticsearch-domains-should-have-atleast-three-data-nodes" {
   enforcement_level = "advisory"
 }
 
+policy "cloudfront-associated-with-waf" {
+  source = "./policies/cloudfront/cloudfront-associated-with-waf.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "cloudfront-s3-origin-access-control-enabled" {
   source = "./policies/cloudfront/cloudfront-s3-origin-access-control-enabled.sentinel"
   enforcement_level = "advisory"
