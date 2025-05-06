@@ -1160,3 +1160,8 @@ policy "ssm-documents-should-not-be-public" {
   source = "./policies/ssm/ssm-documents-should-not-be-public.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "secretsmanager-auto-rotation-enabled-check" {
+  source = "./policies/secretsmanager/secretsmanager-auto-rotation-enabled-check.sentinel"
+  enforcement_level = "advisory"
+}
