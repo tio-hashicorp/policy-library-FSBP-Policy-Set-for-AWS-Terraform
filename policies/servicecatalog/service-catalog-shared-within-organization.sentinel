@@ -7,6 +7,7 @@ import "tfresources" as tf
 import "report" as report
 import "collection" as collection
 import "collection/maps" as maps
+import "strings"
 
 // Constants
 
