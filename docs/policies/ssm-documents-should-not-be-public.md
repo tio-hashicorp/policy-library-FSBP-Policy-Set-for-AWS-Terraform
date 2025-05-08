@@ -10,7 +10,7 @@ This control checks whether AWS Systems Manager documents that are owned by the 
 
 Systems Manager documents that are public might allow unintended access to your documents. A public Systems Manager document can expose valuable information about your account, resources, and internal processes.
 
-This rule is covered by the [ssm-documents-should-not-be-public](../../policies/ssm-documents-should-not-be-public.sentinel) policy.
+This rule is covered by the [ssm-documents-should-not-be-public](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/ssm-documents-should-not-be-public.sentinel) policy.
 
 ## Policy Results (Pass)
 

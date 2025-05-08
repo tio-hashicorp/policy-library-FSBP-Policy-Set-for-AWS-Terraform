@@ -12,7 +12,7 @@ This control checks whether an Amazon SQS queue is encrypted at rest. The contro
 
 Encrypting data at rest reduces the risk of an unauthorized user accessing data stored on disk. Server-side encryption (SSE) protects the contents of messages in SQS queues using SQS-managed encryption keys (SSE-SQS) or AWS KMS keys (SSE-KMS).
 
-This rule is covered by the [sqs-queue-should-be-encrypted-at-rest](../../policies/sqs-queue-should-be-encrypted-at-rest.sentinel) policy.
+This rule is covered by the [sqs-queue-should-be-encrypted-at-rest](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sqs-queue-should-be-encrypted-at-rest.sentinel) policy.
 
 ## Policy Results (Pass)
 

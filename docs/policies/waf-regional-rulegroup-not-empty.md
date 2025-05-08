@@ -10,7 +10,7 @@ This control checks whether an AWS WAF Regional rule group has at least one rule
 
 A WAF Regional rule group can contain multiple rules. The rule's conditions allow for traffic inspection and take a defined action (allow, block, or count). Without any rules, the traffic passes without inspection. A WAF Regional rule group with no rules, but with a name or tag suggesting allow, block, or count, could lead to the wrong assumption that one of those actions is occurring.
 
-This rule is covered by the [waf-regional-rulegroup-not-empty](../../policies/waf/waf-regional-rulegroup-not-empty.sentinel) policy.
+This rule is covered by the [waf-regional-rulegroup-not-empty](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/waf/waf-regional-rulegroup-not-empty.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash

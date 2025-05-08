@@ -13,7 +13,7 @@ This control checks whether a service endpoint for Amazon EC2 is created for eac
 
 This control evaluates resources in single account. It cannot describe resources that are outside of the account. Because AWS Config and Security Hub do not conduct cross-account checks, you will see FAILED findings for VPCs that are shared across accounts. Security Hub recommends that you suppress these FAILED findings.
 
-This rule is covered by the [ec2-service-vpc-endpoint-enabled](../../policies/ec2/ec2-service-vpc-endpoint-enabled.sentinel) policy.
+This rule is covered by the [ec2-service-vpc-endpoint-enabled](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/ec2/ec2-service-vpc-endpoint-enabled.sentinel) policy.
 
 ## Policy Results (Pass)
 

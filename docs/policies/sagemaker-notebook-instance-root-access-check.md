@@ -10,7 +10,7 @@ This control checks whether root access is turned on for an Amazon SageMaker not
 
 In adherence to the principal of least privilege, it is a recommended security best practice to restrict root access to instance resources to avoid unintentionally over provisioning permissions.
 
-This rule is covered by the [sagemaker-notebook-instance-root-access-check](../../policies/sagemaker/sagemaker-notebook-instance-root-access-check.sentinel) policy.
+This rule is covered by the [sagemaker-notebook-instance-root-access-check](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sagemaker/sagemaker-notebook-instance-root-access-check.sentinel) policy.
 
 ## Policy Results (Pass)
 
