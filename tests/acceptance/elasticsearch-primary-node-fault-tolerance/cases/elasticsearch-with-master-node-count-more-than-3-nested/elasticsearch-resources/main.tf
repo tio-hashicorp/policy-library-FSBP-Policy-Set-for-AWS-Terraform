@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_elasticsearch_domain" "example" {
   domain_name           = "example"
   elasticsearch_version = "7.10"

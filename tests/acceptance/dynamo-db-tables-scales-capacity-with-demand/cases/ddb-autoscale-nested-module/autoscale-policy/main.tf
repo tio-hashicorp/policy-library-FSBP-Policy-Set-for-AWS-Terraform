@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_appautoscaling_policy" "dynamodb_table_read_policy" {
   name               = "DynamoDBReadCapacityUtilization:${var.read_target_resource_id}"
   policy_type        = "TargetTrackingScaling"

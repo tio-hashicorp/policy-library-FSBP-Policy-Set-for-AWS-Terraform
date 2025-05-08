@@ -1,5 +1,8 @@
 // This policy checks whether 'aws_cloudfront_distribution' are associated with either AWS WAF Classic or AWS WAF web ACLs.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 // Imports
 
 import "tfconfig/v2" as tfconfig

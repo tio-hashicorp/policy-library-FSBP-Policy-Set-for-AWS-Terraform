@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 // This example creates an IAM user, group, policy. Attaches
 // the policy to the created group and then adds the user
 // to the group.

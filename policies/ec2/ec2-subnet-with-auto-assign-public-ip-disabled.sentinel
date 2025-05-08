@@ -1,5 +1,8 @@
 // This policy requires `aws_subnet` resources to have attribute 'map_public_ip_on_launch' to be false.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 // Imports
 
 import "tfplan/v2" as tfplan

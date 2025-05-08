@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_redshift_cluster" "rscluster" {
   cluster_identifier           = "tf-redshift-cluster"
   database_name                = "newdb"

@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_elastic_beanstalk_application" "example" {
   name        = "example-app"
   description = "An example Elastic Beanstalk application"

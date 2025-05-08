@@ -1,5 +1,8 @@
 # This policy requires resources of type `aws_elasticsearch_domain` to have at least three data nodes and zone awareness enabled.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfplan/v2" as tfplan

@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_networkfirewall_logging_configuration" "example" {
   firewall_arn = aws_networkfirewall_firewall.example.arn
   logging_configuration {

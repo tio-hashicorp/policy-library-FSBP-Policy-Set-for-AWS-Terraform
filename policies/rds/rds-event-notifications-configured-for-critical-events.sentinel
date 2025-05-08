@@ -1,6 +1,9 @@
 # This policy checks if resources of type 'aws_event_subscription' have the event notifications
 # configured
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfconfig/v2" as tfconfig
 import "tfresources" as tf

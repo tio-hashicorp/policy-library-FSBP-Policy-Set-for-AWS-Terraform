@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_appautoscaling_target" "dynamodb_table_read_target" {
   max_capacity       = 100
   min_capacity       = 5

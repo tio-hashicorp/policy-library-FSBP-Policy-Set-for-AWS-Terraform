@@ -2,6 +2,9 @@
 # enable attribute set to true in logging or referenced to the
 # resource 'aws_redshift_logging'
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfconfig/v2" as tfconfig
 import "tfresources" as tf

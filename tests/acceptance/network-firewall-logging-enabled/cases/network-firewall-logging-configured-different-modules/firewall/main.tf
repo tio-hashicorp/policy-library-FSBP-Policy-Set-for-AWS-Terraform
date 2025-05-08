@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_networkfirewall_firewall" "example" {
   name                = "example"
   firewall_policy_arn = aws_networkfirewall_firewall_policy.example.arn

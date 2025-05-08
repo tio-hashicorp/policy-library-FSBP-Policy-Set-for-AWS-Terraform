@@ -1,6 +1,9 @@
 # This policy checks if the container definitions have the 'privileged'
 # parameter set to true and fails if that is the case.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfresources" as tf
 import "report" as report

@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_launch_template" "example" {
   name_prefix = "example2"
   image_id    = "ami-0c55b159cbfafe1f0"

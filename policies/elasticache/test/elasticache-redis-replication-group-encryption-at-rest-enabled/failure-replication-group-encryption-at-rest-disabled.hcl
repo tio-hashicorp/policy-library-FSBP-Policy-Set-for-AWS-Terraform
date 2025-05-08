@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfplan/v2" {
   module {
     source = "./mocks/failure-replication-group-encryption-at-rest-disabled/mock-tfplan-v2.sentinel"

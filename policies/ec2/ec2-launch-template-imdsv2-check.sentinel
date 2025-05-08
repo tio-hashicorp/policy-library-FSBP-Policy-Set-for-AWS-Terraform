@@ -1,6 +1,9 @@
 # This policy checks if resources of type 'aws_launch_template' have the attribute
 # 'http_tokens' in 'metadata_options' set to 'required'
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Import
 
 import "tfplan/v2" as tfplan

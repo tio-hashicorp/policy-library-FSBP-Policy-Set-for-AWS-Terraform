@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "ecs-task-definition-restrict-process-id"
 
 disabled = false

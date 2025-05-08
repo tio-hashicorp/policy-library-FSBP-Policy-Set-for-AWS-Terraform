@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resources = {
 	"module.nf.aws_networkfirewall_firewall.example": {
 		"address": "module.nf.aws_networkfirewall_firewall.example",

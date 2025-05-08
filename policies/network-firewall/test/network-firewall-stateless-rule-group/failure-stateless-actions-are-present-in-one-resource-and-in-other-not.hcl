@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfplan/v2" {
 	module {
 		source = "./mocks/policy-failure-stateless-actions-are-present-in-one-resource-and-in-other-not/mock-tfplan-v2.sentinel"

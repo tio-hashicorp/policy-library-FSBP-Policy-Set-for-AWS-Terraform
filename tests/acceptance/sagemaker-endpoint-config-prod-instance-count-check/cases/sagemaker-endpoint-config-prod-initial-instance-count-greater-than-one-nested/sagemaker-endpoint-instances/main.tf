@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_sagemaker_endpoint_configuration" "ec" {
   name = "new-endpoint-config"
 

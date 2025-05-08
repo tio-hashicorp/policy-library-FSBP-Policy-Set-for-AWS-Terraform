@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "kms-restrict-iam-inline-policies-decrypt-all-kms-keys"
 
 disabled = false

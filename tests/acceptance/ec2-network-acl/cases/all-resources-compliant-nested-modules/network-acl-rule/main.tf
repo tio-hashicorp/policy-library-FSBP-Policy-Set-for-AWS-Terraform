@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_network_acl_rule" "rule1" {
   network_acl_id = var.network_acl_id
   rule_number    = 100

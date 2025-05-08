@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_opensearch_domain" "example" {
   domain_name    = "example"
   engine_version = "Elasticsearch_7.10"

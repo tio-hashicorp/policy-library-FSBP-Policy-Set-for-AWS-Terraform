@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "iam-no-admin-privileges-allowed-by-policies"
 
 disabled = false

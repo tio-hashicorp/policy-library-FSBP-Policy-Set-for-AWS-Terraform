@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "rds-cluster-and-db-snapshot-encrypted"
 disabled = false
 

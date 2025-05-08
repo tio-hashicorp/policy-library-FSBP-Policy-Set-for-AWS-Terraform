@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 output "autoscale_read_target_resource_id" {
   value = aws_appautoscaling_target.dynamodb_table_read_target.resource_id
 }

@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_instance" "example" {
   ami           = "ami-xxxxxxxxxxxxxx"
   instance_type = "t2.micro"

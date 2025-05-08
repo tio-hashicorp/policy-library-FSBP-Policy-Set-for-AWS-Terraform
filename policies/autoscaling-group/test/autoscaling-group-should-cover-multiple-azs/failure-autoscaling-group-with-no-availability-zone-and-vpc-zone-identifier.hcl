@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfconfig/v2" {
 	module {
 		source = "./mocks/policy-failure-autoscaling-group-with-no-availability-zone-and-vpc-zone-identifier/mock-tfconfig-v2.sentinel"

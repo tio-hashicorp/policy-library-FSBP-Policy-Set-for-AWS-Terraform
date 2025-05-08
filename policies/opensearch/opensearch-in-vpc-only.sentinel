@@ -1,5 +1,8 @@
 # This policy checks whether OpenSearch domains are in a VPC. It does not evaluate the VPC subnet routing configuration to determine public access.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfconfig/v2" as tfconfig
 import "tfresources" as tf
 import "report" as report

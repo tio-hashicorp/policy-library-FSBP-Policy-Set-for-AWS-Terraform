@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_dms_endpoint" "test" {
   certificate_arn             = var.certificate_arn_value
   database_name               = "test"

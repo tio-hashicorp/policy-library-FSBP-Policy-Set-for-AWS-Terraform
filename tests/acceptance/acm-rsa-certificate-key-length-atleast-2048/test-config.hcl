@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "acm-rsa-certificate-key-length-atleast-2048"
 	
 disabled = false

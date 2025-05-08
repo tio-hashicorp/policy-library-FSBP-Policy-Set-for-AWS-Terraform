@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "guardduty-eks-audit-log-monitoring-should-be-enabled"
 	
 disabled = false

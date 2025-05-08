@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "cloudfront-distributions-should-use-sni-to-serve-https-requests"
 
 disabled = false

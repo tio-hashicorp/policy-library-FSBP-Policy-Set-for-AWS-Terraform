@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_ec2_client_vpn_endpoint" "example" {
   description            = "terraform-clientvpn-example"
   server_certificate_arn = aws_acm_certificate.cert.arn

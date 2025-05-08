@@ -2,6 +2,9 @@
 # 'instance_count' greater than or equal to 3
 # in the 'cluster_config' block
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfresources" as tf
 import "report" as report

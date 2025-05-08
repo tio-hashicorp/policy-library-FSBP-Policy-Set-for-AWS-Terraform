@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfplan/v2" {
 	module {
 		source = "./mocks/policy-failure-ec2-transit-gateway-with-auto-accept-shared-attachments-set-to-enable/mock-tfplan-v2.sentinel"

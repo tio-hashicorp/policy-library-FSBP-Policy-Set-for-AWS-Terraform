@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfplan/v2" {
 	module {
 		source = "./mocks/policy-success-dms-replication-task-with-logging-enabled-and-set-higher-to-severity-default/mock-tfplan-v2.sentinel"

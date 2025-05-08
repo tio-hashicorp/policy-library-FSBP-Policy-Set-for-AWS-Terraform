@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_fsx_lustre_file_system" "example" {
   storage_capacity     = 1200
   subnet_ids           = [aws_subnet.test1.id]

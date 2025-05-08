@@ -1,5 +1,8 @@
 # This control checks whether an 'aws_cloudfront_distribution' is configured with an origin group that has two or more origins.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfresources" as tf
 import "report" as report

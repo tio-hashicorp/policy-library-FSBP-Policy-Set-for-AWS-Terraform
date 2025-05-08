@@ -1,5 +1,8 @@
 # This policy requires resources of type `aws_elasticsearch_domain` have the `dedicated_master_count` atleast 3 and 'dedicated_master_enabled' set to true for `cluster_config` attribute.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Import
 
 import "tfplan/v2" as tfplan

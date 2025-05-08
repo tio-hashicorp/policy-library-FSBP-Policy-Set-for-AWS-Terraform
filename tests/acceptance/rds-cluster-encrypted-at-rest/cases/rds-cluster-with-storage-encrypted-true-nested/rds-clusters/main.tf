@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_rds_cluster" "default" {
   cluster_identifier      = "aurora-cluster-demo"
   engine                  = "aurora-mysql"

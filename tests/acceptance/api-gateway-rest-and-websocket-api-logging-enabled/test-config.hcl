@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "api-gateway-rest-and-websocket-api-logging-enabled"
 
 disabled = false

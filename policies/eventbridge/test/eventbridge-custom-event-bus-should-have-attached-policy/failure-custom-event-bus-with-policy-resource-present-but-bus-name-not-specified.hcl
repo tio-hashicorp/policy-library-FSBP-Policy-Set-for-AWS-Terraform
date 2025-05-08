@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfplan/v2" {
 	module {
 		source = "./mocks/policy-failure-custom-event-bus-with-policy-resource-present-but-bus-name-not-specified/mock-tfplan-v2.sentinel"

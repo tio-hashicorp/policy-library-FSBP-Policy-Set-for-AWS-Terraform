@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_s3_account_public_access_block" "setting" {
   ignore_public_acls      = false
   restrict_public_buckets = true

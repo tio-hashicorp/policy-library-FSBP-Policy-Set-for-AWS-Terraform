@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_elasticache_replication_group" "example" {
   automatic_failover_enabled  = true
   at_rest_encryption_enabled  = true

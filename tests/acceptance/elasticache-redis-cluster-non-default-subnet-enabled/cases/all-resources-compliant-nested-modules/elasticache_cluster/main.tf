@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_elasticache_cluster" "example" {
   cluster_id               = var.cluster_id
   engine                   = "redis"

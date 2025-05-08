@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "api-gateway-rest-have-x-ray-tracing-enabled"
 
 disabled = false

@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_iam_policy" "policy" {
   name        = "test-policy"
   path        = "/"

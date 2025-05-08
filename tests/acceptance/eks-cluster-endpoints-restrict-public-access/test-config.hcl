@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "eks-cluster-endpoints-restrict-public-access"
 
 disabled = false

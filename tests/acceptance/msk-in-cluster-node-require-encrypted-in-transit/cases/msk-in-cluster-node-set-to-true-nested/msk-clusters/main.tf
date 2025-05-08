@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_vpc" "vpc" {
   cidr_block = "192.168.0.0/22"
 }

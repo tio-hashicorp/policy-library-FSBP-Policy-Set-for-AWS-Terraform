@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "codebuild-project-environments-should-have-a-logging-aws-configuration"
 
 disabled = false

@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "codebuild-s3-logs-should-be-encrypted"
 
 disabled = false

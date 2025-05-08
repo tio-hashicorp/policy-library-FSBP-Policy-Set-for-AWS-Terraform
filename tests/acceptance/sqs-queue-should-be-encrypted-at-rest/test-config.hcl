@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "sqs-queue-should-be-encrypted-at-rest"
 	
 disabled = false

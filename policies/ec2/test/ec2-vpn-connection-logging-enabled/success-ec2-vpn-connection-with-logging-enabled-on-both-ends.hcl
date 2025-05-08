@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfplan/v2" {
 	module {
 		source = "./mocks/policy-success-ec2-vpn-connection-with-logging-enabled-on-both-ends/mock-tfplan-v2.sentinel"

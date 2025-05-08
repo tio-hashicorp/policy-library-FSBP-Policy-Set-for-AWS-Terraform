@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_fsx_openzfs_file_system" "test" {
   storage_capacity     = 64
   subnet_ids           = [aws_subnet.test1.id]

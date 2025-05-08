@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfconfig/v2" {
 	module {
 		source = "./mocks/policy-success-ec2-vpc-with-endpoint-configured-to-ec2/mock-tfconfig-v2.sentinel"

@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "codebuild-bitbucket-url-should-not-contain-sensitive-credentials"
 
 disabled = false

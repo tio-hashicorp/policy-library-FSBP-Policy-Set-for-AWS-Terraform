@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resource "aws_dynamodb_table" "example" {
   name             = "example"
   hash_key         = "TestTableHashKey"

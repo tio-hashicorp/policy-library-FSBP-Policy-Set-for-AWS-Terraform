@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfconfig/v2" {
 	module {
 		source = "./mocks/policy-failure-ec2-attached-ebs-volume-is-not-encrypted-and-is-not-attached/mock-tfconfig-v2.sentinel"

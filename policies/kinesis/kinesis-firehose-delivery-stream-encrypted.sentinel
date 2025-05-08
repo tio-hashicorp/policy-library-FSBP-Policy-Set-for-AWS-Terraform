@@ -1,5 +1,8 @@
 // This policy requires `aws_kinesis_firehose_delivery_stream` resources to have server-side encryption enabled.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 // Imports
 
 import "tfplan/v2" as tfplan

@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 name = "ec2-subnet-with-auto-assign-public-ip-disabled"
 	
 disabled = false
