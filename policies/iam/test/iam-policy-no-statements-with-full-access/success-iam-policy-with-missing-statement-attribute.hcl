@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfstate/v2" {
 	module {
 		source = "./mocks/policy-success-iam-policy-with-missing-statement-attribute/mock-tfstate-v2.sentinel"

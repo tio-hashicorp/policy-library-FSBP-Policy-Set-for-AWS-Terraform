@@ -1,5 +1,8 @@
 // This policy requires `aws_servicecatalog_portfolio_share` resources to have attribute 'type' should not be 'ACCOUNT'.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 // Imports
 
 import "tfconfig/v2" as tfconfig

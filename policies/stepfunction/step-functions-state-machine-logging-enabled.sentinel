@@ -1,5 +1,8 @@
 # This policy requires AWS Step Functions state machines to have logging configuration enabled with level set to "ALL", "ERROR", or "FATAL".
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 import "tfplan/v2" as tfplan
 import "tfresources" as tf

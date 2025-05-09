@@ -1,6 +1,9 @@
 # This policy checks whether AWS X-Ray active tracing is enabled
 # for your resource 'aws_api_gateway_stage'.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfresources" as tf
 import "report" as report

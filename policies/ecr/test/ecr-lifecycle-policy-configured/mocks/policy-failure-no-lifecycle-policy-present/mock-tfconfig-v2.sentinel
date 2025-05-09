@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resources = {
 	"module.ecr.aws_ecr_lifecycle_policy.this": {
 		"address": "module.ecr.aws_ecr_lifecycle_policy.this",

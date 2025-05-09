@@ -1,5 +1,8 @@
 # This policy requires attribute 'backup_retention_period' to be greater than or equal to 7 for 'aws_neptune_cluster' resources
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfplan/v2" as tfplan

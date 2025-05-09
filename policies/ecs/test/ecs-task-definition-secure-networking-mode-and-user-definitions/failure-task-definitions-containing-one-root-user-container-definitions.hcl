@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfplan/v2" {
   module {
     source = "./mocks/policy-failure-task-definitions-containing-one-root-user-container-definitions/mock-tfplan-v2.sentinel"

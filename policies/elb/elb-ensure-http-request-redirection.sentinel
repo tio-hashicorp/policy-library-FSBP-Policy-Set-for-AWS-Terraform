@@ -1,6 +1,9 @@
 # This policy ensures that application load balancer in the terraform configurations
 # have a listener rule configured to redirect HTTP requests to HTTPS
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfconfig/v2" as tfconfig
 import "tfresources" as tf

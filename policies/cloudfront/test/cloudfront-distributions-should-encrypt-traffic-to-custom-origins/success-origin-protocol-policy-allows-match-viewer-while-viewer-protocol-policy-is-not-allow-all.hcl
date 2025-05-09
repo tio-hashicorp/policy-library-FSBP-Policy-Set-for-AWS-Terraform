@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfplan/v2" {
 	module {
 		source = "./mocks/policy-success-origin-protocol-policy-allows-match-viewer-while-viewer-protocol-policy-is-not-allow-all/mock-tfplan-v2.sentinel"

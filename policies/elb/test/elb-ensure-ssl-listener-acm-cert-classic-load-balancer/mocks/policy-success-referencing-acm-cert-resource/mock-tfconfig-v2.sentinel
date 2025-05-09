@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 resources = {
 	"aws_acm_certificate.this": {
 		"address": "aws_acm_certificate.this",

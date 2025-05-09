@@ -2,6 +2,9 @@
 # the 'assign_public_ip' attribute under networking configuration
 # set to true
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfresources" as tf
 import "report" as report

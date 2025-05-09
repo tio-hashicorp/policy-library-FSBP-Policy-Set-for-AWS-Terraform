@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfstate/v2" {
 	module {
 		source = "./mocks/policy-failure-kms-reencryptform-is-present-and-decrypt-is-not-present-in-actions/mock-tfstate-v2.sentinel"

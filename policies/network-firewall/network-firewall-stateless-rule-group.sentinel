@@ -1,5 +1,8 @@
 # This policy checks if a stateless rule group in 'aws_networkfirewall_rule_group' contains rules
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfresources" as tf
 import "report" as report

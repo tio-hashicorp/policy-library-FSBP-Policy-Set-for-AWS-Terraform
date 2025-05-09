@@ -1,5 +1,8 @@
 # This policy requires resources of type `aws_db_instance` have attribute "backup_retention_period" set to integer value between (7, 35).
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfplan/v2" as tfplan

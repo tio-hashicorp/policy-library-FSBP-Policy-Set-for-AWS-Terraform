@@ -1,5 +1,8 @@
 # This policy checks if the EC2 Instance have only one Network Interface
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfresources" as tf
 import "report" as report

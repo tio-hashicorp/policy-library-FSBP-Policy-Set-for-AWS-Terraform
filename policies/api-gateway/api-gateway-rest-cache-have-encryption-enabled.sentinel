@@ -1,5 +1,8 @@
 # This policy checks 'aws_api_gateway_method_settings' in API Gateway REST API stages that have cache enabled are encrypted.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 import "tfplan/v2" as tfplan
 import "tfresources" as tf
 import "report" as report

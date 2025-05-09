@@ -1,5 +1,8 @@
 # S3 general purpose buckets should block public write access
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfstate/v2" as tfstate
