@@ -8,7 +8,7 @@
 
 This control checks whether RDS DB instances are configured to copy all tags to snapshots when the snapshots are created.
 
-This rule is covered by the [rds-instance-copy-tags-to-snapshot-configured](../../policies/rds-instance-copy-tags-to-snapshot-configured.sentinel).
+This rule is covered by the [rds-instance-copy-tags-to-snapshot-configured](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/rds-instance-copy-tags-to-snapshot-configured.sentinel).
 The policy is parameterized and "resource" param value should be "aws_db_instance".
 
 ## Policy Results (Pass)

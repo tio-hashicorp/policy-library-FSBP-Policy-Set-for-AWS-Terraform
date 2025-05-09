@@ -8,7 +8,7 @@
 
 This control checks whether an Amazon Aurora cluster has backtracking enabled. The control fails if the cluster doesn't have backtracking enabled. If you provide a custom value for the BacktrackWindowInHours parameter, the control passes only if the cluster is backtracked for the specified length of time.
 
-This rule is covered by the [rds-ensure-cluster-backtracking-enabled](../../policies/rds/rds-ensure-cluster-backtracking-enabled.sentinel) policy.
+This rule is covered by the [rds-ensure-cluster-backtracking-enabled](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/rds/rds-ensure-cluster-backtracking-enabled.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash

@@ -10,7 +10,7 @@ This control checks whether Elasticsearch domains are configured with at least t
 
 An Elasticsearch domain requires at least three data nodes for high availability and fault-tolerance. Deploying an Elasticsearch domain with at least three data nodes ensures cluster operations if a node fails.
 
-This rule is covered by the [elasticsearch-domains-should-have-atleast-three-data-nodes](../../policies/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel) policy.
+This rule is covered by the [elasticsearch-domains-should-have-atleast-three-data-nodes](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/elasticsearch-domains-should-have-atleast-three-data-nodes.sentinel) policy.
 
 ## Policy Results (Pass)
 

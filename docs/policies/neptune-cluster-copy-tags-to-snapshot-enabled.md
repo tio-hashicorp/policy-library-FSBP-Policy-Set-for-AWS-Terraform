@@ -8,7 +8,7 @@
 
 This control checks if a Neptune DB cluster is configured to copy all tags to snapshots when the snapshots are created. The control fails if a Neptune DB cluster isn't configured to copy tags to snapshots.
 
-This rule is covered by the [neptune-cluster-copy-tags-to-snapshot-enabled](../../policies/neptune/neptune-cluster-copy-tags-to-snapshot-enabled.sentinel) policy.
+This rule is covered by the [neptune-cluster-copy-tags-to-snapshot-enabled](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/neptune/neptune-cluster-copy-tags-to-snapshot-enabled.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash

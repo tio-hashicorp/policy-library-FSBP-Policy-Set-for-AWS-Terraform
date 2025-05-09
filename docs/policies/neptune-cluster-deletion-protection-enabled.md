@@ -8,7 +8,7 @@
 
 This control checks if a Neptune DB cluster has deletion protection enabled. The control fails if a Neptune DB cluster doesn't have deletion protection enabled.
 
-This rule is covered by the [neptune-cluster-deletion-protection-enabled](../../policies/neptune/neptune-cluster-deletion-protection-enabled.sentinel) policy.
+This rule is covered by the [neptune-cluster-deletion-protection-enabled](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/neptune/neptune-cluster-deletion-protection-enabled.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash

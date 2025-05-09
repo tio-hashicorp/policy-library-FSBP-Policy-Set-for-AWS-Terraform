@@ -10,7 +10,7 @@ This control checks whether Amazon Macie is enabled for an account. The control 
 
 Amazon Macie discovers sensitive data using machine learning and pattern matching, provides visibility into data security risks, and enables automated protection against those risks. Macie automatically and continually evaluates your Amazon Simple Storage Service (Amazon S3) buckets for security and access control, and generates findings to notify you of potential issues with the security or privacy of your Amazon S3 data.
 
-This rule is covered by the [aws-macie-status-should-be-enabled](../../policies/aws-macie-status-should-be-enabled.sentinel) policy.
+This rule is covered by the [aws-macie-status-should-be-enabled](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/aws-macie-status-should-be-enabled.sentinel) policy.
 
 ## Policy Results (Pass)
 

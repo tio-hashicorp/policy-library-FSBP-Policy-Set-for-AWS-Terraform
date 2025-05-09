@@ -10,7 +10,7 @@ This control checks whether an EC2 instance uses multiple Elastic Network Interf
 
 Multiple ENIs can cause dual-homed instances, meaning instances that have multiple subnets. This can add network security complexity and introduce unintended network paths and access.
 
-This rule is covered by the [ec2-instance-should-not-use-multiple-enis](../../policies/ec2/ec2-instance-should-not-use-multiple-enis.sentinel) policy.
+This rule is covered by the [ec2-instance-should-not-use-multiple-enis](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/ec2/ec2-instance-should-not-use-multiple-enis.sentinel) policy.
 
 ## Policy Results (Pass)
 
