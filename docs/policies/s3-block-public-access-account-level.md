@@ -18,7 +18,7 @@ trace:
       s3-block-public-access-account-level.sentinel
 
       Description:
-        This policy verifies if the attributes of 'aws_s3_account_public_access_block' resource (if present) are in accordance to AWS CIS standards.
+        This policy verifies if the attributes of 'aws_s3_account_public_access_block' resource (if present) are in accordance to AWS FSBP standards.
 
       Print messages:
 
@@ -41,7 +41,7 @@ trace:
       s3-block-public-access-account-level.sentinel
 
       Description:
-        This policy verifies if the attributes of 'aws_s3_account_public_access_block' resource (if present) are in accordance to AWS CIS standards.
+        This policy verifies if the attributes of 'aws_s3_account_public_access_block' resource (if present) are in accordance to AWS FSBP standards.
 
       Print messages:
 
