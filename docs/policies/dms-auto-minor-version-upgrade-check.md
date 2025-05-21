@@ -60,7 +60,7 @@ trace:
       → Module name: root
         ↳ Resource Address: aws_dms_replication_instance.this
           | ✗ failed
-          | Attribute 'publicly_accessible' should be false for AWS DMS Replication Instance. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/dms-controls.html#dms-6 for more details.
+          | Attribute 'auto_minor_version_upgrade' should be true for AWS DMS Replication Instance. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/dms-controls.html#dms-6 for more details.
 
 
       dms-auto-minor-version-upgrade-check.sentinel:46:1 - Rule "main"

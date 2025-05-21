@@ -54,6 +54,10 @@ resource_address_without_module_address = func(res) {
 	return strings.trim_prefix(resource_addr, module_addr_prefix)
 }
 
+# This function checks if the event categories list is specified in the resource and returns the valid rds resource ids
+# for the event subscription resources
+# It returns "all" if the event subscription resources are empty
+
 get_valid_rds_resource_ids = func(event_subscription_resources, config_resources) {
 	valid_source_ids = []
 	if event_subscription_resources is empty {
@@ -71,14 +75,18 @@ get_valid_rds_resource_ids = func(event_subscription_resources, config_resources
 			valid_source_ids += source_ids_reference
 			continue
 		}
+
 		is_event_category_list_specified_in_resource = true
 		resource_event_categories = maps.get(res, "values.event_categories", [])
-		print(resource_event_categories)
+
+		# Check if the event categories list specified in the resource contains the required event categories specified in the aws control
 		for event_categories_list[source_type] as event_category {
 			if event_category not in resource_event_categories {
 				is_event_category_list_specified_in_resource = false
 			}
 		}
+
+		# If the event categories specified matches the aws control, than the resource is valid
 		if is_event_category_list_specified_in_resource is true {
 			valid_source_ids += source_ids_reference
 		}
@@ -90,8 +98,11 @@ get_valid_rds_resource_ids = func(event_subscription_resources, config_resources
 
 config_resources = tf.config(tfconfig.resources)
 resources = tf.plan(tfplan.planned_values.resources).type(resource_type).resources
+
 event_subscription_resources = tf.plan(tfplan.planned_values.resources).type(const.resource_aws_db_event_subscription).resources
 valid_source_ids = get_valid_rds_resource_ids(event_subscription_resources, config_resources)
+
+# For the specified resource type, checking if the associated event subscription exists with the valid 
 violations = []
 violations += collection.reject(resources, func(res) {
 	resource_address = maps.get(res, "address", "")
