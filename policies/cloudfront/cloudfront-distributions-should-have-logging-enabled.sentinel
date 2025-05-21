@@ -11,9 +11,9 @@ import "collection/maps" as maps
 
 # Constants
 const = {
-	"policy_name":                          "cloudfront-distributions-should-have-origin-failover-configured",
+	"policy_name":                          "cloudfront-distributions-should-have-logging-enabled",
 	"resource_aws_cloudfront_distribution": "aws_cloudfront_distribution",
-	"message":        "server access logging is enabled on 'aws_cloudfront_distribution'. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/cloudfront-controls.html#cloudfront-5 for more details.",
+	"message":        "Server access logging should be enabled for 'aws_cloudfront_distribution'. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/cloudfront-controls.html#cloudfront-5 for more details.",
 	"logging_config": "logging_config",
 }
 
