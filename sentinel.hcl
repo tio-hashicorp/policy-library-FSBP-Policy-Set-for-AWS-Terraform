@@ -1193,3 +1193,9 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
   source = "./policies/autoscaling-group/autoscaling-group-should-use-multiple-instance-types.sentinel"
   enforcement_level = "advisory"
 }
+
+
+policy "sqs-queue-block-public-access" {
+  source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
