@@ -19,9 +19,8 @@ trace:
         Pass - opensearch-access-control-enabled.sentinel
 
         Description:
-        This policy checks if resources of type 'aws_opensearch_domain' have the
-        'anonymous_auth_enabled' attribute set to true
-        in the 'advanced_security_options' block
+        This policy checks if resources of type 'aws_opensearch_domain' have the 'anonymous_auth_enabled' attribute set to true
+        in the 'advanced_security_options' block and the 'advanced_security_options' block is enabled
 
         Print messages:
 
@@ -45,9 +44,8 @@ trace:
         Fail - opensearch-access-control-enabled.sentinel
 
         Description:
-        This policy checks if resources of type 'aws_opensearch_domain' have the
-        'anonymous_auth_enabled' attribute set to true
-        in the 'advanced_security_options' block
+        This policy checks if resources of type 'aws_opensearch_domain' have the 'anonymous_auth_enabled' attribute set to true
+        in the 'advanced_security_options' block and the 'advanced_security_options' block is enabled
 
         Print messages:
 
@@ -60,7 +58,7 @@ trace:
         → Module name: root
         ↳ Resource Address: aws_opensearch_domain.example
             | ✗ failed
-            | Attribute 'anonymous_auth_enabled' in 'advanced_security_options' should be true for AWS OpenSearch Domain. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/opensearch-controls.html#opensearch-7 for more details.
+            | Attribute 'anonymous_auth_enabled' in 'advanced_security_options' should be true and 'advanced_security_options' should be enabled for Fine Grained Access Control for AWS OpenSearch Domain. Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/opensearch-controls.html#opensearch-7 for more details.
 
 
         opensearch-access-control-enabled.sentinel:52:1 - Rule "main"
