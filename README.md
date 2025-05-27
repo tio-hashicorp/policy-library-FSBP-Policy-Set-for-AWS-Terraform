@@ -510,6 +510,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - Amazon SQS queues should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/sqs-queue-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sqs/sqs-queue-should-be-encrypted-at-rest.sentinel))
 
+- SQS queue access policies should not allow public access ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/sqs-queue-block-public-access.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sqs/sqs-queue-block-public-access.sentinel))
+
 - SSM documents should not be public ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/ssm-documents-should-not-be-public.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/ssm/ssm-documents-should-not-be-public.sentinel))
 
 - Step Functions state machines should have logging turned on ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/step-functions-state-machine-logging-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/stepfunction/step-functions-state-machine-logging-enabled.sentinel))
