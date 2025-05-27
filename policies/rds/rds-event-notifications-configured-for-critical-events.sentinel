@@ -102,7 +102,7 @@ resources = tf.plan(tfplan.planned_values.resources).type(resource_type).resourc
 event_subscription_resources = tf.plan(tfplan.planned_values.resources).type(const.resource_aws_db_event_subscription).resources
 valid_source_ids = get_valid_rds_resource_ids(event_subscription_resources, config_resources)
 
-# For the specified resource type, checking if the associated event subscription exists with the valid 
+# For the specified resource type, checking if the associated event subscription exists with the valid
 violations = []
 violations += collection.reject(resources, func(res) {
 	resource_address = maps.get(res, "address", "")
