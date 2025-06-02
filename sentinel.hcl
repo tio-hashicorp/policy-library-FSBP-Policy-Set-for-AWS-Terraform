@@ -362,6 +362,11 @@ policy "rds-for-sql-server-db-instances-should-publish-logs-to-cloudwatch-logs" 
   enforcement_level = "advisory"
 }
 
+policy "rds-for-postgresql-db-instances-should-publish-logs-to-cloudwatch-logs" {
+  source = "./policies/rds/rds-for-postgresql-db-instances-should-publish-logs-to-cloudwatch-logs.sentinel"
+enforcement_level = "advisory"
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
