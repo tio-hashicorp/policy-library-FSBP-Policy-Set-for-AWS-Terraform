@@ -543,11 +543,6 @@ policy "sagemaker-models-should-block-inbound-traffic" {
   enforcement_level = "advisory"
 }
 
-policy "sagemaker-images-should-be-tagged" {
-  source = "./policies/sagemaker/sagemaker-images-should-be-tagged.sentinel"
-  enforcement_level = "advisory"
-}
-
 policy "sagemaker-notebook-instances-should-run-on-supported-platforms" {
   source = "./policies/sagemaker/sagemaker-notebook-instances-should-run-on-supported-platforms.sentinel"
   enforcement_level = "advisory"
