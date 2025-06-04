@@ -54,32 +54,32 @@ To learn more about how to configure a policy set as a [policy evaluation](https
 
 ## Consuming Pre-Written Sentinel Policies for FSBP AWS Foundations Benchmark
 
-Following methods outlines various ways to consume and implement pre-written Sentinel policies for the FSBP AWS Foundations Benchmark. These policies can be used in both Terraform Enterprise (TFE) and Terraform Cloud (TFC) environments. Below are the recommended methods for integrating these policies into your workflows.
+Following methods outlines various ways to consume and implement pre-written Sentinel policies for the FSBP AWS Foundations Benchmark. These policies can be used in both Terraform Enterprise (TFE) and HCP Terraform environments. Below are the recommended methods for integrating these policies into your workflows.
 
 ### Terraform Registry Method:
 * Navigate to the [Terraform Registry](https://registry.terraform.io/browse/policies) and select the desired Sentinel policy.
 * Copy the provided policy snippet from the registry.
 * Create a GitHub repository (or use an existing one) to store your policies.
 * Add a Sentinel.hcl file to the repository and paste the copied policy snippet(s) into this file.
-* Connect the repository to Terraform Cloud or Terraform Enterprise using the VCS (Version Control System) workflow.
-* Trigger policy execution automatically during the plan stage in Terraform Cloud or Terraform Enterprise.
+* Connect the repository to HCP Terraform or Terraform Enterprise using the VCS (Version Control System) workflow.
+* Trigger policy execution automatically during the plan stage in HCP Terraform or Terraform Enterprise.
 
 ### Using the Public GitHub Repository:
 * Access the public GitHub repository containing the policy library.
 * You can directly use the repository as-is or fork it to customize the policies for your specific requirements.
 * If forking, ensure you sync your fork with the upstream repository periodically to stay updated with the latest changes.
-* Avoid using the default branch for consumption in Terraform Cloud or Terraform Enterprise. Instead, use the release branches for better stability.
-* Attach the repository (or your fork) to Terraform Cloud or Terraform Enterprise using the VCS workflow.
+* Avoid using the default branch for consumption in HCP Terraform or Terraform Enterprise. Instead, use the release branches for better stability.
+* Attach the repository (or your fork) to HCP Terraform or Terraform Enterprise using the VCS workflow.
 * Run a Terraform plan to execute the policies during the post-plan stage.
 
 ### Terraform Module Approach:
 * Use a dedicated Terraform module designed to manage Sentinel policy sets.
 * Provide a minimal set of variable inputs (typically four) to configure and attach the policies.
 * The module will automatically attach the latest versions of multiple policy sets to their respective workspaces.
-* Execute a Terraform plan to verify that the policy sets are applied successfully in Terraform Cloud or Terraform Enterprise.
+* Execute a Terraform plan to verify that the policy sets are applied successfully in HCP Terraform or Terraform Enterprise.
 
 #### Notes and Best Practices
-* These policies are compatible with both Terraform Cloud (TFC) and Terraform Enterprise (TFE). Ensure your workflow is configured accordingly.
+* These policies are compatible with both HCP Terraform and Terraform Enterprise (TFE). Ensure your workflow is configured accordingly.
 * When using the public GitHub repository, it is recommended to use release branches for stability and avoid consuming policies directly from the default branch.
 * Regularly update your policies to align with the latest FSBP AWS Foundations Benchmark standards and Terraform best practices.
 * Customize policies as needed to meet your organization's specific compliance and security requirements.
