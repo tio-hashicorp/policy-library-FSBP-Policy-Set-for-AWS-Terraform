@@ -1,0 +1,211 @@
+terraform_version = "1.11.4"
+
+planned_values = {
+	"outputs": {},
+	"resources": {
+		"aws_sagemaker_notebook_instance.example": {
+			"address":        "aws_sagemaker_notebook_instance.example",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "example",
+			"provider_name":  "registry.terraform.io/hashicorp/aws",
+			"tainted":        false,
+			"type":           "aws_sagemaker_notebook_instance",
+			"values": {
+				"accelerator_types":                       null,
+				"additional_code_repositories":            null,
+				"default_code_repository":                 null,
+				"direct_internet_access":                  "Enabled",
+				"instance_metadata_service_configuration": [],
+				"instance_type":                           "ml.t3.medium",
+				"kms_key_id":                              null,
+				"lifecycle_config_name":                   null,
+				"name":                                    "example-notebook-instance",
+				"role_arn":                                "arn:aws:iam::aws:*",
+				"root_access":                             "Enabled",
+				"subnet_id":                               "hfsjdhbcj",
+				"tags":                                    null,
+				"volume_size":                             5,
+			},
+		},
+	},
+}
+
+variables = {}
+
+resource_changes = {
+	"aws_sagemaker_notebook_instance.example": {
+		"address": "aws_sagemaker_notebook_instance.example",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"accelerator_types":                       null,
+				"additional_code_repositories":            null,
+				"default_code_repository":                 null,
+				"direct_internet_access":                  "Enabled",
+				"instance_metadata_service_configuration": [],
+				"instance_type":                           "ml.t3.medium",
+				"kms_key_id":                              null,
+				"lifecycle_config_name":                   null,
+				"name":                                    "example-notebook-instance",
+				"role_arn":                                "arn:aws:iam::aws:*",
+				"root_access":                             "Enabled",
+				"subnet_id":                               "hfsjdhbcj",
+				"tags":                                    null,
+				"volume_size":                             5,
+			},
+			"after_unknown": {
+				"arn": true,
+				"id":  true,
+				"instance_metadata_service_configuration": [],
+				"network_interface_id":                    true,
+				"platform_identifier":                     true,
+				"security_groups":                         true,
+				"tags_all":                                true,
+				"url":                                     true,
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "example",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"type":           "aws_sagemaker_notebook_instance",
+	},
+}
+
+output_changes = {}
+
+raw = {
+	"configuration": {
+		"provider_config": {
+			"aws": {
+				"expressions": {
+					"region": {
+						"constant_value": "us-west-2",
+					},
+				},
+				"full_name":          "registry.terraform.io/hashicorp/aws",
+				"name":               "aws",
+				"version_constraint": "~> 5.98.0",
+			},
+		},
+		"root_module": {
+			"resources": [
+				{
+					"address": "aws_sagemaker_notebook_instance.example",
+					"expressions": {
+						"instance_type": {
+							"constant_value": "ml.t3.medium",
+						},
+						"name": {
+							"constant_value": "example-notebook-instance",
+						},
+						"role_arn": {
+							"constant_value": "arn:aws:iam::aws:*",
+						},
+						"subnet_id": {
+							"constant_value": "hfsjdhbcj",
+						},
+					},
+					"mode":                "managed",
+					"name":                "example",
+					"provider_config_key": "aws",
+					"schema_version":      0,
+					"type":                "aws_sagemaker_notebook_instance",
+				},
+			],
+		},
+	},
+	"format_version": "1.2",
+	"planned_values": {
+		"root_module": {
+			"resources": [
+				{
+					"address":        "aws_sagemaker_notebook_instance.example",
+					"mode":           "managed",
+					"name":           "example",
+					"provider_name":  "registry.terraform.io/hashicorp/aws",
+					"schema_version": 0,
+					"sensitive_values": {
+						"instance_metadata_service_configuration": [],
+						"security_groups":                         [],
+						"tags_all":                                {},
+					},
+					"type": "aws_sagemaker_notebook_instance",
+					"values": {
+						"accelerator_types":                       null,
+						"additional_code_repositories":            null,
+						"default_code_repository":                 null,
+						"direct_internet_access":                  "Enabled",
+						"instance_metadata_service_configuration": [],
+						"instance_type":                           "ml.t3.medium",
+						"kms_key_id":                              null,
+						"lifecycle_config_name":                   null,
+						"name":                                    "example-notebook-instance",
+						"role_arn":                                "arn:aws:iam::aws:*",
+						"root_access":                             "Enabled",
+						"subnet_id":                               "hfsjdhbcj",
+						"tags":                                    null,
+						"volume_size":                             5,
+					},
+				},
+			],
+		},
+	},
+	"resource_changes": [
+		{
+			"address": "aws_sagemaker_notebook_instance.example",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"accelerator_types":                       null,
+					"additional_code_repositories":            null,
+					"default_code_repository":                 null,
+					"direct_internet_access":                  "Enabled",
+					"instance_metadata_service_configuration": [],
+					"instance_type":                           "ml.t3.medium",
+					"kms_key_id":                              null,
+					"lifecycle_config_name":                   null,
+					"name":                                    "example-notebook-instance",
+					"role_arn":                                "arn:aws:iam::aws:*",
+					"root_access":                             "Enabled",
+					"subnet_id":                               "hfsjdhbcj",
+					"tags":                                    null,
+					"volume_size":                             5,
+				},
+				"after_sensitive": {
+					"instance_metadata_service_configuration": [],
+					"security_groups":                         [],
+					"tags_all":                                {},
+				},
+				"after_unknown": {
+					"arn": true,
+					"id":  true,
+					"instance_metadata_service_configuration": [],
+					"network_interface_id":                    true,
+					"platform_identifier":                     true,
+					"security_groups":                         true,
+					"tags_all":                                true,
+					"url":                                     true,
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "example",
+			"provider_name": "registry.terraform.io/hashicorp/aws",
+			"type":          "aws_sagemaker_notebook_instance",
+		},
+	],
+	"terraform_version": "1.11.4",
+}
