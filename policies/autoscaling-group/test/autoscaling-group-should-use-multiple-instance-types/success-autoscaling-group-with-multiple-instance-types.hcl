@@ -3,7 +3,7 @@
 
 mock "tfplan/v2" {
 	module {
-		source = "./mocks/policy-failure-autoscaling-group-with-only-one-overide-specified/mock-tfplan-v2.sentinel"
+		source = "./mocks/policy-success-autoscaling-group-with-multiple-instance-types/mock-tfplan-v2.sentinel"
 	}
 }
 
@@ -23,6 +23,6 @@ mock "report" {
 
 test {
 	rules = {
-		main = false
+		main = true
 	}
 }

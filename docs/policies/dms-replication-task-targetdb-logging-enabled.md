@@ -19,7 +19,7 @@ This rule is covered by the [dms-replication-task-logging-enabled](https://githu
 
 ```bash
 trace:
-        Pass - dms-repliction-task-targetdb-logging-enabled.sentinel
+        Pass - dms-replication-task-targetdb-logging-enabled.sentinel
 
         Description:
         This policy checks if resources of type 'aws_dms_replication_task' have the
@@ -30,11 +30,11 @@ trace:
 
         → → Overall Result: true
 
-        This result means that all resources have passed the policy check for the policy dms-replication-instances-should-not-be-public.
+        This result means that all resources have passed the policy check for the policy dms-replication-task-targetdb-logging-enabled.
 
         ✓ Found 0 resource violations
 
-        dms-repliction-task-targetdb-logging-enabled.sentinel:84:1 - Rule "main"
+        dms-replication-task-targetdb-logging-enabled.sentinel:84:1 - Rule "main"
         Value:
             true
 ```
@@ -45,7 +45,7 @@ trace:
 
 ```bash
 trace:
-        Fail - dms-repliction-task-targetdb-logging-enabled.sentinel
+        Fail - dms-replication-task-targetdb-logging-enabled.sentinel
 
         Description:
         This policy checks if resources of type 'aws_dms_replication_task' have the
@@ -66,7 +66,7 @@ trace:
             | Attribute 'replication_task-settings' should have the logging enabled for AWS DMS Replication Task.Refer to https://docs.aws.amazon.com/securityhub/latest/userguide/dms-controls.html#dms-7 for more details.
 
 
-        dms-repliction-task-targetdb-logging-enabled.sentinel:84:1 - Rule "main"
+        dms-replication-task-targetdb-logging-enabled.sentinel:84:1 - Rule "main"
         Value:
             false
 ```
