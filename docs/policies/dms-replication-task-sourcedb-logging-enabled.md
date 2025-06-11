@@ -1,4 +1,4 @@
-# AWS DMS Replication Task should have Logging enabled for the attrinute 'replication_task_settings' for source db
+# AWS DMS Replication Task should have Logging enabled for the attribute 'replication_task_settings' for source db
 
 | Provider            |    Category   |
 | ------------------- |   ---------   |
@@ -13,7 +13,7 @@ DMS uses Amazon CloudWatch to log information during the migration process. Usin
   - SOURCE_CAPTURE – Ongoing replication or change data capture (CDC) data is captured from the source database or service, and passed to the SORTER service component.
   - SOURCE_UNLOAD – Data is unloaded from the source database or service during full load.
 
-This rule is covered by the [dms-replication-task-logging-enabled](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/dms-replication-task-logging-enabled.sentinel) policy.
+This rule is covered by the [dms-replication-task-logging-enabled](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/dms/dms-replication-task-logging-enabled.sentinel) policy.
 
 ## Policy Results (Pass)
 
