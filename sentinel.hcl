@@ -1199,3 +1199,8 @@ policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "efs-filesystem-encrypted" {
+  source = "./policies/efs/efs-filesystem-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
