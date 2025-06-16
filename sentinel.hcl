@@ -1284,3 +1284,8 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   source = "./policies/workspaces/workspaces-root-volumes-should-be-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "appsync-graphqlapi-cache-should-be-encrypted-at-rest" {
+  source = "./policies/appsync/appsync-graphqlapi-cache-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
