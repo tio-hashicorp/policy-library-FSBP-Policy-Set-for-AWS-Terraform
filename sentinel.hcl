@@ -1194,8 +1194,12 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
   enforcement_level = "advisory"
 }
 
-
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "emr-security-configuration-encryption-rest" {
+  source = "./policies/emr/emr-security-configuration-encryption-rest.sentinel"
   enforcement_level = "advisory"
 }
