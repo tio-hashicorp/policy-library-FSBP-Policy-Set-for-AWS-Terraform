@@ -352,6 +352,36 @@ policy "rds-security-group-event-notifications-configured-for-critical-events" {
   }
 }
 
+policy "rds-for-sql-server-db-instances-should-be-encrypted-in-transit" {
+  source = "./policies/rds/rds-for-sql-server-db-instances-should-be-encrypted-in-transit.sentinel"
+enforcement_level = "advisory"
+}
+
+policy "rds-for-mariadb-db-instances-should-be-encrypted-in-transit" {
+  source = "./policies/rds/rds-for-mariadb-db-instances-should-be-encrypted-in-transit.sentinel"
+enforcement_level = "advisory"
+}
+
+policy "rds-for-mariadb-db-instances-should-publish-logs-to-cloudwatch-logs" {
+  source = "./policies/rds/rds-for-mariadb-db-instances-should-publish-logs-to-cloudwatch-logs.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-for-sql-server-db-instances-should-publish-logs-to-cloudwatch-logs" {
+  source = "./policies/rds/rds-for-sql-server-db-instances-should-publish-logs-to-cloudwatch-logs.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-for-postgresql-db-instances-should-publish-logs-to-cloudwatch-logs" {
+  source = "./policies/rds/rds-for-postgresql-db-instances-should-publish-logs-to-cloudwatch-logs.sentinel"
+enforcement_level = "advisory"
+}
+
+policy "aurora-postgresql-db-clusters-should-publish-logs-to-cloudwatch-logs" {
+  source = "./policies/rds/aurora-postgresql-db-clusters-should-publish-logs-to-cloudwatch-logs.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
@@ -510,7 +540,17 @@ policy "sagemaker-endpoint-config-prod-instance-count-check" {
 
 policy "sagemaker-models-should-block-inbound-traffic" {
   source = "./policies/sagemaker/sagemaker-models-should-block-inbound-traffic.sentinel"
-enforcement_level = "advisory"
+  enforcement_level = "advisory"
+}
+
+policy "sagemaker-images-should-be-tagged" {
+  source = "./policies/sagemaker/sagemaker-images-should-be-tagged.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "sagemaker-notebook-instances-should-run-on-supported-platforms" {
+  source = "./policies/sagemaker/sagemaker-notebook-instances-should-run-on-supported-platforms.sentinel"
+  enforcement_level = "advisory"
 }
 
 policy "redshift-cluster-public-access-check" {
@@ -564,6 +604,36 @@ policy "redshift-cluster-should-be-encrypted-at-rest" {
 
 policy "redshift-cluster-unrestricted-port-access-check" {
   source = "./policies/redshift/redshift-cluster-unrestricted-port-access-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-namespaces-should-not-use-the-default-admin-username"{
+  source = "./policies/redshiftserverless/redshift-serverless-namespaces-should-not-use-the-default-admin-username.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-workgroups-should-prohibit-public-access" {
+  source = "./policies/redshiftserverless/redshift-serverless-workgroups-should-prohibit-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-namespaces-should-export-logs-to-cloudwatch-logs"{
+  source = "./policies/redshiftserverless/redshift-serverless-namespaces-should-export-logs-to-cloudwatch-logs.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-namespaces-should-not-use-the-default-database-name" {
+  source = "./policies/redshiftserverless/redshift-serverless-namespaces-should-not-use-the-default-database-name.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-workgroups-should-be-required-to-use-ssl" {
+  source = "./policies/redshiftserverless/redshift-serverless-workgroups-should-be-required-to-use-ssl.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-workgroups-should-use-enhanced-vpc-routing" {
+  source = "./policies/redshiftserverless/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -1202,5 +1272,15 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
 
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "sns-topic-access-policies-should-not-allow-public-access" {
+  source = "./policies/sns/sns-topic-access-policies-should-not-allow-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
+  source = "./policies/workspaces/workspaces-root-volumes-should-be-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
 }
