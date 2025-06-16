@@ -538,6 +538,11 @@ policy "sagemaker-endpoint-config-prod-instance-count-check" {
   }
 }
 
+policy "sagemaker-models-should-block-inbound-traffic" {
+  source = "./policies/sagemaker/sagemaker-models-should-block-inbound-traffic.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "sagemaker-images-should-be-tagged" {
   source = "./policies/sagemaker/sagemaker-images-should-be-tagged.sentinel"
   enforcement_level = "advisory"
