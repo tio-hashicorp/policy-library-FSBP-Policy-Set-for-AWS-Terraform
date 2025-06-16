@@ -352,6 +352,11 @@ policy "rds-security-group-event-notifications-configured-for-critical-events" {
   }
 }
 
+policy "rds-for-sql-server-db-instances-should-be-encrypted-in-transit" {
+  source = "./policies/rds/rds-for-sql-server-db-instances-should-be-encrypted-in-transit.sentinel"
+enforcement_level = "advisory"
+}
+
 policy "rds-for-mariadb-db-instances-should-be-encrypted-in-transit" {
   source = "./policies/rds/rds-for-mariadb-db-instances-should-be-encrypted-in-transit.sentinel"
 enforcement_level = "advisory"
