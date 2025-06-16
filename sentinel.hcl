@@ -592,6 +592,11 @@ policy "redshift-cluster-unrestricted-port-access-check" {
   enforcement_level = "advisory"
 }
 
+policy "redshift-serverless-namespaces-should-not-use-the-default-admin-username"{
+  source = "./policies/redshiftserverless/redshift-serverless-namespaces-should-not-use-the-default-admin-username.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "redshift-serverless-workgroups-should-prohibit-public-access" {
   source = "./policies/redshiftserverless/redshift-serverless-workgroups-should-prohibit-public-access.sentinel"
   enforcement_level = "advisory"
