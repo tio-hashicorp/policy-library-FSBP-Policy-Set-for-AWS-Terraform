@@ -592,6 +592,11 @@ policy "redshift-cluster-unrestricted-port-access-check" {
   enforcement_level = "advisory"
 }
 
+policy "redshift-serverless-namespaces-should-export-logs-to-cloudwatch-logs"{
+  source = "./policies/redshiftserverless/redshift-serverless-namespaces-should-export-logs-to-cloudwatch-logs.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "redshift-serverless-namespaces-should-not-use-the-default-database-name" {
   source = "./policies/redshiftserverless/redshift-serverless-namespaces-should-not-use-the-default-database-name.sentinel"
   enforcement_level = "advisory"
