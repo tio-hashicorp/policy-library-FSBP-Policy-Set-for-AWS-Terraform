@@ -1,6 +1,6 @@
-mock "tfconfig/v2" {
+mock "tfplan/v2" {
 	module {
-		source = "./mocks/policy-success-s3-multi-region-access-point-block-public-access-enabled/mock-tfconfig-v2.sentinel"
+		source = "./mocks/policy-success-s3-multi-region-access-point-block-public-access-enabled/mock-tfplan-v2.sentinel"
 	}
 }
 

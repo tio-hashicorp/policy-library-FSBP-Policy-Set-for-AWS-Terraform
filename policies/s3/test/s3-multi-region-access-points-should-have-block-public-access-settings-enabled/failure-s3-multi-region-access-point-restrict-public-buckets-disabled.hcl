@@ -1,6 +1,6 @@
-mock "tfconfig/v2" {
+mock "tfplan/v2" {
 	module {
-		source = "./mocks/policy-failure-s3-multi-region-access-point-restrict-public-buckets-disabled/mock-tfconfig-v2.sentinel"
+		source = "./mocks/policy-failure-s3-multi-region-access-point-restrict-public-buckets-disabled/mock-tfplan-v2.sentinel"
 	}
 }
 

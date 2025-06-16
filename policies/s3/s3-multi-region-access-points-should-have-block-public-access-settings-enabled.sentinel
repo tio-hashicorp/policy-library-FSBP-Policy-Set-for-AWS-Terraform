@@ -2,7 +2,7 @@
 
 # Imports
 
-import "tfconfig/v2" as tfconfig
+import "tfplan/v2" as tfplan
 import "tfresources" as tf
 import "report" as report
 import "collection" as collection
@@ -24,8 +24,8 @@ const = {
 
 # Functions
 
-is_public_access_block_compliant = func(config) {
-	details = maps.get(config, "details", [])
+is_public_access_block_compliant = func(values) {
+	details = maps.get(values, "details", [])
 	if details is null or details is [] {
 		return false
 	}
@@ -40,7 +40,7 @@ is_public_access_block_compliant = func(config) {
 				if not maps.has(block, check) {
 					return false
 				}
-				if not maps.get(block, check + ".constant_value", false) is true {
+				if maps.get(block, check, false) is false {
 					return false
 				}
 			}
@@ -49,52 +49,16 @@ is_public_access_block_compliant = func(config) {
 	return true
 }
 
-get_compliance_s3_buckets = func(compliance_resources) {
-	compliance_s3_buckets = []
-
-	for compliance_resources as res {
-		details = maps.get(maps.get(res, "config", {}), "details", [])
-		if details is [] or details is null {
-			return true
-		}
-		for details as detail {
-			regions = maps.get(detail, "region", [])
-			if regions is [] or regions is null {
-				return true
-			}
-			for regions as region {
-				for maps.get(region, "bucket.references", []) as bucket_ref {
-					if bucket_ref in s3_bucket_address {
-						append(compliance_s3_buckets, bucket_ref)
-					}
-				}
-			}
-		}
-	}
-	return compliance_s3_buckets
-}
-
 # Variables
 
-resources = tf.config(tfconfig.resources).type(const.resource_aws_s3control_multi_region_access_point).resources
-s3_bucket_resources = tf.config(tfconfig.resources).type("aws_s3_bucket").resources
+resources = tf.plan(tfplan.planned_values.resources).type(const.resource_aws_s3control_multi_region_access_point).resources
 
-s3_bucket_address = map s3_bucket_resources as res {
-	res.address
-}
 
-compliance_resources = collection.filter(resources, func(res) {
-	config = maps.get(res, "config", {})
-	return is_public_access_block_compliant(config)
+violations = collection.reject(resources, func(res) {
+	values = maps.get(res, "values", {})
+	return is_public_access_block_compliant(values)
 })
 
-compliance_s3_buckets = get_compliance_s3_buckets(compliance_resources)
-
-violations = collection.filter(s3_bucket_resources, func(res) {
-	return res.address not in compliance_s3_buckets
-})
-
-print(violations is empty)
 
 summary = {
 	"policy_name": const.policy_name,
