@@ -612,6 +612,11 @@ policy "redshift-serverless-namespaces-should-not-use-the-default-database-name"
   enforcement_level = "advisory"
 }
 
+policy "redshift-serverless-workgroups-should-be-required-to-use-ssl" {
+  source = "./policies/redshiftserverless/redshift-serverless-workgroups-should-be-required-to-use-ssl.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "dms-replication-instances-should-not-be-public" {
   source = "./policies/dms/dms-replication-instances-should-not-be-public.sentinel"
   enforcement_level = "advisory"
