@@ -543,6 +543,11 @@ policy "sagemaker-images-should-be-tagged" {
   enforcement_level = "advisory"
 }
 
+policy "sagemaker-notebook-instances-should-run-on-supported-platforms" {
+  source = "./policies/sagemaker/sagemaker-notebook-instances-should-run-on-supported-platforms.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "redshift-cluster-public-access-check" {
   source = "./policies/redshift/redshift-cluster-public-access-check.sentinel"
   enforcement_level = "advisory"
