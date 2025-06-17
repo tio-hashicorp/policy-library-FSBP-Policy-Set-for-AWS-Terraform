@@ -1194,8 +1194,12 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
   enforcement_level = "advisory"
 }
 
-
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "glue-spark-job-supported-version" {
+  source = "./policies/glue/glue-spark-job-supported-version.sentinel"
   enforcement_level = "advisory"
 }
