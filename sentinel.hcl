@@ -1284,3 +1284,8 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   source = "./policies/workspaces/workspaces-root-volumes-should-be-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "connect-instance-flow-logging-should-be-enabled" {
+  source = "./policies/connect/connect-instance-flow-logging-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
