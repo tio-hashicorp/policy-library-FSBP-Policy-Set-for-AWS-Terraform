@@ -6,8 +6,6 @@
 
 ## Description
 
-CIS recommends that every Cloudtrail has KmsKeyId set. 
-
 This policy verifies whether the `aws_cloudtrail` is configured to use the server-side encryption (SSE) AWS KMS key encryption. 
 The policy fails if the `kms_key_id` attribute isn't defined for the resource.
 
