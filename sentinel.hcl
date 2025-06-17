@@ -1284,3 +1284,8 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   source = "./policies/workspaces/workspaces-root-volumes-should-be-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "datasync-task-should-have-logging-enabled" {
+  source = "./policies/datasync/datasync-task-should-have-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
