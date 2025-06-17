@@ -1284,3 +1284,8 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   source = "./policies/workspaces/workspaces-root-volumes-should-be-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "efs-file-systems-should-be-in-backup-plans" {
+  source = "./policies/efs/efs-file-systems-should-be-in-backup-plans.sentinel"
+  enforcement_level = "advisory"
+}
