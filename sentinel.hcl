@@ -1194,8 +1194,12 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
   enforcement_level = "advisory"
 }
 
-
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "fsx-openzfs-deployment-type-check" {
+  source = "./policies/fsx/fsx-openzfs-deployment-type-check.sentinel"
   enforcement_level = "advisory"
 }
