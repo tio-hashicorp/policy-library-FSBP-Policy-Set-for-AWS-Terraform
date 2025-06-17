@@ -1194,8 +1194,12 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
   enforcement_level = "advisory"
 }
 
-
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "inspector-lambda-standard-scan-enabled" {
+  source = "./policies/inspector/inspector-lambda-standard-scan-enabled.sentinel"
   enforcement_level = "advisory"
 }
