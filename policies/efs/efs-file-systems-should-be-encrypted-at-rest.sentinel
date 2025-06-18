@@ -33,8 +33,6 @@ get_violations = func(efs_file_system_resources) {
 		if efs_kms_key_id_values is null or efs_kms_key_id_values is empty {
 			return false
 		}
-		print("efs_encrypted_values: ", efs_encrypted_values)
-		print("efs_kms_key_id_values: ", efs_kms_key_id_values)
 		if efs_kms_key_id_values.constant_value is not defined {
 			return efs_encrypted_values.constant_value is true and efs_kms_key_id_values.references is not empty
 		}
