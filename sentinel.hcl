@@ -1274,6 +1274,11 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+policy "fsx-ontap-deployment-type-check" {
+  source = "./policies/fsx/fsx-ontap-deployment-type-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "fsx-windows-deployment-type-check" {
   source = "./policies/fsx/fsx-windows-deployment-type-check.sentinel"
   enforcement_level = "advisory"
