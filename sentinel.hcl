@@ -1274,6 +1274,11 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+policy "fsx-windows-deployment-type-check" {
+  source = "./policies/fsx/fsx-windows-deployment-type-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "glue-spark-job-supported-version" {
   source = "./policies/glue/glue-spark-job-supported-version.sentinel"
   enforcement_level = "advisory"

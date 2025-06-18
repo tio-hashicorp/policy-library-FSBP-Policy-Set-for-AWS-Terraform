@@ -333,6 +333,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - FSx for OpenZFS file systems should be configured to copy tags to backups and volumes ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/fsx-openzfs-copy-tags-to-backups-and-volumes-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/fsx/fsx-openzfs-copy-tags-to-backups-and-volumes-enabled.sentinel))
 
+- FSx for Windows File Server file systems should be configured for Multi-AZ deployment ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/fsx-windows-deployment-type-check.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/fsx/fsx-windows-deployment-type-check.sentinel))
+
 - GuardDuty EKS Audit Log Monitoring should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/guardduty-eks-audit-log-monitoring-should-be-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/guardduty/guardduty-eks-audit-log-monitoring-should-be-enabled.sentinel))
 
 - GuardDuty EKS Runtime Monitoring should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/guardduty-eks-protection-runtime-should-be-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/guardduty/guardduty-eks-protection-runtime-should-be-enabled.sentinel))
