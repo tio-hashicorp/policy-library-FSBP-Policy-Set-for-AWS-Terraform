@@ -12,8 +12,8 @@ For more details on how to work with these policies and to understand the Sentin
 
 We aim to validate the effectiveness of our policies by collecting diverse user feedback and understanding real-world use cases. This input will help refine our policies and enhance their overall impact.
 
-1. You can submit your feedback via a [public survey](https://docs.google.com/forms/d/e/1FAIpQLScswwLMaVaRuYRGJzDjNiycwM4BUa_gAIsAE_zOPdgyFeLXCA/viewform). 
- 
+1. You can submit your feedback via a [public survey](https://docs.google.com/forms/d/e/1FAIpQLScswwLMaVaRuYRGJzDjNiycwM4BUa_gAIsAE_zOPdgyFeLXCA/viewform).
+
 2. If you have any issues or enhancement suggestions to the library, please create [a new GitHub issue](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/issues/new).
 
 3. Alternatively, we welcome any contributions that improve the impact of this library! To learn more about contributing and suggesting changes to this library, refer to the [contributing guide](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/CONTRIBUTING.md).
@@ -35,6 +35,7 @@ This getting started guide assumes that:
 By default, the module will enable all policies within the library, and they will be enforced by the HCP Platform with the `enforcement_level` set to `advisory` only.
 
 **Example:**
+
 ```
 policy "iam-password-expiry" {
   source = "./policies/iam/iam-password-expiry.sentinel"
@@ -48,41 +49,45 @@ policy "iam-password-expiry" {
 If you want to enable only a subset of the policies or change the [enforcement levels](https://developer.hashicorp.com/sentinel/docs/concepts/enforcement-levels) to either `soft-mandatory` or `hard-mandatory`, we recommend updating the contents of the `sentinel.hcl` file in each library before applying the Terraform configuration.
 
 > **Important:**
-The policies in each library are opinionated and depend on several Sentinel modules. To learn more about modules, please refer to the [Sentinel module](https://developer.hashicorp.com/sentinel/docs/extending/modules) documentation.
+> The policies in each library are opinionated and depend on several Sentinel modules. To learn more about modules, please refer to the [Sentinel module](https://developer.hashicorp.com/sentinel/docs/extending/modules) documentation.
 >
-To learn more about how to configure a policy set as a [policy evaluation](https://developer.hashicorp.com/terraform/cloud-docs/policy-enforcement/manage-policy-sets#policy-evaluations), please review the Terraform Enterprise provider [documentation](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/policy_set#agent_enabled).
+> To learn more about how to configure a policy set as a [policy evaluation](https://developer.hashicorp.com/terraform/cloud-docs/policy-enforcement/manage-policy-sets#policy-evaluations), please review the Terraform Enterprise provider [documentation](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/policy_set#agent_enabled).
 
 ## Consuming Pre-Written Sentinel Policies for FSBP AWS Foundations Benchmark
 
 Following methods outlines various ways to consume and implement pre-written Sentinel policies for the FSBP AWS Foundations Benchmark. These policies can be used in both Terraform Enterprise (TFE) and HCP Terraform environments. Below are the recommended methods for integrating these policies into your workflows.
 
 ### Terraform Registry Method:
-* Navigate to the [Terraform Registry](https://registry.terraform.io/browse/policies) and select the desired Sentinel policy.
-* Copy the provided policy snippet from the registry.
-* Create a GitHub repository (or use an existing one) to store your policies.
-* Add a Sentinel.hcl file to the repository and paste the copied policy snippet(s) into this file.
-* Connect the repository to HCP Terraform or Terraform Enterprise using the VCS (Version Control System) workflow.
-* Trigger policy execution automatically during the plan stage in HCP Terraform or Terraform Enterprise.
+
+- Navigate to the [Terraform Registry](https://registry.terraform.io/browse/policies) and select the desired Sentinel policy.
+- Copy the provided policy snippet from the registry.
+- Create a GitHub repository (or use an existing one) to store your policies.
+- Add a Sentinel.hcl file to the repository and paste the copied policy snippet(s) into this file.
+- Connect the repository to Terraform Cloud or Terraform Enterprise using the VCS (Version Control System) workflow.
+- Trigger policy execution automatically during the plan stage in Terraform Cloud or Terraform Enterprise.
 
 ### Using the Public GitHub Repository:
-* Access the public GitHub repository containing the policy library.
-* You can directly use the repository as-is or fork it to customize the policies for your specific requirements.
-* If forking, ensure you sync your fork with the upstream repository periodically to stay updated with the latest changes.
-* Avoid using the default branch for consumption in HCP Terraform or Terraform Enterprise. Instead, use the release branches for better stability.
-* Attach the repository (or your fork) to HCP Terraform or Terraform Enterprise using the VCS workflow.
-* Run a Terraform plan to execute the policies during the post-plan stage.
+
+- Access the public GitHub repository containing the policy library.
+- You can directly use the repository as-is or fork it to customize the policies for your specific requirements.
+- If forking, ensure you sync your fork with the upstream repository periodically to stay updated with the latest changes.
+- Avoid using the default branch for consumption in Terraform Cloud or Terraform Enterprise. Instead, use the release branches for better stability.
+- Attach the repository (or your fork) to Terraform Cloud or Terraform Enterprise using the VCS workflow.
+- Run a Terraform plan to execute the policies during the post-plan stage.
 
 ### Terraform Module Approach:
-* Use a dedicated Terraform module designed to manage Sentinel policy sets.
-* Provide a minimal set of variable inputs (typically four) to configure and attach the policies.
-* The module will automatically attach the latest versions of multiple policy sets to their respective workspaces.
-* Execute a Terraform plan to verify that the policy sets are applied successfully in HCP Terraform or Terraform Enterprise.
+
+- Use a dedicated Terraform module designed to manage Sentinel policy sets.
+- Provide a minimal set of variable inputs (typically four) to configure and attach the policies.
+- The module will automatically attach the latest versions of multiple policy sets to their respective workspaces.
+- Execute a Terraform plan to verify that the policy sets are applied successfully in Terraform Cloud or Terraform Enterprise.
 
 #### Notes and Best Practices
-* These policies are compatible with both HCP Terraform and Terraform Enterprise (TFE). Ensure your workflow is configured accordingly.
-* When using the public GitHub repository, it is recommended to use release branches for stability and avoid consuming policies directly from the default branch.
-* Regularly update your policies to align with the latest FSBP AWS Foundations Benchmark standards and Terraform best practices.
-* Customize policies as needed to meet your organization's specific compliance and security requirements.
+
+- These policies are compatible with both Terraform Cloud (TFC) and Terraform Enterprise (TFE). Ensure your workflow is configured accordingly.
+- When using the public GitHub repository, it is recommended to use release branches for stability and avoid consuming policies directly from the default branch.
+- Regularly update your policies to align with the latest FSBP AWS Foundations Benchmark standards and Terraform best practices.
+- Customize policies as needed to meet your organization's specific compliance and security requirements.
 
 ## Resources
 
@@ -330,6 +335,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - FSx for NetApp ONTAP file systems should be configured for Multi-AZ deployment ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/fsx-ontap-deployment-type-check.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/fsx/fsx-ontap-deployment-type-check.sentinel))
 
+- FSx for Windows File Server file systems should be configured for Multi-AZ deployment ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/fsx-windows-deployment-type-check.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/fsx/fsx-windows-deployment-type-check.sentinel))
+
 - GuardDuty EKS Audit Log Monitoring should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/guardduty-eks-audit-log-monitoring-should-be-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/guardduty/guardduty-eks-audit-log-monitoring-should-be-enabled.sentinel))
 
 - GuardDuty EKS Runtime Monitoring should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/guardduty-eks-protection-runtime-should-be-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/guardduty/guardduty-eks-protection-runtime-should-be-enabled.sentinel))
@@ -340,7 +347,13 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - GuardDuty should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/guardduty-should-be-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/guardduty/guardduty-should-be-enabled.sentinel))
 
+- GuardDuty Runtime Monitoring should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/guardduty-runtime-monitoring-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/guardduty/guardduty-runtime-monitoring-enabled.sentinel))
+
+- GuardDuty ECS Runtime Monitoring should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/guardduty-ecs-protection-runtime-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/guardduty/guardduty-ecs-protection-runtime-enabled.sentinel))
+
 - IAM policies should not allow full "*" administrative privileges ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/iam-no-admin-privileges-allowed-by-policies.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/iam/iam-no-admin-privileges-allowed-by-policies.sentinel))
+
+- IAM policies should not allow full "\*" administrative privileges ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/iam-no-admin-privileges-allowed-by-policies.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/iam/iam-no-admin-privileges-allowed-by-policies.sentinel))
 
 - IAM users should not have IAM policies attached ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/iam-no-policies-attached-to-users.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/iam/iam-no-policies-attached-to-users.sentinel))
 
@@ -351,6 +364,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 - Firehose delivery streams should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/kinesis-firehose-delivery-stream-encrypted.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/kinesis/kinesis-firehose-delivery-stream-encrypted.sentinel))
 
 - Kinesis streams should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/kinesis-stream-encrypted.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/kinesis/kinesis-stream-encrypted.sentinel))
+
+- Kinesis streams should have an adequate data retention period ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/kinesis-stream-backup-retention-check.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/kinesis/kinesis-stream-backup-retention-check.sentinel))
 
 - KMS restrict IAM inline policies decrypt all KMS keys ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/kms-restrict-iam-inline-policies-decrypt-all-kms-keys.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/kms/kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel))
 
@@ -367,6 +382,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 - ActiveMQ brokers should stream audit logs to CloudWatch ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/mq-cloudwatch-audit-log-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/mq/mq-cloudwatch-audit-log-enabled.sentinel))
 
 - AWS MQ Broker should have the in_cluster attribute set to true for encryption_in_transit of encryption_info attribute ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/msk-in-cluster-node-require-encrypted-in-transit.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/msk/msk-in-cluster-node-require-encrypted-in-transit.sentinel))
+
+- MSK Connect connectors should be encrypted in transit ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/msk-connect-connector-encrypted.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/msk/msk-connect-connector-encrypted.sentinel))
 
 - Neptune DB clusters should publish audit logs to cloudwatch ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/neptune-cluster-audit-logs-publishing-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/neptune/neptune-cluster-audit-logs-publishing-enabled.sentinel))
 
@@ -537,3 +554,65 @@ Following methods outlines various ways to consume and implement pre-written Sen
 - AWS WAF rules should have CloudWatch metrics enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/wafv2-rulegroup-logging-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/waf/wafv2-rulegroup-logging-enabled.sentinel))
 
 - AWS WAF web ACLs should have at least one rule or rule group ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/wafv2-webacl-not-empty.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/waf/wafv2-webacl-not-empty.sentinel))
+
+- AWS Glue Spark jobs should run on supported versions of AWS Glue ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/glue-spark-job-supported-version.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/glue/glue-spark-job-supported-version.sentinel))
+
+- Amazon Inspector EC2 scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-ec2-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-ec2-scan-enabled.sentinel))
+
+- Amazon Inspector ECR scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-ecr-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-ecr-scan-enabled.sentinel))
+
+- Amazon Inspector Lambda code scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-lambda-code-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-lambda-code-scan-enabled.sentinel))
+
+- Amazon Inspector Lambda standard scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-lambda-standard-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-lambda-standard-scan-enabled.sentinel))
+
+- Network Firewall firewalls should have subnet change protection enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/network-firewall/network-firewall-subnet-change-protection-enabled.sentinel) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/network-firewall/network-firewall-subnet-change-protection-enabled.sentinel))
+
+- AWS SageMaker models should block inbound traffic ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/sagemaker-models-should-block-inbound-traffic.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sagemaker/sagemaker-models-should-block-inbound-traffic.sentinel))
+
+- AWS Redshift Serverless namespaces should not use the default admin username ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-namespaces-should-not-use-the-default-admin-username.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserverless/redshift-serverless-namespaces-should-not-use-the-default-admin-username.sentinel))
+
+- AWS Redshift Serverless workgroups should prohibit public access ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-workgroups-should-prohibit-public-access.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserverless/redshift-serverless-workgroups-should-prohibit-public-access.sentinel))
+
+- AWS Redshift Serverless namespaces should export logs to CloudWatch Logs ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-namespaces-should-export-logs-to-cloudwatch-logs.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserverless/redshift-serverless-namespaces-should-export-logs-to-cloudwatch-logs.sentinel))
+
+- AWS Redshift Serverless namespaces should not use the default database name ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-namespaces-should-not-use-the-default-database-name.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserverless/redshift-serverless-namespaces-should-not-use-the-default-database-name.sentinel))
+
+- RDS for SQL Server DB instances should be encrypted in transit ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/rds-for-sql-server-db-instances-should-be-encrypted-in-transit.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/rds/rds-for-sql-server-db-instances-should-be-encrypted-in-transit.sentinel))
+
+- RDS for MariaDB DB instances should be encrypted in transit ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/rds-for-mariadb-db-instances-should-be-encrypted-in-transit.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/rds/rds-for-mariadb-db-instances-should-be-encrypted-in-transit.sentinel))
+
+- RDS for MariaDB DB instances should publish logs to CloudWatch Logs ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/rds-for-mariadb-db-instances-should-publish-logs-to-cloudwatch-logs.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/rds/rds-for-mariadb-db-instances-should-publish-logs-to-cloudwatch-logs.sentinel))
+
+- RDS for SQL Server DB instances should publish logs to CloudWatch Logs ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/rds-for-sql-server-db-instances-should-publish-logs-to-cloudwatch-logs.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/rds/rds-for-sql-server-db-instances-should-publish-logs-to-cloudwatch-logs.sentinel))
+
+- AWS RDS for PostgreSQL DB instances should publish logs to CloudWatch Logs ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/rds-for-postgresql-db-instances-should-publish-logs-to-cloudwatch-logs.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/rds/rds-for-postgresql-db-instances-should-publish-logs-to-cloudwatch-logs.sentinel))
+
+- Aurora PostgreSQL DB clusters should publish logs to CloudWatch Logs ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/aurora-postgresql-db-clusters-should-publish-logs-to-cloudwatch-logs.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/rds/aurora-postgresql-db-clusters-should-publish-logs-to-cloudwatch-logs.sentinel))
+
+- SNS topic access policies should not allow public access([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/sns-topic-access-policies-should-not-allow-public-access.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sns/sns-topic-access-policies-should-not-allow-public-access.sentinel))
+
+- AWS WorkSpaces root volumes should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/workspaces-root-volumes-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/workspaces/workspaces-root-volumes-should-be-encrypted-at-rest.sentinel))
+
+- AWS Connections to Redshift Serverless workgroups should be required to use SSL ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-workgroups-should-be-required-to-use-ssl.sentinel.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserverless/redshift-serverless-workgroups-should-be-required-to-use-ssl.sentinel))
+
+- AWS SageMaker images should be tagged ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/sagemaker-images-should-be-tagged.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sagemaker/sagemaker-images-should-be-tagged.sentinel))
+
+- AWS SageMaker notebook instances should run on supported platforms ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/sagemaker-notebook-instances-should-run-on-supported-platforms.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sagemaker/sagemaker-notebook-instances-should-run-on-supported-platforms.sentinel))
+
+- AWS Amazon Redshift Serverless workgroups should use enhanced VPC routing ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserveless/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.sentinel))
+
+- AWS Cloudtrail LogFile Validation is enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/cloudtrail-log-file-validation-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/cloudtrail/cloudtrail-log-file-validation-enabled.sentinel))
+
+- AWS CloudTrail should have encryption at-rest enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/cloudtrail-server-side-encryption-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/cloudtrail/cloudtrail-server-side-encryption-enabled.sentinel))
+
+- Athena workgroups should have logging enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/athena-workgroup-should-have-logging-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/athena/athena-workgroup-should-have-logging-enabled.sentinel))
+
+- AWS AppSync API caches should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-graphqlapi-cache-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-graphqlapi-cache-should-be-encrypted-at-rest.sentinel))
+
+- AWS AppSync should have field-level logging enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-field-level-logging-should-be-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-field-level-logging-should-be-enabled.sentinel))
+
+- AWS AppSync GraphQL APIs should not be authenticated with API keys ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-graphql-api-should-not-authenticate-with-api-keys.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-graphql-api-should-not-authenticate-with-api-keys.sentinel))
+
+- AWS AppSync API caches should be encrypted in transit ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-cache-should-be-encrypted-at-transit.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-cache-should-be-encrypted-at-transit.sentinel))
+
+- WorkSpaces user volumes should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/workspaces-user-volumes-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/workspaces/workspaces-user-volumes-should-be-encrypted-at-rest.sentinel))
