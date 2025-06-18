@@ -1359,6 +1359,11 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "efs-file-systems-should-be-encrypted-at-rest" {
+  source = "./policies/efs/efs-file-systems-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ecs-task-set-assign-public-ip-disabled" {
   source = "./policies/ecs/ecs-task-set-assign-public-ip-disabled.sentinel"
   enforcement_level = "advisory"
