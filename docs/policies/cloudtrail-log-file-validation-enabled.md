@@ -1,8 +1,8 @@
 # Cloudtrail LogFile Validation is enabled
 
-| Provider            | Category                |
-|---------------------|-------------------------|
-| Amazon Web Services | Data protection |
+| Provider            |         Category        |
+|---------------------| ----------------------- |
+| Amazon Web Services |     Data protection     |
 
 ## Description
 
