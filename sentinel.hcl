@@ -397,6 +397,11 @@ policy "s3-require-ssl" {
   enforcement_level = "advisory"
 }
 
+policy "s3-multi-region-access-points-should-have-block-public-access-settings-enabled" {
+  source = "./policies/s3/s3-multi-region-access-points-should-have-block-public-access-settings-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "elasticache-redis-replication-group-redis-auth-enabled" {
   source = "./policies/elasticache/elasticache-redis-replication-group-redis-auth-enabled.sentinel"
   enforcement_level = "advisory"
@@ -540,11 +545,6 @@ policy "sagemaker-endpoint-config-prod-instance-count-check" {
 
 policy "sagemaker-models-should-block-inbound-traffic" {
   source = "./policies/sagemaker/sagemaker-models-should-block-inbound-traffic.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "sagemaker-images-should-be-tagged" {
-  source = "./policies/sagemaker/sagemaker-images-should-be-tagged.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -1276,6 +1276,21 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
 
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "efs-automatic-backups-enabled" {
+  source = "./policies/efs/efs-automatic-backups-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "efs-filesystem-encrypted" {
+  source = "./policies/efs/efs-filesystem-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elb-multiple-az" {
+  source = "./policies/elb/elb-multiple-az.sentinel"
   enforcement_level = "advisory"
 }
 

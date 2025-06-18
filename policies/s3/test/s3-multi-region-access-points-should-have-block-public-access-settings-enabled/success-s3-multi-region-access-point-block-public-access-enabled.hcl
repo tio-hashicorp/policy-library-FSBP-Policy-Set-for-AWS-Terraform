@@ -1,6 +1,6 @@
 mock "tfplan/v2" {
 	module {
-		source = "./mocks/policy-success-sagemaker-image-required-tags-empty-values/mock-tfplan-v2.sentinel"
+		source = "./mocks/policy-success-s3-multi-region-access-point-block-public-access-enabled/mock-tfplan-v2.sentinel"
 	}
 }
 
