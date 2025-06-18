@@ -1349,6 +1349,46 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-ecr-api" {
+  source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    service_name = "ecr.api"
+  }
+}
+
+policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-docker-registry" {
+  source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    service_name = "ecr.dkr"
+  }
+}
+
+policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-systems-manager" {
+  source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    service_name = "ssm"
+  }
+}
+
+policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-systems-manager-incident-manager-contacts" {
+  source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    service_name = "ssm-contacts"
+  }
+}
+
+policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-systems-manager-incident-manager" {
+  source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    service_name = "ssm-incidents"
+  }
+}
+
 policy "datasync-task-should-have-logging-enabled" {
   source = "./policies/datasync/datasync-task-should-have-logging-enabled.sentinel"
   enforcement_level = "advisory"
