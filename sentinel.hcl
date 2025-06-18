@@ -1354,6 +1354,11 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "ec2-vpc-block-public-access-options-should-block-internet-gateway-traffic" {
+  source = "./policies/ec2/ec2-vpc-block-public-access-options-should-block-internet-gateway-traffic.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-ecr-api" {
   source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
   enforcement_level = "advisory"
