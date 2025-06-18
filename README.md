@@ -343,6 +343,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - GuardDuty should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/guardduty-should-be-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/guardduty/guardduty-should-be-enabled.sentinel))
 
+- GuardDuty Runtime Monitoring should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/guardduty-runtime-monitoring-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/guardduty/guardduty-runtime-monitoring-enabled.sentinel))
+
 - GuardDuty ECS Runtime Monitoring should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/guardduty-ecs-protection-runtime-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/guardduty/guardduty-ecs-protection-runtime-enabled.sentinel))
 
 - IAM policies should not allow full "*" administrative privileges ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/iam-no-admin-privileges-allowed-by-policies.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/iam/iam-no-admin-privileges-allowed-by-policies.sentinel))

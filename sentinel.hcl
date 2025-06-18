@@ -1252,7 +1252,7 @@ policy "service-catalog-shared-within-organization" {
 policy "acm-rsa-certificate-key-length-atleast-2048" {
   source = "./policies/acm/acm-rsa-certificate-key-length-atleast-2048.sentinel"
   enforcement_level = "advisory"
-}c
+}
 
 policy "autoscaling-group-with-load-balancer-attached-should-have-elb-healthcheck" {
   source = "./policies/autoscaling-group/autoscaling-group-with-load-balancer-attached-should-have-elb-healthcheck.sentinel"
@@ -1271,6 +1271,11 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
 
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "guardduty-runtime-monitoring-enabled" {
+  source = "./policies/guardduty/guardduty-runtime-monitoring-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -1323,7 +1328,6 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   source = "./policies/workspaces/workspaces-root-volumes-should-be-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
 }
-
 
 policy "cloudtrail-server-side-encryption-enabled" {
   source = "./policies/cloudtrail/cloudtrail-server-side-encryption-enabled.sentinel"
