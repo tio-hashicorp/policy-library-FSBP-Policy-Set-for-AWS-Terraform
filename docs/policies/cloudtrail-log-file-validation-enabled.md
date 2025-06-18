@@ -6,9 +6,11 @@
 
 ## Description
 
-This policy verifies whether log file validation for a given Cloud trail resource is enabled. 
-The policy fails if the `enable_log_file_validation` isn't enabled for the given `aws_cloudtrail` resource.
+This control checks whether log file integrity validation is enabled on a CloudTrail trail.
 
+CloudTrail log file validation creates a digitally signed digest file that contains a hash of each log that CloudTrail writes to Amazon S3. You can use these digest files to determine whether a log file was changed, deleted, or unchanged after CloudTrail delivered the log.
+
+Security Hub recommends that you enable file validation on all trails. Log file validation provides additional integrity checks of CloudTrail logs.
 This rule is covered by the [cloudtrail-log-file-validation-enabled](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/cloudtrail/cloudtrail-log-file-validation-enabled.sentinel) policy.
 
 ## Policy Results (Pass)
