@@ -595,6 +595,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS Amazon Redshift Serverless workgroups should use enhanced VPC routing ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserveless/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.sentinel))
 
+- AWS Cloudtrail LogFile Validation is enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/cloudtrail-log-file-validation-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/cloudtrail/cloudtrail-log-file-validation-enabled.sentinel))
+
 - AWS CloudTrail should have encryption at-rest enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/cloudtrail-server-side-encryption-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/cloudtrail/cloudtrail-server-side-encryption-enabled.sentinel))
 
 - Athena workgroups should have logging enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/athena-workgroup-should-have-logging-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/athena/athena-workgroup-should-have-logging-enabled.sentinel))

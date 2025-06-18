@@ -1329,6 +1329,11 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "cloudtrail-log-file-validation-enabled" {
+  source = "./policies/cloudtrail/cloudtrail-log-file-validation-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "cloudtrail-server-side-encryption-enabled" {
   source = "./policies/cloudtrail/cloudtrail-server-side-encryption-enabled.sentinel"
   enforcement_level = "advisory"
