@@ -1,5 +1,8 @@
 # This control checks whether public access is disabled for an Amazon Redshift Serverless workgroup.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfplan/v2" as tfplan

@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfplan/v2" {
 	module {
 		source = "./mocks/policy-success-rds-mariadb-multiple-logs-exported-to-cloudwatch/mock-tfplan-v2.sentinel"

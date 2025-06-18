@@ -1,5 +1,8 @@
 # This policy requires resources of type `aws_kinesis_stream` have attribute "retention_period" set to at least 168 hours (7 days).
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfplan/v2" as tfplan

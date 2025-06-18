@@ -1,5 +1,8 @@
 # This control checks whether connections to an Amazon Redshift Serverless workgroup are required to encrypt data in transit.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfplan/v2" as tfplan

@@ -1,5 +1,8 @@
 # This control checks if the Amazon SNS topic access policy allows public access.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfconfig/v2" as tfconfig
