@@ -355,6 +355,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - Kinesis streams should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/kinesis-stream-encrypted.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/kinesis/kinesis-stream-encrypted.sentinel))
 
+- Kinesis streams should have an adequate data retention period ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/kinesis-stream-backup-retention-check.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/kinesis/kinesis-stream-backup-retention-check.sentinel))
+
 - KMS restrict IAM inline policies decrypt all KMS keys ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/kms-restrict-iam-inline-policies-decrypt-all-kms-keys.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/kms/kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel))
 
 - Lambda function policies should prohibit public access ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/lambda-function-public-access-prohibited.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/lambda/lambda-function-public-access-prohibited.sentinel))
@@ -370,6 +372,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 - ActiveMQ brokers should stream audit logs to CloudWatch ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/mq-cloudwatch-audit-log-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/mq/mq-cloudwatch-audit-log-enabled.sentinel))
 
 - AWS MQ Broker should have the in_cluster attribute set to true for encryption_in_transit of encryption_info attribute ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/msk-in-cluster-node-require-encrypted-in-transit.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/msk/msk-in-cluster-node-require-encrypted-in-transit.sentinel))
+
+- MSK Connect connectors should be encrypted in transit ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/msk-connect-connector-encrypted.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/msk/msk-connect-connector-encrypted.sentinel))
 
 - Neptune DB clusters should publish audit logs to cloudwatch ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/neptune-cluster-audit-logs-publishing-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/neptune/neptune-cluster-audit-logs-publishing-enabled.sentinel))
 
@@ -541,6 +545,12 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS WAF web ACLs should have at least one rule or rule group ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/wafv2-webacl-not-empty.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/waf/wafv2-webacl-not-empty.sentinel))
 
+- Amazon Inspector Lambda code scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-lambda-code-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-lambda-code-scan-enabled.sentinel))
+
+- Amazon Inspector Lambda standard scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-lambda-standard-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-lambda-standard-scan-enabled.sentinel))
+
+- Network Firewall firewalls should have subnet change protection enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/network-firewall/network-firewall-subnet-change-protection-enabled.sentinel) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/network-firewall/network-firewall-subnet-change-protection-enabled.sentinel))
+
 - AWS SageMaker models should block inbound traffic ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/sagemaker-models-should-block-inbound-traffic.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sagemaker/sagemaker-models-should-block-inbound-traffic.sentinel))
 
 - AWS Redshift Serverless namespaces should not use the default admin username ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-namespaces-should-not-use-the-default-admin-username.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserverless/redshift-serverless-namespaces-should-not-use-the-default-admin-username.sentinel))
@@ -575,4 +585,11 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS Amazon Redshift Serverless workgroups should use enhanced VPC routing ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserveless/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.sentinel))
 
+- AWS AppSync API caches should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-graphqlapi-cache-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-graphqlapi-cache-should-be-encrypted-at-rest.sentinel))
+
+- AWS AppSync should have field-level logging enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-field-level-logging-should-be-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-field-level-logging-should-be-enabled.sentinel))
+
 - AWS AppSync GraphQL APIs should not be authenticated with API keys ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-graphql-api-should-not-authenticate-with-api-keys.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-graphql-api-should-not-authenticate-with-api-keys.sentinel))
+
+- WorkSpaces user volumes should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/workspaces-user-volumes-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/workspaces/workspaces-user-volumes-should-be-encrypted-at-rest.sentinel))
+
