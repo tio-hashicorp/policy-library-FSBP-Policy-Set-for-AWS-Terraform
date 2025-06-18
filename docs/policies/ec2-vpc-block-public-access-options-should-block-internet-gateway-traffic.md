@@ -1,4 +1,4 @@
-# DataSync tasks should have logging enabled
+# EC2 VPC Block Public Access settings should block internet gateway traffic
 
 | Provider            |             Category           |
 | ------------------- |  ----------------------------  |
