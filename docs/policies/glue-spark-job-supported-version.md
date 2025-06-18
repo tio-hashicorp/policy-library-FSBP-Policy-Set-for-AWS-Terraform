@@ -10,7 +10,7 @@ This control checks whether an AWS Glue for Spark job is configured to run on a 
 
 Running AWS Glue Spark jobs on current versions of AWS Glue can optimize performance, security, and access to the latest features of AWS Glue. It can also help safeguard against security vulnerabilities. For example, a new version might be released to provide security updates, address issues, or introduce new features.
 
-This rule is covered by the [glue-spark-job-supported-version](../../policies/glue/glue-spark-job-supported-version.sentinel) policy.
+This rule is covered by the [glue-spark-job-supported-version](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/glue/glue-spark-job-supported-version.sentinel) policy.
 
 ## Policy Results (Pass)
 
