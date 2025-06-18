@@ -1274,12 +1274,11 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
-<<<<<<< elb.13
 policy "elb-multiple-az" {
   source = "./policies/elb/elb-multiple-az.sentinel"
   enforcement_level = "advisory"
 }
-=======
+
 policy "elb-predefined-security-policy-ssl-check" {
   source = "./policies/elb/elb-predefined-security-policy-ssl-check.sentinel"
   enforcement_level = "advisory"
@@ -1502,4 +1501,3 @@ policy "route-53-public-hosted-zones-should-log-dns-queries" {
   source = "./policies/route53/route-53-public-hosted-zones-should-log-dns-queries.sentinel"
   enforcement_level = "advisory"
 }
->>>>>>> dev
