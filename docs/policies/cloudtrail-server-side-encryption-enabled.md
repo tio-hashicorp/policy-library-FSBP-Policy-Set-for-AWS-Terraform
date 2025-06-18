@@ -2,7 +2,7 @@
 
 | Provider            | Category                |
 |---------------------|-------------------------|
-| Amazon Web Services | Management & Governance |
+| Amazon Web Services | Data Protection |
 
 ## Description
 
