@@ -545,6 +545,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS WAF web ACLs should have at least one rule or rule group ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/wafv2-webacl-not-empty.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/waf/wafv2-webacl-not-empty.sentinel))
 
+- Amazon Inspector ECR scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-ecr-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-ecr-scan-enabled.sentinel))
+
 - Amazon Inspector Lambda code scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-lambda-code-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-lambda-code-scan-enabled.sentinel))
 
 - Amazon Inspector Lambda standard scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-lambda-standard-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-lambda-standard-scan-enabled.sentinel))
@@ -592,4 +594,3 @@ Following methods outlines various ways to consume and implement pre-written Sen
 - AWS AppSync GraphQL APIs should not be authenticated with API keys ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-graphql-api-should-not-authenticate-with-api-keys.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-graphql-api-should-not-authenticate-with-api-keys.sentinel))
 
 - WorkSpaces user volumes should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/workspaces-user-volumes-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/workspaces/workspaces-user-volumes-should-be-encrypted-at-rest.sentinel))
-
