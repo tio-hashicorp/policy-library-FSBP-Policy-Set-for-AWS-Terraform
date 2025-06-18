@@ -603,6 +603,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS Amazon Redshift Serverless workgroups should use enhanced VPC routing ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserveless/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.sentinel))
 
+- DataSync tasks should have logging enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/datasync-task-should-have-logging-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/datasync/datasync-task-should-have-logging-enabled.sentinel))
+
 - Amazon Connect instances should have CloudWatch logging enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/connect-instance-flow-logging-should-be-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/connect/connect-instance-flow-logging-should-be-enabled.sentinel))
 
 - AWS Cloudtrail LogFile Validation is enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/cloudtrail-log-file-validation-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/cloudtrail/cloudtrail-log-file-validation-enabled.sentinel))
