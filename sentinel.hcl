@@ -1274,6 +1274,11 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+policy "inspector-lambda-code-scan-enabled" {
+  source = "./policies/inspector/inspector-lambda-code-scan-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "inspector-lambda-standard-scan-enabled" {
   source = "./policies/inspector/inspector-lambda-standard-scan-enabled.sentinel"
   enforcement_level = "advisory"
