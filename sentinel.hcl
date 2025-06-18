@@ -1359,6 +1359,11 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "efs-access-point-should-enforce-user-identity" {
+  source = "./policies/efs/efs-access-point-should-enforce-user-identity.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "efs-access-point-should-enforce-root-directory" {
   source = "./policies/efs/efs-access-point-should-enforce-root-directory.sentinel"
   enforcement_level = "advisory"
