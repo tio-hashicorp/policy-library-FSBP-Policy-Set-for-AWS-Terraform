@@ -659,3 +659,4 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS Route 53 public hosted zones should log DNS queries ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/route-53-public-hosted-zones-should-log-dns-queries.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/route53/route-53-public-hosted-zones-should-log-dns-queries.sentinel))
 
+- AWS S3 Multi-Region Access Points should have block public access settings enabledd ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/s3-multi-region-access-points-should-have-block-public-access-settings-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/s3/s3-multi-region-access-points-should-have-block-public-access-settings-enabled.sentinel))
