@@ -10,7 +10,7 @@ This control checks whether the HTTPS listener for an Application Load Balancer 
 
 Elastic Load Balancing uses an SSL negotiation configuration, known as a security policy, to negotiate connections between a client and a load balancer. The security policy specifies a combination of protocols and ciphers. The protocol establishes a secure connection between a client and a server. A cipher is an encryption algorithm that uses encryption keys to create a coded message. During the connection negotiation process, the client and the load balancer present a list of ciphers and protocols that they each support, in order of preference. Using a recommended security policy for a load balancer can help you meet compliance and security standards.
 
-This rule is covered by the [elb-predefined-security-policy-ssl-check](../../policies/elb/elb-predefined-security-policy-ssl-check.sentinel) policy.
+This rule is covered by the [elb-predefined-security-policy-ssl-check](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/elb/elb-predefined-security-policy-ssl-check.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash
