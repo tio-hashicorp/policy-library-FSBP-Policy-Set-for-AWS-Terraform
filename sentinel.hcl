@@ -1274,6 +1274,11 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+policy "kinesis-stream-backup-retention-check" {
+  source = "./policies/kinesis/kinesis-stream-backup-retention-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "msk-connect-connector-encrypted" {
   source = "./policies/msk/msk-connect-connector-encrypted.sentinel"
   enforcement_level = "advisory"

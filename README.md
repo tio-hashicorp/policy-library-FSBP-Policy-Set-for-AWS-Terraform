@@ -355,6 +355,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - Kinesis streams should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/kinesis-stream-encrypted.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/kinesis/kinesis-stream-encrypted.sentinel))
 
+- Kinesis streams should have an adequate data retention period ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/kinesis-stream-backup-retention-check.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/kinesis/kinesis-stream-backup-retention-check.sentinel))
+
 - KMS restrict IAM inline policies decrypt all KMS keys ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/kms-restrict-iam-inline-policies-decrypt-all-kms-keys.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/kms/kms-restrict-iam-inline-policies-decrypt-all-kms-keys.sentinel))
 
 - Lambda function policies should prohibit public access ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/lambda-function-public-access-prohibited.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/lambda/lambda-function-public-access-prohibited.sentinel))
