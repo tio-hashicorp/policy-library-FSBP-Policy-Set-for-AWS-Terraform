@@ -10,7 +10,7 @@ This control checks whether an Amazon EFS file system encrypts data with AWS Key
 
 Data at rest refers to data that's stored in persistent, non-volatile storage for any duration. Encrypting data at rest helps you protect its confidentiality, which reduces the risk that an unauthorized user can access it.
 
-This rule is covered by the [efs-filesystem-encrypted](../../policies/efs/efs-filesystem-encrypted.sentinel) policy.
+This rule is covered by the [efs-filesystem-encrypted](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/efs/efs-filesystem-encrypted.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash
