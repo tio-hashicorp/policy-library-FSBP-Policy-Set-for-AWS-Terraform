@@ -575,4 +575,6 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS Amazon Redshift Serverless workgroups should use enhanced VPC routing ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserveless/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.sentinel))
 
+- AWS AppSync API caches should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-graphqlapi-cache-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-graphqlapi-cache-should-be-encrypted-at-rest.sentinel))
+
 - WorkSpaces user volumes should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/workspaces-user-volumes-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/workspaces/workspaces-user-volumes-should-be-encrypted-at-rest.sentinel))
