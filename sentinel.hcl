@@ -1274,6 +1274,11 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+policy "efs-automatic-backups-enabled" {
+  source = "./policies/efs/efs-automatic-backups-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "efs-filesystem-encrypted" {
   source = "./policies/efs/efs-filesystem-encrypted.sentinel"
   enforcement_level = "advisory"
