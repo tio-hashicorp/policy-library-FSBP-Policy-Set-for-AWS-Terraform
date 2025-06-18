@@ -1319,6 +1319,11 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+
+policy "cloudtrail-server-side-encryption-enabled" {
+  source = "./policies/cloudtrail/cloudtrail-server-side-encryption-enabled.sentinel"
+  enforcement_level = "advisory"
+}
 policy "athena-workgroup-should-have-logging-enabled" {
   source = "./policies/athena/athena-workgroup-should-have-logging-enabled.sentinel"
   enforcement_level = "advisory"
