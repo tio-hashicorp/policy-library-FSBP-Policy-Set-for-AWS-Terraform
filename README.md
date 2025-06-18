@@ -327,6 +327,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - Amazon EMR block public access setting should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/emr-block-public-access-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/emr/emr-block-public-access-enabled.sentinel))
 
+- Amazon EMR security configurations should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/emr-security-configuration-encryption-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/emr/emr-security-configuration-encryption-rest.sentinel))
+
 - Amazon EMR security configurations should be encrypted in transit ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/emr-security-configuration-encryption-transit.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/emr/emr-security-configuration-encryption-transit.sentinel))
 
 - EventBridge custom event buses should have a resource-based policy attached ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/eventbridge-custom-event-bus-should-have-attached-policy.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/eventbridge/eventbridge-custom-event-bus-should-have-attached-policy.sentinel))
