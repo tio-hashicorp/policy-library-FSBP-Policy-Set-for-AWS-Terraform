@@ -10,7 +10,7 @@ This control checks whether an Elastic Load Balancer V2 (Application, Network, o
 
 Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. Elastic Load Balancing scales your load balancer as your incoming traffic changes over time. It is recommended to configure at least two availability zones to ensure availability of services, as the Elastic Load Balancer will be able to direct traffic to another availability zone if one becomes unavailable. Having multiple availability zones configured will help eliminate having a single point of failure for the application.
 
-This rule is covered by the [elb-multiple-az](../../policies/elb/elb-multiple-az.sentinel) policy.
+This rule is covered by the [elb-multiple-az](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/elb/elb-multiple-az.sentinel) policy.
 
 ## Policy Results (Pass)
 ```bash
