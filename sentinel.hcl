@@ -1332,6 +1332,11 @@ policy "appsync-graphql-api-should-not-authenticate-with-api-keys" {
   enforcement_level = "advisory"
 }
 
+policy "appsync-cache-should-be-encrypted-at-transit" {
+  source = "./policies/appsync/appsync-cache-should-be-encrypted-at-transit.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "workspaces-user-volumes-should-be-encrypted-at-rest" {
   source = "./policies/workspaces/workspaces-user-volumes-should-be-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
