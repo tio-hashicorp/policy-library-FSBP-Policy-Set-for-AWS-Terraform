@@ -589,4 +589,7 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS AppSync should have field-level logging enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-field-level-logging-should-be-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-field-level-logging-should-be-enabled.sentinel))
 
+- AWS AppSync GraphQL APIs should not be authenticated with API keys ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-graphql-api-should-not-authenticate-with-api-keys.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-graphql-api-should-not-authenticate-with-api-keys.sentinel))
+
 - WorkSpaces user volumes should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/workspaces-user-volumes-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/workspaces/workspaces-user-volumes-should-be-encrypted-at-rest.sentinel))
+
