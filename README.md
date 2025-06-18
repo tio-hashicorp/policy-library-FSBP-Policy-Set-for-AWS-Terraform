@@ -545,6 +545,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS WAF web ACLs should have at least one rule or rule group ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/wafv2-webacl-not-empty.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/waf/wafv2-webacl-not-empty.sentinel))
 
+- Amazon Inspector Lambda standard scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-lambda-standard-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-lambda-standard-scan-enabled.sentinel))
+
 - Network Firewall firewalls should have subnet change protection enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/network-firewall/network-firewall-subnet-change-protection-enabled.sentinel) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/network-firewall/network-firewall-subnet-change-protection-enabled.sentinel))
 
 - AWS SageMaker models should block inbound traffic ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/sagemaker-models-should-block-inbound-traffic.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sagemaker/sagemaker-models-should-block-inbound-traffic.sentinel))
