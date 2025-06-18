@@ -1,7 +1,7 @@
 # This policy ensures that Application, Network, and Gateway Load Balancers span multiple Availability Zones
 
-// Copyright (c) HashiCorp, Inc.
-// SPDX-License-Identifier: BUSL-1.1
+#  Copyright (c) HashiCorp, Inc.
+#  SPDX-License-Identifier: BUSL-1.1
 
 # Imports
 import "tfplan/v2" as tfplan

@@ -1,5 +1,8 @@
 # This policy requires resources of type `aws_athena_workgroup` have attribute `publish_cloudwatch_metrics_enabled` should be `true`.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfplan/v2" as tfplan

@@ -1,5 +1,8 @@
 # This control checks whether a root volume in an Amazon WorkSpaces WorkSpace is encrypted at rest.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfplan/v2" as tfplan

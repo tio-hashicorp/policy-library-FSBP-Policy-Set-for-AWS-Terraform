@@ -1,5 +1,8 @@
 # This policy requires resources of type `aws_appsync_api_cache` should have 'at_rest_encryption_enabled' should be set to true and 'api_id' should be referenced to `aws_appsync_graphql_api` resource.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfconfig/v2" as tfconfig

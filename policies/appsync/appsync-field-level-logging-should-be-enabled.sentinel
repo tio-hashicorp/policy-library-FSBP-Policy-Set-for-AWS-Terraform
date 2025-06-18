@@ -1,5 +1,8 @@
 # This policy requires resources of type `aws_appsync_graphql_api` have attribute `log_config` with `field_log_level` set to `ERROR` or `ALL`.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfplan/v2" as tfplan

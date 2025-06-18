@@ -1,5 +1,8 @@
 # This policy requires resources of type `aws_efs_file_system` should be associated with resource 'aws_backup_selection'.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfconfig/v2" as tfconfig

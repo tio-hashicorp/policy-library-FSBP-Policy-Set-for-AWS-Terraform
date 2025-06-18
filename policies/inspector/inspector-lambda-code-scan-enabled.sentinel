@@ -1,5 +1,8 @@
 # This policy ensures that Amazon Inspector Lambda code scanning is enabled
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 import "tfplan/v2" as tfplan
 import "tfresources" as tf

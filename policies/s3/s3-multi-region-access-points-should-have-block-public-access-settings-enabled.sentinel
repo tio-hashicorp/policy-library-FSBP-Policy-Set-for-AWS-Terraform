@@ -1,5 +1,8 @@
 # This control checks whether an Amazon S3 Multi-Region Access Point has block public access settings enabled.
 
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 # Imports
 
 import "tfplan/v2" as tfplan
@@ -53,12 +56,10 @@ is_public_access_block_compliant = func(values) {
 
 resources = tf.plan(tfplan.planned_values.resources).type(const.resource_aws_s3control_multi_region_access_point).resources
 
-
 violations = collection.reject(resources, func(res) {
 	values = maps.get(res, "values", {})
 	return is_public_access_block_compliant(values)
 })
-
 
 summary = {
 	"policy_name": const.policy_name,

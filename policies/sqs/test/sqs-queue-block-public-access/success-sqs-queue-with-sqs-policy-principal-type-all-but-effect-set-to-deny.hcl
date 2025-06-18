@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: BUSL-1.1
+
 mock "tfplan/v2" {
 	module {
 		source = "./mocks/policy-success-sqs-queue-with-sqs-policy-principal-type-all-but-effect-set-to-deny/mock-tfplan-v2.sentinel"
