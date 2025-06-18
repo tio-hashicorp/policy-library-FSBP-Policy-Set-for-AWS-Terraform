@@ -1359,6 +1359,11 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "ecs-task-set-assign-public-ip-disabled" {
+  source = "./policies/ecs/ecs-task-set-assign-public-ip-disabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "ec2-vpc-block-public-access-options-should-block-internet-gateway-traffic" {
   source = "./policies/ec2/ec2-vpc-block-public-access-options-should-block-internet-gateway-traffic.sentinel"
   enforcement_level = "advisory"
