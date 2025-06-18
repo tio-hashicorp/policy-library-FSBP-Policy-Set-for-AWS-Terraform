@@ -1,4 +1,3 @@
-
 resources = {
 	"aws_cloudtrail.example": {
 		"address": "aws_cloudtrail.example",
