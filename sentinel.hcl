@@ -352,6 +352,36 @@ policy "rds-security-group-event-notifications-configured-for-critical-events" {
   }
 }
 
+policy "rds-for-sql-server-db-instances-should-be-encrypted-in-transit" {
+  source = "./policies/rds/rds-for-sql-server-db-instances-should-be-encrypted-in-transit.sentinel"
+enforcement_level = "advisory"
+}
+
+policy "rds-for-mariadb-db-instances-should-be-encrypted-in-transit" {
+  source = "./policies/rds/rds-for-mariadb-db-instances-should-be-encrypted-in-transit.sentinel"
+enforcement_level = "advisory"
+}
+
+policy "rds-for-mariadb-db-instances-should-publish-logs-to-cloudwatch-logs" {
+  source = "./policies/rds/rds-for-mariadb-db-instances-should-publish-logs-to-cloudwatch-logs.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-for-sql-server-db-instances-should-publish-logs-to-cloudwatch-logs" {
+  source = "./policies/rds/rds-for-sql-server-db-instances-should-publish-logs-to-cloudwatch-logs.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "rds-for-postgresql-db-instances-should-publish-logs-to-cloudwatch-logs" {
+  source = "./policies/rds/rds-for-postgresql-db-instances-should-publish-logs-to-cloudwatch-logs.sentinel"
+enforcement_level = "advisory"
+}
+
+policy "aurora-postgresql-db-clusters-should-publish-logs-to-cloudwatch-logs" {
+  source = "./policies/rds/aurora-postgresql-db-clusters-should-publish-logs-to-cloudwatch-logs.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "s3-block-public-access-account-level" {
     source = "./policies/s3/s3-block-public-access-account-level.sentinel"
     enforcement_level = "advisory"
@@ -508,6 +538,21 @@ policy "sagemaker-endpoint-config-prod-instance-count-check" {
   }
 }
 
+policy "sagemaker-models-should-block-inbound-traffic" {
+  source = "./policies/sagemaker/sagemaker-models-should-block-inbound-traffic.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "sagemaker-images-should-be-tagged" {
+  source = "./policies/sagemaker/sagemaker-images-should-be-tagged.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "sagemaker-notebook-instances-should-run-on-supported-platforms" {
+  source = "./policies/sagemaker/sagemaker-notebook-instances-should-run-on-supported-platforms.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "redshift-cluster-public-access-check" {
   source = "./policies/redshift/redshift-cluster-public-access-check.sentinel"
   enforcement_level = "advisory"
@@ -559,6 +604,36 @@ policy "redshift-cluster-should-be-encrypted-at-rest" {
 
 policy "redshift-cluster-unrestricted-port-access-check" {
   source = "./policies/redshift/redshift-cluster-unrestricted-port-access-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-namespaces-should-not-use-the-default-admin-username"{
+  source = "./policies/redshiftserverless/redshift-serverless-namespaces-should-not-use-the-default-admin-username.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-workgroups-should-prohibit-public-access" {
+  source = "./policies/redshiftserverless/redshift-serverless-workgroups-should-prohibit-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-namespaces-should-export-logs-to-cloudwatch-logs"{
+  source = "./policies/redshiftserverless/redshift-serverless-namespaces-should-export-logs-to-cloudwatch-logs.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-namespaces-should-not-use-the-default-database-name" {
+  source = "./policies/redshiftserverless/redshift-serverless-namespaces-should-not-use-the-default-database-name.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-workgroups-should-be-required-to-use-ssl" {
+  source = "./policies/redshiftserverless/redshift-serverless-workgroups-should-be-required-to-use-ssl.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "redshift-serverless-workgroups-should-use-enhanced-vpc-routing" {
+  source = "./policies/redshiftserverless/redshift-serverless-workgroups-should-use-enhanced-vpc-routing.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -1199,7 +1274,232 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+<<<<<<< elb.13
 policy "elb-multiple-az" {
   source = "./policies/elb/elb-multiple-az.sentinel"
   enforcement_level = "advisory"
 }
+=======
+policy "elb-predefined-security-policy-ssl-check" {
+  source = "./policies/elb/elb-predefined-security-policy-ssl-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "emr-security-configuration-encryption-rest" {
+  source = "./policies/emr/emr-security-configuration-encryption-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "emr-security-configuration-encryption-transit" {
+  source = "./policies/emr/emr-security-configuration-encryption-transit.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "fsx-openzfs-deployment-type-check" {
+  source = "./policies/fsx/fsx-openzfs-deployment-type-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "fsx-ontap-deployment-type-check" {
+  source = "./policies/fsx/fsx-ontap-deployment-type-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "fsx-windows-deployment-type-check" {
+  source = "./policies/fsx/fsx-windows-deployment-type-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "glue-spark-job-supported-version" {
+  source = "./policies/glue/glue-spark-job-supported-version.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "guardduty-runtime-monitoring-enabled" {
+  source = "./policies/guardduty/guardduty-runtime-monitoring-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "guardduty-ecs-protection-runtime-enabled" {
+  source = "./policies/guardduty/guardduty-ecs-protection-runtime-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "inspector-ec2-scan-enabled" {
+  source = "./policies/inspector/inspector-ec2-scan-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "inspector-ecr-scan-enabled" {
+  source = "./policies/inspector/inspector-ecr-scan-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "inspector-lambda-code-scan-enabled" {
+  source = "./policies/inspector/inspector-lambda-code-scan-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "inspector-lambda-standard-scan-enabled" {
+  source = "./policies/inspector/inspector-lambda-standard-scan-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "kinesis-stream-backup-retention-check" {
+  source = "./policies/kinesis/kinesis-stream-backup-retention-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "msk-connect-connector-encrypted" {
+  source = "./policies/msk/msk-connect-connector-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "network-firewall-subnet-change-protection-enabled" {
+  source = "./policies/network-firewall/network-firewall-subnet-change-protection-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "sns-topic-access-policies-should-not-allow-public-access" {
+  source = "./policies/sns/sns-topic-access-policies-should-not-allow-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
+  source = "./policies/workspaces/workspaces-root-volumes-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "efs-access-point-should-enforce-user-identity" {
+  source = "./policies/efs/efs-access-point-should-enforce-user-identity.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "efs-access-point-should-enforce-root-directory" {
+  source = "./policies/efs/efs-access-point-should-enforce-root-directory.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "efs-file-systems-should-be-in-backup-plans" {
+  source = "./policies/efs/efs-file-systems-should-be-in-backup-plans.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "efs-file-systems-should-be-encrypted-at-rest" {
+  source = "./policies/efs/efs-file-systems-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ecs-task-set-assign-public-ip-disabled" {
+  source = "./policies/ecs/ecs-task-set-assign-public-ip-disabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-vpc-block-public-access-options-should-block-internet-gateway-traffic" {
+  source = "./policies/ec2/ec2-vpc-block-public-access-options-should-block-internet-gateway-traffic.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-ecr-api" {
+  source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    service_name = "ecr.api"
+  }
+}
+
+policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-docker-registry" {
+  source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    service_name = "ecr.dkr"
+  }
+}
+
+policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-systems-manager" {
+  source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    service_name = "ssm"
+  }
+}
+
+policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-systems-manager-incident-manager-contacts" {
+  source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    service_name = "ssm-contacts"
+  }
+}
+
+policy "ec2-vpc-should-be-configured-for-interface-endpoint-for-systems-manager-incident-manager" {
+  source = "./policies/ec2/ec2-vpc-should-be-configured-for-interface-endpoint.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    service_name = "ssm-incidents"
+  }
+}
+
+policy "datasync-task-should-have-logging-enabled" {
+  source = "./policies/datasync/datasync-task-should-have-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "connect-instance-flow-logging-should-be-enabled" {
+  source = "./policies/connect/connect-instance-flow-logging-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudtrail-log-file-validation-enabled" {
+  source = "./policies/cloudtrail/cloudtrail-log-file-validation-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudtrail-server-side-encryption-enabled" {
+  source = "./policies/cloudtrail/cloudtrail-server-side-encryption-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "cloudtrail-cloudwatch-logs-group-arn-present" {
+  source = "./policies/cloudtrail/cloudtrail-cloudwatch-logs-group-arn-present.sentinel"
+  enforcement_level = "advisory"
+}
+  
+policy "athena-workgroup-should-have-logging-enabled" {
+  source = "./policies/athena/athena-workgroup-should-have-logging-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "appsync-graphqlapi-cache-should-be-encrypted-at-rest" {
+  source = "./policies/appsync/appsync-graphqlapi-cache-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "appsync-field-level-logging-should-be-enabled" {
+  source = "./policies/appsync/appsync-field-level-logging-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    field_log_level_options = ["ALL", "ERROR"]
+  }
+}
+
+policy "appsync-graphql-api-should-not-authenticate-with-api-keys" {
+  source = "./policies/appsync/appsync-graphql-api-should-not-authenticate-with-api-keys.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "appsync-cache-should-be-encrypted-at-transit" {
+  source = "./policies/appsync/appsync-cache-should-be-encrypted-at-transit.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "workspaces-user-volumes-should-be-encrypted-at-rest" {
+  source = "./policies/workspaces/workspaces-user-volumes-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "route-53-public-hosted-zones-should-log-dns-queries" {
+  source = "./policies/route53/route-53-public-hosted-zones-should-log-dns-queries.sentinel"
+  enforcement_level = "advisory"
+}
+>>>>>>> dev
