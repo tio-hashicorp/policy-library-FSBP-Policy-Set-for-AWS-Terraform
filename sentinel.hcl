@@ -1274,6 +1274,11 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+policy "inspector-ec2-scan-enabled" {
+  source = "./policies/inspector/inspector-ec2-scan-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "inspector-ecr-scan-enabled" {
   source = "./policies/inspector/inspector-ecr-scan-enabled.sentinel"
   enforcement_level = "advisory"
