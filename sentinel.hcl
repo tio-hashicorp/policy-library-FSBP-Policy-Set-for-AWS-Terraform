@@ -1363,6 +1363,12 @@ policy "cloudtrail-server-side-encryption-enabled" {
   source = "./policies/cloudtrail/cloudtrail-server-side-encryption-enabled.sentinel"
   enforcement_level = "advisory"
 }
+
+policy "cloudtrail-cloudwatch-logs-group-arn-present" {
+  source = "./policies/cloudtrail/cloudtrail-cloudwatch-logs-group-arn-present.sentinel"
+  enforcement_level = "advisory"
+}
+  
 policy "athena-workgroup-should-have-logging-enabled" {
   source = "./policies/athena/athena-workgroup-should-have-logging-enabled.sentinel"
   enforcement_level = "advisory"

@@ -609,6 +609,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS CloudTrail should have encryption at-rest enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/cloudtrail-server-side-encryption-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/cloudtrail/cloudtrail-server-side-encryption-enabled.sentinel))
 
+- AWS Cloudtrail Cloudwatch Logs Group Arn is set ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/cloudtrail-cloudwatch-logs-group-arn-present.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/cloudtrail/cloudtrail-cloudwatch-logs-group-arn-present.sentinel))
+
 - Athena workgroups should have logging enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/athena-workgroup-should-have-logging-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/athena/athena-workgroup-should-have-logging-enabled.sentinel))
 
 - AWS AppSync API caches should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-graphqlapi-cache-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-graphqlapi-cache-should-be-encrypted-at-rest.sentinel))
@@ -620,4 +622,3 @@ Following methods outlines various ways to consume and implement pre-written Sen
 - AWS AppSync API caches should be encrypted in transit ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/appsync-cache-should-be-encrypted-at-transit.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/appsync/appsync-cache-should-be-encrypted-at-transit.sentinel))
 
 - WorkSpaces user volumes should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/workspaces-user-volumes-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/workspaces/workspaces-user-volumes-should-be-encrypted-at-rest.sentinel))
-- 
