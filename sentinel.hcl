@@ -1269,9 +1269,13 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
   enforcement_level = "advisory"
 }
 
-
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "network-firewall-subnet-change-protection-enabled" {
+  source = "./policies/network-firewall/network-firewall-subnet-change-protection-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
