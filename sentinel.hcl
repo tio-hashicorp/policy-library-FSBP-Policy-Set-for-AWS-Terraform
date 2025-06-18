@@ -1274,6 +1274,11 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+policy "elb-predefined-security-policy-ssl-check" {
+  source = "./policies/elb/elb-predefined-security-policy-ssl-check.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "emr-security-configuration-encryption-rest" {
   source = "./policies/emr/emr-security-configuration-encryption-rest.sentinel"
   enforcement_level = "advisory"
