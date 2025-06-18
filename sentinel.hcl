@@ -1269,9 +1269,38 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
   enforcement_level = "advisory"
 }
 
-
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "inspector-ecr-scan-enabled" {
+  source = "./policies/inspector/inspector-ecr-scan-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "inspector-lambda-code-scan-enabled" {
+  source = "./policies/inspector/inspector-lambda-code-scan-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "inspector-lambda-standard-scan-enabled" {
+  source = "./policies/inspector/inspector-lambda-standard-scan-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "kinesis-stream-backup-retention-check" {
+  source = "./policies/kinesis/kinesis-stream-backup-retention-check.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "msk-connect-connector-encrypted" {
+  source = "./policies/msk/msk-connect-connector-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "network-firewall-subnet-change-protection-enabled" {
+  source = "./policies/network-firewall/network-firewall-subnet-change-protection-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
@@ -1285,7 +1314,30 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "appsync-graphqlapi-cache-should-be-encrypted-at-rest" {
+  source = "./policies/appsync/appsync-graphqlapi-cache-should-be-encrypted-at-rest.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "appsync-field-level-logging-should-be-enabled" {
+  source = "./policies/appsync/appsync-field-level-logging-should-be-enabled.sentinel"
+  enforcement_level = "advisory"
+  params = {
+    field_log_level_options = ["ALL", "ERROR"]
+  }
+}
+
+policy "appsync-graphql-api-should-not-authenticate-with-api-keys" {
+  source = "./policies/appsync/appsync-graphql-api-should-not-authenticate-with-api-keys.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "appsync-cache-should-be-encrypted-at-transit" {
   source = "./policies/appsync/appsync-cache-should-be-encrypted-at-transit.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "workspaces-user-volumes-should-be-encrypted-at-rest" {
+  source = "./policies/workspaces/workspaces-user-volumes-should-be-encrypted-at-rest.sentinel"
   enforcement_level = "advisory"
 }
