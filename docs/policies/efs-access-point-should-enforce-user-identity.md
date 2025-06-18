@@ -2,7 +2,7 @@
 
 | Provider            |   Category   |
 | ------------------- |  ----------  |
-| Amazon Web Services |  Encryption  |
+| Amazon Web Services |  Secure access management  |
 
 ## Description
 
