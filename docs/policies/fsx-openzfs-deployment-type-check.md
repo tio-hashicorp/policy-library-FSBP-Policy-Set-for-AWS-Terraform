@@ -10,7 +10,7 @@ This control checks whether an Amazon FSx for OpenZFS file system is configured 
 
 Amazon FSx for OpenZFS supports several deployment types for file systems: Multi-AZ (HA), Single-AZ (HA), and Single-AZ (non-HA). The deployment types offer different levels of availability and durability. Multi-AZ (HA) file systems are composed of a high-availability (HA) pair of file servers that are spread across two Availability Zones (AZs). We recommend using the Multi-AZ (HA) deployment type for most production workloads due to the high availability and durability model that it provides.
 
-This rule is covered by the [fsx-openzfs-deployment-type-check](../../policies/fsx/fsx-openzfs-deployment-type-check.setntinel) policy.
+This rule is covered by the [fsx-openzfs-deployment-type-check](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/fsx/fsx-openzfs-deployment-type-check.sentinel) policy.
 
 ## Policy Results (Pass)
 
