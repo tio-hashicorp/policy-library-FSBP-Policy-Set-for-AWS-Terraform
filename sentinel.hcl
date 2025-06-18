@@ -1274,6 +1274,11 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+policy "msk-connect-connector-encrypted" {
+  source = "./policies/msk/msk-connect-connector-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "network-firewall-subnet-change-protection-enabled" {
   source = "./policies/network-firewall/network-firewall-subnet-change-protection-enabled.sentinel"
   enforcement_level = "advisory"
