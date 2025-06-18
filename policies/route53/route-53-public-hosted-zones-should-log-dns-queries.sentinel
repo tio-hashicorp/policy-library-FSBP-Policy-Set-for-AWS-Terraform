@@ -20,7 +20,6 @@ const = {
 
 route53_query_log_resources = tf.config(tfconfig.resources).type(const.resource_aws_route53_query_log).resources
 
-
 violations = collection.reject(route53_query_log_resources, func(res) {
 	config = maps.get(res, "config", {})
 	if config is {} or config is null {
@@ -35,7 +34,7 @@ violations = collection.reject(route53_query_log_resources, func(res) {
 	if (constant_value != "" and constant_value is not null) {
 		return true
 	}
-	if references is not []{
+	if references is not [] {
 		return true
 	}
 	return false

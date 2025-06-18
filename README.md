@@ -325,6 +325,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - Classic Load Balancer should be configured with defensive or strictest desync mitigation mode ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/elb-ensure-valid-desync-mitigation-mode-classic-load-balancer.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/elb/elb-ensure-valid-desync-mitigation-mode.sentinel))
 
+- Application, Network and Gateway Load Balancers should span multiple Availability Zones ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/elb-multiple-az.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/elb/elb-multiple-az.sentinel))
+
 - Application and Network Load Balancers with listeners should use recommended security policies ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/elb-predefined-security-policy-ssl-check.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/elb/elb-predefined-security-policy-ssl-check.sentinel))
 
 - Amazon EMR block public access setting should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/emr-block-public-access-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/emr/emr-block-public-access-enabled.sentinel))
@@ -563,6 +565,10 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS WAF web ACLs should have at least one rule or rule group ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/wafv2-webacl-not-empty.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/waf/wafv2-webacl-not-empty.sentinel))
 
+- EFS file systems should have automatic backups enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/efs-automatic-backups-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/efs/efs-automatic-backups-enabled.sentinel))
+
+- EFS file systems should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/efs-filesystem-encrypted.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/efs/efs-filesystem-encrypted.sentinel))
+
 - AWS Glue Spark jobs should run on supported versions of AWS Glue ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/glue-spark-job-supported-version.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/glue/glue-spark-job-supported-version.sentinel))
 
 - Amazon Inspector EC2 scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-ec2-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-ec2-scan-enabled.sentinel))
@@ -602,8 +608,6 @@ Following methods outlines various ways to consume and implement pre-written Sen
 - AWS WorkSpaces root volumes should be encrypted at rest ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/workspaces-root-volumes-should-be-encrypted-at-rest.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/workspaces/workspaces-root-volumes-should-be-encrypted-at-rest.sentinel))
 
 - AWS Connections to Redshift Serverless workgroups should be required to use SSL ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/redshift-serverless-workgroups-should-be-required-to-use-ssl.sentinel.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/redshiftserverless/redshift-serverless-workgroups-should-be-required-to-use-ssl.sentinel))
-
-- AWS SageMaker images should be tagged ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/sagemaker-images-should-be-tagged.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sagemaker/sagemaker-images-should-be-tagged.sentinel))
 
 - AWS SageMaker notebook instances should run on supported platforms ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/sagemaker-notebook-instances-should-run-on-supported-platforms.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/sagemaker/sagemaker-notebook-instances-should-run-on-supported-platforms.sentinel))
 

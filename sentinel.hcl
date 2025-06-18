@@ -548,11 +548,6 @@ policy "sagemaker-models-should-block-inbound-traffic" {
   enforcement_level = "advisory"
 }
 
-policy "sagemaker-images-should-be-tagged" {
-  source = "./policies/sagemaker/sagemaker-images-should-be-tagged.sentinel"
-  enforcement_level = "advisory"
-}
-
 policy "sagemaker-notebook-instances-should-run-on-supported-platforms" {
   source = "./policies/sagemaker/sagemaker-notebook-instances-should-run-on-supported-platforms.sentinel"
   enforcement_level = "advisory"
@@ -1276,6 +1271,21 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
 
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "efs-automatic-backups-enabled" {
+  source = "./policies/efs/efs-automatic-backups-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "efs-filesystem-encrypted" {
+  source = "./policies/efs/efs-filesystem-encrypted.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "elb-multiple-az" {
+  source = "./policies/elb/elb-multiple-az.sentinel"
   enforcement_level = "advisory"
 }
 

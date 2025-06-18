@@ -1,10 +1,8 @@
 mock "tfplan/v2" {
 	module {
-		source = "./mocks/policy-success-sagemaker-image-required-tags-empty-values/mock-tfplan-v2.sentinel"
+		source = "./mocks/policy-success-multiple-az-present/mock-tfplan-v2.sentinel"
 	}
 }
-
-
 
 mock "tfresources" {
   module {
@@ -13,9 +11,9 @@ mock "tfresources" {
 }
 
 mock "report" {
-	module {
-		source = "../../../../modules/mocks/report/report.sentinel"
-	}
+  module {
+    source = "../../../../modules/mocks/report/report.sentinel"
+  }
 }
 
 test {
