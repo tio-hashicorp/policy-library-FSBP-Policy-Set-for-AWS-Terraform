@@ -1274,6 +1274,16 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+policy "guardduty-runtime-monitoring-enabled" {
+  source = "./policies/guardduty/guardduty-runtime-monitoring-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "guardduty-ecs-protection-runtime-enabled" {
+  source = "./policies/guardduty/guardduty-ecs-protection-runtime-enabled.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "inspector-ec2-scan-enabled" {
   source = "./policies/inspector/inspector-ec2-scan-enabled.sentinel"
   enforcement_level = "advisory"
