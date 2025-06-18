@@ -551,6 +551,8 @@ Following methods outlines various ways to consume and implement pre-written Sen
 
 - AWS WAF web ACLs should have at least one rule or rule group ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/wafv2-webacl-not-empty.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/waf/wafv2-webacl-not-empty.sentinel))
 
+- AWS Glue Spark jobs should run on supported versions of AWS Glue ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/glue-spark-job-supported-version.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/glue/glue-spark-job-supported-version.sentinel))
+
 - Amazon Inspector EC2 scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-ec2-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-ec2-scan-enabled.sentinel))
 
 - Amazon Inspector ECR scanning should be enabled ([docs](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/docs/policies/inspector-ecr-scan-enabled.md) | [code](https://github.com/hashicorp/policy-library-FSBP-Policy-Set-for-AWS-Terraform/blob/main/policies/inspector/inspector-ecr-scan-enabled.sentinel))

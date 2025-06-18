@@ -1274,6 +1274,11 @@ policy "sqs-queue-block-public-access" {
   enforcement_level = "advisory"
 }
 
+policy "glue-spark-job-supported-version" {
+  source = "./policies/glue/glue-spark-job-supported-version.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "guardduty-runtime-monitoring-enabled" {
   source = "./policies/guardduty/guardduty-runtime-monitoring-enabled.sentinel"
   enforcement_level = "advisory"
