@@ -1359,6 +1359,11 @@ policy "workspaces-root-volumes-should-be-encrypted-at-rest" {
   enforcement_level = "advisory"
 }
 
+policy "efs-access-point-should-enforce-root-directory" {
+  source = "./policies/efs/efs-access-point-should-enforce-root-directory.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "efs-file-systems-should-be-in-backup-plans" {
   source = "./policies/efs/efs-file-systems-should-be-in-backup-plans.sentinel"
   enforcement_level = "advisory"
