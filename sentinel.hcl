@@ -1252,7 +1252,7 @@ policy "service-catalog-shared-within-organization" {
 policy "acm-rsa-certificate-key-length-atleast-2048" {
   source = "./policies/acm/acm-rsa-certificate-key-length-atleast-2048.sentinel"
   enforcement_level = "advisory"
-}
+}c
 
 policy "autoscaling-group-with-load-balancer-attached-should-have-elb-healthcheck" {
   source = "./policies/autoscaling-group/autoscaling-group-with-load-balancer-attached-should-have-elb-healthcheck.sentinel"
@@ -1271,6 +1271,11 @@ policy "autoscaling-group-should-use-multiple-instance-types" {
 
 policy "sqs-queue-block-public-access" {
   source = "./policies/sqs/sqs-queue-block-public-access.sentinel"
+  enforcement_level = "advisory"
+}
+
+policy "guardduty-ecs-protection-runtime-enabled" {
+  source = "./policies/guardduty/guardduty-ecs-protection-runtime-enabled.sentinel"
   enforcement_level = "advisory"
 }
 
